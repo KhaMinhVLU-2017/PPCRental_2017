@@ -31,7 +31,7 @@ Author: Cloud Software Solution Ltd.
 
 .hero-slide .carousel-caption small {
     font-size       : 13px;
-    color           : #777777;
+    color           : white;
     font-weight     : 500;
     animation-delay : 1s;
     }
@@ -51,11 +51,12 @@ Author: Cloud Software Solution Ltd.
     margin                  : 30px 0 20px;
     -webkit-animation-delay : 150ms;
     animation-delay         : 150ms;
+    color                   : white;
     }
 
 .hero-slide .carousel-caption .lead {
     font-size               : 24px;
-    color                   : #555555;
+    color                   : white;
     font-weight             : normal;
     margin-bottom           : 30px;
     -webkit-animation-delay : 200ms;

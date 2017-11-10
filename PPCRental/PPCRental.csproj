@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -181,6 +183,7 @@
     <Content Include="Content\css\menu.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\StyleOfBCA.css" />
     <Content Include="Content\css\template.css" />
     <Content Include="Content\css\typography.css" />
     <Content Include="Content\css\YTPlayer.css" />
@@ -294,6 +297,8 @@
     <Content Include="Content\img\slider\slide-1.jpg" />
     <Content Include="Content\img\slider\slide-2.jpg" />
     <Content Include="Content\img\slider\slide-3.jpg" />
+    <Content Include="Content\img\slider\slide4.jpg" />
+    <Content Include="Content\img\slider\slide5.jpg" />
     <Content Include="Content\img\team\introthumb.jpg" />
     <Content Include="Content\img\team\tm1.jpg" />
     <Content Include="Content\img\team\tm2.jpg" />

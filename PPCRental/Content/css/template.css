@@ -599,7 +599,7 @@ SECTION
 }
 
 .page-title-section {
-  background: url(../img/page-header-bg.jpg);
+  background: url(~/img/page-header-bg.jpg);
   background-size: cover;
 }
 
@@ -622,7 +622,7 @@ SECTION
 
 /*top-bar*/
 .top-bar {
-  background: url(../img/topbar-bg.jpg) no-repeat;
+  background: url(~/img/page-header-bg.jpg) no-repeat;
   background-size: cover;
 }
 

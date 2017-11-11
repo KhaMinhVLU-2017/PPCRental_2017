@@ -642,7 +642,7 @@ COUNTER SECTION
 --------------------------------------------------------------------- */
 .counter-section {
   padding: 100px 0;
-  background: url(../img/counter-bg.jpg) no-repeat center top fixed;
+  background: url(../img/city1.jpg) no-repeat center top fixed;
   background-size: cover;
 }
 
@@ -676,16 +676,16 @@ span.count-description:before {
   margin-right: 10px;
 }
 
-span.count-description.flaticon-boat:before {
-  content: "\e006";
+span.count-description.flaticon-man:before {
+  content: "\e050";
 }
 
 span.count-description.flaticon-international:before {
   content: "\e01d";
 }
 
-span.count-description.flaticon-compass:before {
-  content: "\e013";
+span.count-description.flaticon-home:before {
+  content: "\e020";
 }
 
 /* ------------------------------------------------------------------

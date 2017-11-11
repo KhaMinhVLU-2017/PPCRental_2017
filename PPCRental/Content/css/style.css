@@ -193,7 +193,7 @@ OUR SERVICES SECTION
 
 .service-thumb-home a {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 5%;
   overflow: hidden;
   vertical-align: middle;
 }
@@ -211,9 +211,9 @@ OUR SERVICES SECTION
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b2b6a', endColorstr='#7db9e8',GradientType=1 );
   position: absolute;
   top: 0;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
   opacity: 0;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
@@ -226,9 +226,9 @@ OUR SERVICES SECTION
 }
 
 .service-thumb-home img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
 }
 
 .service-home h3 {

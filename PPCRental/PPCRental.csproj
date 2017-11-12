@@ -294,12 +294,12 @@
     <Content Include="Content\img\service\zoom1.jpg" />
     <Content Include="Content\img\service\zoom3.jpg" />
     <Content Include="Content\img\shipping.jpg" />
-    <Content Include="Content\img\slider\slide-1.jpg" />
-    <Content Include="Content\img\slider\slide-2.jpg" />
-    <Content Include="Content\img\slider\slide-3.jpg" />
     <Content Include="Content\img\slider\slide4.jpg" />
     <Content Include="Content\img\slider\slide5.jpg" />
+    <Content Include="Content\img\slider\slide6.jpg" />
+    <Content Include="Content\img\slider\slide7.jpg" />
     <Content Include="Content\img\team\introthumb.jpg" />
+    <Content Include="Content\img\slider\slide8.jpg" />
     <Content Include="Content\img\team\tm1.jpg" />
     <Content Include="Content\img\team\tm2.jpg" />
     <Content Include="Content\img\team\tm3.jpg" />

@@ -203,7 +203,6 @@
     <Content Include="Content\img\blog\blog-6.jpg" />
     <Content Include="Content\img\blog\blog.jpg" />
     <Content Include="Content\img\careerthumb.jpg" />
-    <Content Include="Content\img\cargo.png" />
     <Content Include="Content\img\carousel-indicator-blue.png" />
     <Content Include="Content\img\carousel-indicator-green.png" />
     <Content Include="Content\img\carousel-indicator-tarquis.png" />
@@ -237,6 +236,23 @@
     <Content Include="Content\img\flags\vietnam.svg" />
     <Content Include="Content\img\grabbing.png" />
     <Content Include="Content\img\gradientbg.png" />
+    <Content Include="Content\img\Home\1.jpg" />
+    <Content Include="Content\img\Home\10.jpg" />
+    <Content Include="Content\img\Home\11.jpg" />
+    <Content Include="Content\img\Home\2.jpg" />
+    <Content Include="Content\img\Home\3.jpg" />
+    <Content Include="Content\img\Home\4.jpg" />
+    <Content Include="Content\img\Home\5.jpg" />
+    <Content Include="Content\img\Home\6.jpg" />
+    <Content Include="Content\img\Home\7.jpg" />
+    <Content Include="Content\img\Home\8.jpg" />
+    <Content Include="Content\img\Home\9.jpg" />
+    <Content Include="Content\img\Home\N1.jpg" />
+    <Content Include="Content\img\Home\N2.jpg" />
+    <Content Include="Content\img\Home\N3.jpg" />
+    <Content Include="Content\img\Home\N4.jpg" />
+    <Content Include="Content\img\Home\N5.jpg" />
+    <Content Include="Content\img\Home\N6.jpg" />
     <Content Include="Content\img\intro-bg.jpg" />
     <Content Include="Content\img\logo - Copy.png" />
     <Content Include="Content\img\logo.png" />
@@ -293,7 +309,6 @@
     <Content Include="Content\img\service\truckingthumb.png" />
     <Content Include="Content\img\service\zoom1.jpg" />
     <Content Include="Content\img\service\zoom3.jpg" />
-    <Content Include="Content\img\shipping.jpg" />
     <Content Include="Content\img\slider\slide4.jpg" />
     <Content Include="Content\img\slider\slide5.jpg" />
     <Content Include="Content\img\slider\slide6.jpg" />
@@ -308,7 +323,6 @@
     <Content Include="Content\img\team\tm6.jpg" />
     <Content Include="Content\img\topbar-bg.jpg" />
     <Content Include="Content\img\track.png" />
-    <Content Include="Content\img\trans.jpg" />
     <Content Include="Content\img\zoomin.png" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\classie.js" />

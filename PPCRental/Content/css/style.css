@@ -9,6 +9,13 @@ Author: Cloud Software Solution Ltd.
 /*-------------------------------------
  *  HERO SLIDER
  *-------------------------------------*/
+.center{
+        margin: 100px 300px 40px 300px;
+        width: 100%;
+        border: 3px solid none;
+        padding: 10px;
+        text-align: center;
+    }   
 .hero-slide img{
     min-width: 100%;
     }

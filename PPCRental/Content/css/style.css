@@ -231,6 +231,14 @@ OUR SERVICES SECTION
   border-radius: 5%;
 }
 
+.service-homerent{
+  background-color: #aa8585;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  color: #fff;
+}
+
 .service-home h3 {
   margin-bottom: 15px;
 }
@@ -273,7 +281,8 @@ OUR SERVICES SECTION
 Featuer Section
 --------------------------------------------------------------------- */
 .feature-section {
-  background: url(../img/feature-bg.jpg) no-repeat;
+  /*background: url(../img/gradientbg.png) no-repeat;*/
+  background-color: #7B8A97;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -449,7 +458,7 @@ TESTIMONIAL SECTION
 }
 
 .testimonial-section::before {
-  content: "\f10d";
+  /*content: "\f10d";*/
   font-family: FontAwesome;
   font-size: 400px;
   color: #EAECEE;

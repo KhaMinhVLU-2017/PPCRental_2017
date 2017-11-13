@@ -259,6 +259,7 @@
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\logo1.png" />
     <Content Include="Content\img\map-marker.png" />
+    <Content Include="Content\img\moving.jpg" />
     <Content Include="Content\img\page-header-bg.jpg" />
     <Content Include="Content\img\page-title-bg.jpg" />
     <Content Include="Content\img\partner\m-partner-1.jpg" />
@@ -309,7 +310,7 @@
     <Content Include="Content\img\service\truckingthumb.png" />
     <Content Include="Content\img\service\zoom1.jpg" />
     <Content Include="Content\img\service\zoom3.jpg" />
-    <Content Include="Content\img\slider\slide3.jpg" />
+    <Content Include="Content\img\slider\slide4.jpg" />
     <Content Include="Content\img\slider\slide5.jpg" />
     <Content Include="Content\img\slider\slide6.jpg" />
     <Content Include="Content\img\slider\slide7.jpg" />

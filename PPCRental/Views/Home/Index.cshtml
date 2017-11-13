@@ -1,5 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Random rnd = new Random();
+    int usernumber = rnd.Next(50, 5000);
 }
 
 
@@ -375,7 +377,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-12">
                         <div class="counter-block">
-                            <span class="count-description flaticon-man"><strong class="timer">1501</strong>User truy cập</span>
+                            <span class="count-description flaticon-man"><strong class="timer">@usernumber</strong>User truy cập</span>
                         </div>
                     </div>
                 </div> <!-- /.row -->

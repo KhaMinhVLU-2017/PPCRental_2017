@@ -1492,8 +1492,9 @@ Contact Page
 .black-background{
     background-color: hsla(0, 45%, 5%, 0.8);
     box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
-    margin: 100px 300px 40px 300px;
+    /*margin: 300px;*/
     width: 100%;
     border: 3px solid white;
-    padding: 10px;
+    padding: 15px;
+    text-align: center;
 }

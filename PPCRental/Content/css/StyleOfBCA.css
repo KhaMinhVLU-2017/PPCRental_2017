@@ -1,5 +1,6 @@
 ﻿.div_slide{
     color:white;
+    margin: 250px;
 }
 .open-larger:hover div a img{
     width: 800px;

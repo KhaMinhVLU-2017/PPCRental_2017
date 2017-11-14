@@ -1,6 +1,6 @@
 ﻿.div_slide{
     color:white;
-    margin: 250px;
+    transform: translateX(33%);
 }
 .open-larger:hover div a img{
     width: 800px;
@@ -11,5 +11,8 @@
 .open-larger:not(:hover) div a img{
     width: 200px;
     transition: 2s;
+}
+.meo_slide{
+	padding: 0;
 }
 

@@ -1518,9 +1518,10 @@ Contact Page
 .div_slide:not(:hover) .black-background{
     transition: 1s;
 }
-.div_slide:hover{
-  text-shadow:  5px 5px 15px white;
-=======
+.div_slide:hover {
+    text-shadow: 5px 5px 15px white;
+}
+
 .aboutbackgroud{
     background-color:#D5D5D8;
     height: 100%;

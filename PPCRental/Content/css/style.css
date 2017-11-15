@@ -236,7 +236,7 @@ OUR SERVICES SECTION
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  color: #fff;
+  color: #7b8a97;
 }
 
 .service-home h3 {
@@ -559,7 +559,7 @@ TESTIMONIAL SECTION
   display: inline-block;
   line-height: 18px;
   position: relative;
-  color: #7B8A97
+  color: #7B8A97;
 }
 .testimonial2 .client-title:before,
 .testimonial2 .client-title:after{

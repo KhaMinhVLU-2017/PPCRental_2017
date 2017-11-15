@@ -194,6 +194,7 @@
     <Content Include="Content\fonts\flaticon\flaticon.svg" />
     <Content Include="Content\fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\aboutus.jpg" />
     <Content Include="Content\img\admin.jpg" />
     <Content Include="Content\img\annual-thumb.jpg" />
     <Content Include="Content\img\blog\blog-1.jpg" />

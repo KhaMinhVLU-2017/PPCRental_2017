@@ -1509,7 +1509,9 @@ Contact Page
     padding: 15px;
     text-align: center;
 }
-<<<<<<< HEAD
+/* ----------------------------------------------------------------
+About us Page
+-------------------------------------------------------------------*/
 .div_slide:hover .black-background{
     background: transparent;
     border: none; 
@@ -1546,9 +1548,4 @@ Contact Page
     box-shadow: 3px 0px 15px 1px;
     background-color:#F1F0F7;
 }
-.contentAboutusStyle{
-    text-align:center;
-    font-size:xx-large;
-    padding:20%;
->>>>>>> 7117db665b52fa56a149b94f0914cfa99177c3d3
-}
+

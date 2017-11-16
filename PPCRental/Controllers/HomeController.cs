@@ -37,5 +37,29 @@ namespace PPCRental.Controllers
             var result = db.PROPERTies.ToList().Where(s => s.PropertyName.Contains(search));
             return View(result);
         }
+
+        public ActionResult SearchCodeType(string type = "")
+        {
+            var result = db.PROPERTY_TYPE.FirstOrDefault(s=>s.CodeType.Contains(type));
+            var rs = db.PROPERTies.Where(s => s.PropertyType_ID == result.ID).ToList();
+            return View(rs);
+        }
+
+        [HttpGet]
+        public ActionResult GetCodeType()
+        {
+
+            List<ListDB> lstCus = new List<ListDB>();
+            //var result = pms.Database.SqlQuery<CustomerGroup>("MM_CustomerGroup").ToList();
+            var result = db.Database.SqlQuery<ListDB>("PPC_GetCodeType").ToList();
+            foreach (var item in result)
+            {
+                lstCus.Add(new ListDB()
+                {
+                    CodeType = item.CodeType
+                });
+            }
+            return Json(lstCus, JsonRequestBehavior.AllowGet);
+        }
     }
 }

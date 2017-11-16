@@ -109,5 +109,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PPC_GetCodeType" FunctionName="K21T1_Team1Model.Store.PPC_GetCodeType" />
   </EntityContainerMapping>
 </Mapping>

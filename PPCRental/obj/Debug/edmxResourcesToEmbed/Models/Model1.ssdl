@@ -231,6 +231,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="PPC_GetCodeType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="K21T1_Team1ModelStoreContainer">
     <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FEATURE" EntityType="Self.FEATURE" Schema="dbo" store:Type="Tables" />

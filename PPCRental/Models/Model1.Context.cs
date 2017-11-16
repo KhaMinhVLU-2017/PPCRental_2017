@@ -12,6 +12,8 @@ namespace PPCRental.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class PPCRentalEntities : DbContext
     {
@@ -34,5 +36,10 @@ namespace PPCRental.Models
         public virtual DbSet<STREET> STREETs { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WARD> WARDs { get; set; }
+    
+        public virtual ObjectResult<string> PPC_GetCodeType()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("PPC_GetCodeType");
+        }
     }
 }

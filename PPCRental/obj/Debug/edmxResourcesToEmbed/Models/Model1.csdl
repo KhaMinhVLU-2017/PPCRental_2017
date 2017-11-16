@@ -307,5 +307,6 @@
       <End Role="WARD" EntitySet="WARDs" />
       <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
+    <FunctionImport Name="PPC_GetCodeType" ReturnType="Collection(String)" />
   </EntityContainer>
 </Schema>

@@ -42,8 +42,28 @@
         <script src="js/vendor/html5shim.js"></script>
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-
+    @*<script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "/home/getcodetype",
+                datatype: "JSON",
+                type: "Get",
+                success: function (data) {
+                    debugger;
+                    for (var i = 0; i < data.length; i++) {
+                        var opt = new Option(data[i].CustomerGroupID);
+                        $("#").append(opt);
+                    }
+                }
+            });
+        });
+    </script>*@
 </head>
+@{
+    Random rnd = new Random();
+    int usernumber = rnd.Next(50, 5000);
+}
 <body>
 
     <div id="st-container" class="st-container">
@@ -159,10 +179,10 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Apartment</a></li>
-                                                    <li><a href="#">Villa</a></li>
-                                                    <li><a href="#">Office</a></li>
-                                                    <li><a href="#">House</a></li>
+                                                    <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Apartment" })">Apartment</a></li>
+                                                    <li id="2"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Villa" })">Villa</a></li>
+                                                    <li id="3"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Office" })">Office</a></li>
+                                                    <li id="4"><a href="@Url.Action("SearchCodeType", "Home", new { type = "House" })">House</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -376,6 +396,29 @@
                     </div><!-- /.container -->
                 </section><!-- /.cta-section -->
                 <!-- cta end -->
+                <!-- counter start -->
+                <section class="counter-section" data-stellar-background-ratio="0.5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-home"><strong class="timer">207</strong>Dự án</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-man"><strong class="timer">125</strong>Agency</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-man"><strong class="timer">@usernumber</strong>User truy cập</span>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div><!-- /.container -->
+                </section><!-- /.counter-section -->
+                <!-- counter end -->
                 <!-- footer-widget-section start -->
                 <section class="footer-widget-section section-padding">
                     <div class="container">

@@ -475,7 +475,12 @@
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Home\SearchCodeType.cshtml" />
     <Content Include="Views\Home\SearchFeature.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\Detail.cshtml" />
+=======
+    <Content Include="Views\Home\Contact1.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+>>>>>>> 5fcd0cc934f2c6188c854b2cd90da67cf5b8c9e9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

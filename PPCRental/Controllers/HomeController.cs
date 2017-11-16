@@ -30,6 +30,14 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+        public ActionResult Contact1()
+        {
+            return View();
+        }
+        public ActionResult News()
+        {
+            return View();
+        }
 
         [HttpGet]
         public ActionResult Search(string search = "")

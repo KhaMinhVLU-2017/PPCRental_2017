@@ -27,5 +27,9 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+        public ActionResult Tintuc()
+        {
+            return View();
+        }
     }
 }

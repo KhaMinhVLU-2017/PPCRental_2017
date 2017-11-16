@@ -16,7 +16,7 @@
 	padding: 0;
 }
 .img_slide{
-	height: 750px;
+	height: 750px !important;
 }
 @media (max-width:414px){
 	.carousel-inner div img{

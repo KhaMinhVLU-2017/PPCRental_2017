@@ -30,5 +30,12 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Search(string search = "")
+        {
+            var result = db.PROPERTies.ToList().Where(s => s.PropertyName.Contains(search));
+            return View(result);
+        }
     }
 }

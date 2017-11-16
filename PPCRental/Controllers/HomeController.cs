@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PPCRental.Models;
 
 namespace PPCRental.Controllers
 {
     public class HomeController : Controller
     {
+        PPCRentalEntities db = new PPCRentalEntities();
         public ActionResult Index()
         {
-            return View();
+            var result = db.PROPERTies.ToList();
+            return View(result);
         }
 
         public ActionResult About()
@@ -24,10 +27,6 @@ namespace PPCRental.Controllers
             return View();
         }
         public ActionResult Aboutus()
-        {
-            return View();
-        }
-        public ActionResult Tintuc()
         {
             return View();
         }

@@ -1,7 +1,9 @@
-﻿@{
+﻿@model IEnumerable<PPCRental.Models.PROPERTY>
+@{
     ViewBag.Title = "Home Page";
     Random rnd = new Random();
     int usernumber = rnd.Next(50, 5000);
+
 }
 
 
@@ -99,37 +101,80 @@
                     </div>
                 </div> <!-- /.row -->
                 <div class="row content-row">
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N2.jpg"  alt=""></a>
-                            </div>
+                    <br />
+                    <br />
+                    @*@for (int i = 0; i < Model.Count(); i++)
+                    {
+                        <div class="col-md-12">
+                            @for (; i < Model.Count(); i++)
+                            {
+                                <div class="col-sm-4">
+                                    <div class="service">
+                                        <div class="service-thumb-home">
+                                            <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s=>s.ID == i).Images" alt=""></a>
+                                        </div>
 
-                            <h3>Dự án căn hộ Green River</h3>
-                            <p>Khu đất nằm ngay mặt tiền Phạm Thế Hiển<br> quận 8. Thích hợp cho việc xây dựng<br> khu căn hộ cao cấp </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                        <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
+                                        <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    </div>
+                                </div>
+                            }
+                            @if (i + 1 % 3 == 0)
+                            {
+                                break;
+                            }
+
                         </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N6.jpg" alt=""></a>
+                    }*@
+                    @for (var i = 10; i < 16; i++)
+                    {
+                        <div class="col-sm-4">
+                                    <div class="service">
+                                        <div class="service-thumb-home">
+                                            <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt=""></a>
+                                        </div>
+
+                                        <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
+                                        <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    </div>
+                                </div>
+                    }
+                    @*@foreach (var item in Model)
+                        {
+                            <div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/@item.Images"  alt=""></a>
+                                    </div>
+
+                                    <h3>@item.PropertyName</h3>
+                                    <p>@item.Content</p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div> /.col-sm-4
+                        }*@
+                    @*<div class="col-sm-4">
+                            <div class="service">
+                                <div class="service-thumb-home">
+                                    <a href="#"><img src="~/Content/img/Home/N6.jpg" alt=""></a>
+                                </div>
+                                <h3>Khu chung cư cao cấp Sunrise City</h3>
+                                <p>Khu chung cư cao cấp Sunrise City được thiết kế trên diện tích khu đất với độ rộng lên đến 51.000m², tọa lạc tại khu vực quận 7 ven sông Sài Gòn với một cảnh quan thoáng mát, trong lành .khu căn hộ gồm Trung tâm Towers, North Towers, South Towers. </p>
+                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                             </div>
-                            <h3>Khu chung cư cao cấp Sunrise City</h3>
-                            <p>Khu chung cư cao cấp Sunrise City được thiết kế trên diện tích khu đất với độ rộng lên đến 51.000m², tọa lạc tại khu vực quận 7 ven sông Sài Gòn với một cảnh quan thoáng mát, trong lành .khu căn hộ gồm Trung tâm Towers, North Towers, South Towers. </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N1.jpg" alt=""></a>
+                        </div><!-- /.col-sm-4 -->
+                        <div class="col-sm-4">
+                            <div class="service">
+                                <div class="service-thumb-home">
+                                    <a href="#"><img src="~/Content/img/Home/N1.jpg" alt=""></a>
+                                </div>
+                                <h3>Căn hộ cao cấp Quận 2</h3>
+                                <p>Trên mặt tiền đường Mai Chí Thọ quận 2 Thành phố <br> Hồ Chí Minh.  Là dự án hot nhất Quận 2<br> đang mở bán. </p>
+                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                             </div>
-                            <h3>Căn hộ cao cấp Quận 2</h3>
-                            <p>Trên mặt tiền đường Mai Chí Thọ quận 2 Thành phố <br> Hồ Chí Minh.  Là dự án hot nhất Quận 2<br> đang mở bán. </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
+                        </div><!-- /.col-sm-4 -->*@
                 </div> <!-- /.row -->
             </div><!-- /.container -->
         </section>
@@ -179,18 +224,18 @@
         <!-- services end -->
         <!-- featuer-section start -->
         @*<section class="feature-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-7 col-xs-12">
-                        <h2>We do care about your cargo!</h2>
-                        <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                        <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-12">
+                            <h2>We do care about your cargo!</h2>
+                            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                            <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-        </section>*@
+            </section>*@
         <!-- featuer-section end -->
         <!-- why-us-setion start -->
         @*<section class="why-us-setion section-padding">
@@ -210,71 +255,71 @@
                                 <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"><i class="flaticon-logistics18"></i> Chất lượng</a></li>
                                 <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab"><i class="flaticon-logistics16"></i> Dễ giao dịch</a></li>
                                 @*<li role="presentation"><a href="#reliable" aria-controls="reliable" role="tab" data-toggle="tab"><i class="flaticon-broken43"></i> Reliable</a></li>*@
-                            @*</ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active fade in" id="secure">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/secure.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="trackable">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/track.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="fast">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/fast.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>*@
-                                @*<div role="tabpanel" class="tab-pane fade" id="reliable">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/reliable.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>*@
-                            @*</div>
-                        </div><!-- /.css-tab -->
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section>*@
+        @*</ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active fade in" id="secure">
+                    <div class="css-tab-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="~/Content/img/secure.png" alt="">
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6 content-text">
+                                <h3>Continually disintermediate</h3>
+                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.css-tab-content -->
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="trackable">
+                    <div class="css-tab-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="~/Content/img/track.png" alt="">
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6 content-text">
+                                <h3>Continually disintermediate</h3>
+                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.css-tab-content -->
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="fast">
+                    <div class="css-tab-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="~/Content/img/fast.png" alt="">
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6 content-text">
+                                <h3>Continually disintermediate</h3>
+                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.css-tab-content -->
+                </div>*@
+        @*<div role="tabpanel" class="tab-pane fade" id="reliable">
+                <div class="css-tab-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="~/Content/img/reliable.png" alt="">
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 content-text">
+                            <h3>Continually disintermediate</h3>
+                            <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                            <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.css-tab-content -->
+            </div>*@
+        @*</div>
+                            </div><!-- /.css-tab -->
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>*@
         <!-- why-us-setion end -->
         <!-- testimonial-section start -->
         <section class="feature-section section-padding">

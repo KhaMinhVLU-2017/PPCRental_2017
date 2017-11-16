@@ -153,9 +153,13 @@
                             <div class="col-sm-4">
                                 <div class="service">
                                     <div class="service-thumb-home">
-                                        <a href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID"><img src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt=""></a>
+                                        <a  href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID">
+                                            <img class="a_project_hot" src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt="">
+                                            <hr class="project_hot_left" />
+                                            <p class="project_hot_title">PPCRental</p>
+                                            <hr class="project_hot_right"/>
+                                        </a>
                                     </div>
-
                                     <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
                                     <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
                                     <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>

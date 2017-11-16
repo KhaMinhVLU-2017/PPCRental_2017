@@ -21,6 +21,9 @@
 .detail_frist{
 	margin-top:100px;
 }
+.a_project_hot{
+	position: relative;
+}
 @media (max-width:414px){
 	.carousel-inner div img{
 		height: 300px !important;

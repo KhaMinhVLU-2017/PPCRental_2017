@@ -1557,5 +1557,60 @@ Aboutus Page
 }
 
 /* ----------------------------------------------------------------
-Aboutus Page
+Contact Page
 -------------------------------------------------------------------*/
+.contactbackgroud{
+    background-color:#D5D5D8;
+    height: 100%;
+}
+.contact{
+    background-color:#9781F9;
+    color: #f4f6f7;
+    text-align:center;
+    font-size:xx-large;
+    height:75px;
+    padding:20px;
+}
+.contentcontact{
+    margin:5% 10% 5% 5%;
+    width: 90%;
+    height: 80%;
+    border: 2px solid #9781F9;
+    padding: 90px;
+    box-shadow: 3px 0px 15px 1px;
+    background-color:#F1F0F7;
+}
+.contentContactStyle{
+    text-align:center;
+    font-size:xx-large;
+    padding:20%;
+}
+/* ----------------------------------------------------------------
+News Page
+-------------------------------------------------------------------*/
+.newsbackgroud{
+    background-color:#D5D5D8;
+    height: 100%;
+}
+.news{
+    background-color:#9781F9;
+    color: #f4f6f7;
+    text-align:center;
+    font-size:xx-large;
+    height:75px;
+    padding:20px;
+}
+.contentnews{
+    margin:5% 10% 5% 5%;
+    width: 90%;
+    height: 80%;
+    border: 2px solid #9781F9;
+    padding: 90px;
+    box-shadow: 3px 0px 15px 1px;
+    background-color:#F1F0F7;
+}
+.contentnewsStyle{
+    text-align:center;
+    font-size:xx-large;
+    padding:20%;
+}

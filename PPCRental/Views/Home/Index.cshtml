@@ -151,15 +151,17 @@
                         @for (var i = 10; i < 16; i++)
                         {
                             <div class="col-sm-4">
-                                <div class="service">
-                                    <div class="service-thumb-home">
-                                        <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt=""></a>
-                                    </div>
+                                <a href="/Home/Detail">
+                                    <div class="service">
+                                        <div class="service-thumb-home">
+                                            <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt=""></a>
+                                        </div>
 
-                                    <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
-                                    <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
-                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                </div>
+                                        <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
+                                        <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    </div>
+                                </a>
                             </div>
                         }
                         @*@foreach (var item in Model)

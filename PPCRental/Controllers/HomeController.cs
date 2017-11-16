@@ -68,5 +68,9 @@ namespace PPCRental.Controllers
             }
             return Json(lstCus, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult Detail(int id)
+        {
+            return View();
+        }
     }
 }

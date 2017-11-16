@@ -1509,6 +1509,7 @@ Contact Page
     padding: 15px;
     text-align: center;
 }
+<<<<<<< HEAD
 .div_slide:hover .black-background{
     background: transparent;
     border: none; 
@@ -1517,8 +1518,8 @@ Contact Page
 .div_slide:not(:hover) .black-background{
     transition: 1s;
 }
-.div_slide:hover{
-  text-shadow:  5px 5px 15px white;
+.div_slide:hover {
+    text-shadow: 5px 5px 15px white;
 }
 .aboutbackgroud{
     background-color:#D5D5D8;
@@ -1548,5 +1549,5 @@ Contact Page
     text-align:center;
     font-size:xx-large;
     padding:20%;
-
+>>>>>>> 7117db665b52fa56a149b94f0914cfa99177c3d3
 }

@@ -621,10 +621,11 @@ PARTNER SECTION
 .partner-section .row-content {
   margin-top: 55px;
 }
-
+.img_slide {
+    height: 750px !important;
+}
 .partner-carousel-navigation {
 }
-
 .partner-carousel-navigation .prev,
 .partner-carousel-navigation .next {
   position: absolute;

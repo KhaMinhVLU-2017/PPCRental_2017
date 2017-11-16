@@ -1,399 +1,441 @@
-﻿@{
+﻿@model IEnumerable<PPCRental.Models.PROPERTY>
+@{
     ViewBag.Title = "Home Page";
-    Random rnd = new Random();
-    int usernumber = rnd.Next(50, 5000);
+
 }
 
+<body>
+    <div class="st-pusher">
+        <div class="st-content">
+            <div id="main-carousel" class="carousel slide hero-slide col-md-12 meo_slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#main-carousel" data-slide-to="1"></li>
+                    <li data-target="#main-carousel" data-slide-to="2"></li>
+                    <li data-target="#main-carousel" data-slide-to="3"></li>
+                    <li data-target="#main-carousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="img_slide" src="~/Content/img/slider/slide5.jpg" alt="slide5.jpg">
+                        <!--Slide Image-->
+                        <div class="container slideblur">
+                            <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
+                                <h1 class="animated lightSpeedIn black-background">UY TÍN- ĐẢM BẢO- DỄ GIAO DỊCH</h1>
+                            </div>
+                            <!--.carousel-caption-->
+                        </div>
+                        <!--.container-->
+                    </div>
+                    <!--.item-->
+                    <div class="item">
+                        <img class="img_slide" src="~/Content/img/slider/slide3.jpg" alt="slide3.jpg">
+                        <!--Slide Image-->
+                        <div class="container slideblur">
+                            <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
+                                <h1 class="animated bounceIn black-background">Đất vàng đầu tư – An cư trọn đời</h1>
+                            </div>
+                            <!--.carousel-caption-->
+                        </div>
+                        <!--.container-->
+                    </div>
+                    <div class="item">
+                        <img class="img_slide" src="~/Content/img/slider/slide7.jpg" alt="slide7.jpg">
+                        <!--Slide Image-->
+                        <div class="container slideblur">
+                            <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
+                                <h1 class="animated zoomIn black-background">Chúng tôi sẽ mang lại cho bạn không gian sống hoàn hảo</h1>
+                            </div>
+                            <!--.carousel-caption-->
+                        </div>
+                        <!--.container-->
+                    </div>
+                    <div class="item">
+                        <img class="img_slide" src="~/Content/img/slider/slide8.jpg" alt="slide8.jpg">
+                        <!--Slide Image-->
+                        <div class="container slideblur">
+                            <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
+                                <h1 class="animated fadeIn black-background">Tôn tạo giá trị  – sống Mộc cùng với thiên nhiên</h1>
+                            </div>
+                            <!--.carousel-caption-->
+                        </div>
+                        <!--.container-->
+                    </div>
+                    <div class="item">
+                        <img class="img_slide" src="~/Content/img/slider/slide6.jpg" alt="slide6.jpg">
+                        <!--Slide Image-->
+                        <div class="container slideblur">
+                            <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
+                                <h1 class="animated flipInX black-background">Tận hưởng tất cả những tiện ích vượt trội</h1>
+                            </div>
+                            <!--.carousel-caption-->
+                        </div>
+                        <!--.container-->
+                    </div>
 
-<div class="st-pusher">
-    <div class="st-content">
-        <div id="main-carousel" class="carousel slide hero-slide col-md-12 meo_slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#main-carousel" data-slide-to="1"></li>
-                <li data-target="#main-carousel" data-slide-to="2"></li>
-                <li data-target="#main-carousel" data-slide-to="3"></li>
-                <li data-target="#main-carousel" data-slide-to="4"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="img_slide" src="~/Content/img/slider/slide5.jpg" alt="slide5.jpg">
-                    <!--Slide Image-->
-                    <div class="container slideblur">
-                        <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
-                            <h1 class="animated lightSpeedIn black-background">UY TÍN- ĐẢM BẢO- DỄ GIAO DỊCH</h1>
-                        </div>
-                        <!--.carousel-caption-->
-                    </div>
-                    <!--.container-->
+                    <!--.item-->
                 </div>
-                <!--.item-->
-                <div class="item">
-                    <img class="img_slide" src="~/Content/img/slider/slide3.jpg" alt="slide3.jpg">
-                    <!--Slide Image-->
-                    <div class="container slideblur">
-                        <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
-                            <h1 class="animated bounceIn black-background">Đất vàng đầu tư – An cư trọn đời</h1>
-                        </div>
-                        <!--.carousel-caption-->
-                    </div>
-                    <!--.container-->
-                </div>
-                <div class="item">
-                    <img class="img_slide" src="~/Content/img/slider/slide7.jpg" alt="slide7.jpg">
-                    <!--Slide Image-->
-                    <div class="container slideblur">
-                        <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
-                            <h1 class="animated zoomIn black-background">Chúng tôi sẽ mang lại cho bạn không gian sống hoàn hảo</h1>
-                        </div>
-                        <!--.carousel-caption-->
-                    </div>
-                    <!--.container-->
-                </div>
-                <div class="item">
-                    <img class="img_slide" src="~/Content/img/slider/slide8.jpg" alt="slide8.jpg">
-                    <!--Slide Image-->
-                    <div class="container slideblur">
-                        <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
-                            <h1 class="animated fadeIn black-background">Tôn tạo giá trị  – sống Mộc cùng với thiên nhiên</h1>
-                        </div>
-                        <!--.carousel-caption-->
-                    </div>
-                    <!--.container-->
-                </div>
-                <div class="item">
-                    <img class="img_slide" src="~/Content/img/slider/slide6.jpg" alt="slide6.jpg">
-                    <!--Slide Image-->
-                    <div class="container slideblur">
-                        <div onmouseout="NotBlur()" onmouseover="blurSlide()" class="carousel-caption div_slide">
-                            <h1 class="animated flipInX black-background">Tận hưởng tất cả những tiện ích vượt trội</h1>
-                        </div>
-                        <!--.carousel-caption-->
-                    </div>
-                    <!--.container-->
-                </div>
-
-                <!--.item-->
+                <!--.carousel-inner-->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <!--.carousel-inner-->
-            <!-- Controls -->
-            <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!-- #main-carousel-->
-        <!-- services start -->
-        <section class="service-homerent section-padding">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="section-title">Dự án Hot</h2>
-                        <span class="section-sub">Những dự án được nhiều người quan tâm nhất</span>
-                    </div>
-                </div> <!-- /.row -->
-                <div class="row content-row">
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N2.jpg"  alt=""></a>
-                            </div>
-
-                            <h3>Dự án căn hộ Green River</h3>
-                            <p>Khu đất nằm ngay mặt tiền Phạm Thế Hiển<br> quận 8. Thích hợp cho việc xây dựng<br> khu căn hộ cao cấp </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N6.jpg" alt=""></a>
-                            </div>
-                            <h3>Khu chung cư cao cấp Sunrise City</h3>
-                            <p>Khu chung cư cao cấp Sunrise City được thiết kế trên diện tích khu đất với độ rộng lên đến 51.000m², tọa lạc tại khu vực quận 7 ven sông Sài Gòn với một cảnh quan thoáng mát, trong lành .khu căn hộ gồm Trung tâm Towers, North Towers, South Towers. </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N1.jpg" alt=""></a>
-                            </div>
-                            <h3>Căn hộ cao cấp Quận 2</h3>
-                            <p>Trên mặt tiền đường Mai Chí Thọ quận 2 Thành phố <br> Hồ Chí Minh.  Là dự án hot nhất Quận 2<br> đang mở bán. </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                </div> <!-- /.row -->
-            </div><!-- /.container -->
-        </section>
-        <section class="testimonial-section section-padding">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="section-title">Dự án mới</h2>
-                        <span class="section-sub">Những dự án mới nhất được cập nhật liên tục</span>
-                    </div>
-                </div> <!-- /.row -->
-                <div class="row content-row">
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N3.jpg" alt=""></a>
-                            </div>
-
-                            <h3>Khu phức hợp Saigon Airport Plaza</h3>
-                            <p>Sài Gòn Airport Plaza là điểm nhấn đầu tiên ở khu vực Tân Bình ngay tại nút giao thông quan trọng Sân bay quốc tế Tân Sơn Nhất khu phức hợp gồm khách sạn, văn phòng, căn hộ, trung tâm thương mại </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N5.jpg" alt=""></a>
-                            </div>
-                            <h3>Dự án Léman Luxury Apartments</h3>
-                            <p>Tòa nhà 24 tầng giữa trung tâm Quận 3<br> trên một khuôn viên thoáng đãng có hai mặt tiền đường Trương Định và Nguyễn Đình Chiểu<br> khu căn hộ cao và cấp sang trọng </p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <div class="service-thumb-home">
-                                <a href="#"><img src="~/Content/img/Home/N4.jpg" alt=""></a>
-                            </div>
-                            <h3>Dự án MILLENNIUM</h3>
-                            <p>MILLENNIUM sở hữu vị trí đắt giá tại trung tâm thành phố Hồ Chí Minh tọa lạc tại Bến Vân Đồn quận 4<br> là khu phức hợp với văn phòng và căn hộ cao cấp</p>
-                            <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                        </div>
-                    </div><!-- /.col-sm-4 -->
-                </div> <!-- /.row -->
-            </div><!-- /.container -->
-        </section>
-        <!-- services end -->
-        <!-- featuer-section start -->
-        @*<section class="feature-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-7 col-xs-12">
-                        <h2>We do care about your cargo!</h2>
-                        <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                        <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
-
+            <!-- #main-carousel-->
+            <section class="feature-section section-padding">
+                <div class="col-sm-2">
+                    Nhóm khách hàng
+                    </br>
+                    <select class="form-control" id="op1" name="CustomerGroupID">
+                        @*<option selected="selected"></option>*@
+                    </select>
                 </div>
-            </div>
-        </section>*@
-        <!-- featuer-section end -->
-        <!-- why-us-setion start -->
-        @*<section class="why-us-setion section-padding">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-xs-12">
-                        <h2 class="section-title">Why Chose Us</h2>
-                        <span class="section-sub">Monotonectally innovate cross-media<br> resources without seamless</span>
-                    </div>
-                </div> <!-- /.row -->
-                <div class="row content-row">
-                    <div class="col-md-12">
-                        <div class="css-tab" role="tabpanel">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#secure" aria-controls="secure" role="tab" data-toggle="tab"><i class="flaticon-logistics15"></i> Uy tín</a></li>
-                                <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"><i class="flaticon-logistics18"></i> Chất lượng</a></li>
-                                <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab"><i class="flaticon-logistics16"></i> Dễ giao dịch</a></li>
-                                @*<li role="presentation"><a href="#reliable" aria-controls="reliable" role="tab" data-toggle="tab"><i class="flaticon-broken43"></i> Reliable</a></li>*@
-                            @*</ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active fade in" id="secure">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/secure.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
+                <div class="col-sm-2">
+                    Nhóm khách hàng
+                    </br>
+                    <select class="form-control" id="op1" name="CustomerGroupID">
+                        @*<option selected="selected"></option>*@
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    Nhóm khách hàng
+                    </br>
+                    <select class="form-control" id="op1" name="CustomerGroupID">
+                        @*<option selected="selected"></option>*@
+                    </select>
+                </div>
+            </section>
+            <!-- services start -->
+            <section class="service-homerent section-padding">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="section-title">Dự án Hot</h2>
+                            <span class="section-sub">Những dự án được nhiều người quan tâm nhất</span>
+                        </div>
+                    </div> <!-- /.row -->
+                    <div class="row content-row">
+                        <br />
+                        <br />
+                        @*@for (int i = 0; i < Model.Count(); i++)
+                            {
+                                <div class="col-md-12">
+                                    @for (; i < Model.Count(); i++)
+                                    {
+                                        <div class="col-sm-4">
+                                            <div class="service">
+                                                <div class="service-thumb-home">
+                                                    <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s=>s.ID == i).Images" alt=""></a>
+                                                </div>
+
+                                                <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
+                                                <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                            </div>
+                                        </div>
+                                    }
+                                    @if (i + 1 % 3 == 0)
+                                    {
+                                        break;
+                                    }
+
                                 </div>
-                                <div role="tabpanel" class="tab-pane fade" id="trackable">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/track.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="fast">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/fast.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>*@
-                                @*<div role="tabpanel" class="tab-pane fade" id="reliable">
-                                    <div class="css-tab-content">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <img src="~/Content/img/reliable.png" alt="">
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 content-text">
-                                                <h3>Continually disintermediate</h3>
-                                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
-                                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.css-tab-content -->
-                                </div>*@
-                            @*</div>
-                        </div><!-- /.css-tab -->
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section>*@
-        <!-- why-us-setion end -->
-        <!-- testimonial-section start -->
-        <section class="feature-section section-padding">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="section-title">We are Trusted By</h2>
-                        <span class="section-sub">Monotonectally innovate cross-media<br> resources without seamless</span>
-                    </div>
-                </div> <!-- /.row -->
-                <div class="row row-content">
-                    <div class="col-md-12">
-                        <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#testimonial-carousel" data-slide-to="1"></li>
-                                <li data-target="#testimonial-carousel" data-slide-to="2"></li>
-                            </ol>
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div class="testimonial-content">
-                                        <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
-                                        <span class="client-title">- Deanna Lewis -</span>
-                                    </div><!-- /.testimonial-content -->
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-content">
-                                        <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
-                                        <span class="client-title">- Deanna Lewis -</span>
-                                    </div><!-- /.testimonial-content -->
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-content">
-                                        <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
-                                        <span class="client-title">- Deanna Lewis -</span>
-                                    </div><!-- /.testimonial-content -->
+                            }*@
+                        @for (var i = 10; i < 16; i++)
+                        {
+                            <div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt=""></a>
+                                    </div>
+
+                                    <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
+                                    <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                 </div>
                             </div>
-                        </div><!-- /.carousel -->
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
-                <hr>
-                <div class="partner-section">
+                        }
+                        @*@foreach (var item in Model)
+                            {
+                                <div class="col-sm-4">
+                                    <div class="service">
+                                        <div class="service-thumb-home">
+                                            <a href="#"><img src="~/Content/img/Home/@item.Images"  alt=""></a>
+                                        </div>
+
+                                        <h3>@item.PropertyName</h3>
+                                        <p>@item.Content</p>
+                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    </div>
+                                </div> /.col-sm-4
+                            }*@
+                        @*<div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/N6.jpg" alt=""></a>
+                                    </div>
+                                    <h3>Khu chung cư cao cấp Sunrise City</h3>
+                                    <p>Khu chung cư cao cấp Sunrise City được thiết kế trên diện tích khu đất với độ rộng lên đến 51.000m², tọa lạc tại khu vực quận 7 ven sông Sài Gòn với một cảnh quan thoáng mát, trong lành .khu căn hộ gồm Trung tâm Towers, North Towers, South Towers. </p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div><!-- /.col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/N1.jpg" alt=""></a>
+                                    </div>
+                                    <h3>Căn hộ cao cấp Quận 2</h3>
+                                    <p>Trên mặt tiền đường Mai Chí Thọ quận 2 Thành phố <br> Hồ Chí Minh.  Là dự án hot nhất Quận 2<br> đang mở bán. </p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div><!-- /.col-sm-4 -->*@
+                    </div> <!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+            <section class="testimonial-section section-padding">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="section-title">Dự án mới</h2>
+                            <span class="section-sub">Những dự án mới nhất được cập nhật liên tục</span>
+                        </div>
+                    </div> <!-- /.row -->
+                    <div class="row content-row">
+                        <div class="col-sm-4">
+                            <div class="service">
+                                <div class="service-thumb-home">
+                                    <a href="#"><img src="~/Content/img/Home/N3.jpg" alt=""></a>
+                                </div>
+
+                                <h3>Khu phức hợp Saigon Airport Plaza</h3>
+                                <p>Sài Gòn Airport Plaza là điểm nhấn đầu tiên ở khu vực Tân Bình ngay tại nút giao thông quan trọng Sân bay quốc tế Tân Sơn Nhất khu phức hợp gồm khách sạn, văn phòng, căn hộ, trung tâm thương mại </p>
+                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                            </div>
+                        </div><!-- /.col-sm-4 -->
+                        <div class="col-sm-4">
+                            <div class="service">
+                                <div class="service-thumb-home">
+                                    <a href="#"><img src="~/Content/img/Home/N5.jpg" alt=""></a>
+                                </div>
+                                <h3>Dự án Léman Luxury Apartments</h3>
+                                <p>Tòa nhà 24 tầng giữa trung tâm Quận 3<br> trên một khuôn viên thoáng đãng có hai mặt tiền đường Trương Định và Nguyễn Đình Chiểu<br> khu căn hộ cao và cấp sang trọng </p>
+                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                            </div>
+                        </div><!-- /.col-sm-4 -->
+                        <div class="col-sm-4">
+                            <div class="service">
+                                <div class="service-thumb-home">
+                                    <a href="#"><img src="~/Content/img/Home/N4.jpg" alt=""></a>
+                                </div>
+                                <h3>Dự án MILLENNIUM</h3>
+                                <p>MILLENNIUM sở hữu vị trí đắt giá tại trung tâm thành phố Hồ Chí Minh tọa lạc tại Bến Vân Đồn quận 4<br> là khu phức hợp với văn phòng và căn hộ cao cấp</p>
+                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                            </div>
+                        </div><!-- /.col-sm-4 -->
+                    </div> <!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+            <!-- services end -->
+            <!-- featuer-section start -->
+            @*<section class="feature-section section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7 col-xs-12">
+                                <h2>We do care about your cargo!</h2>
+                                <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>*@
+            <!-- featuer-section end -->
+            <!-- why-us-setion start -->
+            @*<section class="why-us-setion section-padding">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-xs-12">
+                            <h2 class="section-title">Why Chose Us</h2>
+                            <span class="section-sub">Monotonectally innovate cross-media<br> resources without seamless</span>
+                        </div>
+                    </div> <!-- /.row -->
+                    <div class="row content-row">
+                        <div class="col-md-12">
+                            <div class="css-tab" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#secure" aria-controls="secure" role="tab" data-toggle="tab"><i class="flaticon-logistics15"></i> Uy tín</a></li>
+                                    <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"><i class="flaticon-logistics18"></i> Chất lượng</a></li>
+                                    <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab"><i class="flaticon-logistics16"></i> Dễ giao dịch</a></li>
+                                    @*<li role="presentation"><a href="#reliable" aria-controls="reliable" role="tab" data-toggle="tab"><i class="flaticon-broken43"></i> Reliable</a></li>*@
+            @*</ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active fade in" id="secure">
+                        <div class="css-tab-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="~/Content/img/secure.png" alt="">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 content-text">
+                                    <h3>Continually disintermediate</h3>
+                                    <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                    <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                                </div><!-- /.col-md-6 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.css-tab-content -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="trackable">
+                        <div class="css-tab-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="~/Content/img/track.png" alt="">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 content-text">
+                                    <h3>Continually disintermediate</h3>
+                                    <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                    <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                                </div><!-- /.col-md-6 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.css-tab-content -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="fast">
+                        <div class="css-tab-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="~/Content/img/fast.png" alt="">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 content-text">
+                                    <h3>Continually disintermediate</h3>
+                                    <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                    <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                                </div><!-- /.col-md-6 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.css-tab-content -->
+                    </div>*@
+            @*<div role="tabpanel" class="tab-pane fade" id="reliable">
+                    <div class="css-tab-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="~/Content/img/reliable.png" alt="">
+                            </div><!-- /.col-md-6 -->
+                            <div class="col-md-6 content-text">
+                                <h3>Continually disintermediate</h3>
+                                <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                                <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            </div><!-- /.col-md-6 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.css-tab-content -->
+                </div>*@
+            @*</div>
+                                </div><!-- /.css-tab -->
+                            </div><!-- /.col-md-12 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </section>*@
+            <!-- why-us-setion end -->
+            <!-- testimonial-section start -->
+            @*<section class="feature-section section-padding">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="section-title">We are Trusted By</h2>
+                            <span class="section-sub">Monotonectally innovate cross-media<br> resources without seamless</span>
+                        </div>
+                    </div> <!-- /.row -->
                     <div class="row row-content">
                         <div class="col-md-12">
-                            <div class="owl-carousel partner-carousel">
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p1.jpg" alt=""></a>
+                            <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+                                    <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="testimonial-content">
+                                            <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+                                            <span class="client-title">- Deanna Lewis -</span>
+                                        </div><!-- /.testimonial-content -->
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+                                            <span class="client-title">- Deanna Lewis -</span>
+                                        </div><!-- /.testimonial-content -->
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+                                            <span class="client-title">- Deanna Lewis -</span>
+                                        </div><!-- /.testimonial-content -->
+                                    </div>
                                 </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p2.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p3.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p4.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p5.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p1.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p2.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p3.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                    <a href="#"><img src="~/Content/img/partner/p4.jpg" alt=""></a>
-                                </div>
-                            </div>
-
-                            <div class="partner-carousel-navigation">
-                                <a class="prev"><i class="fa fa-angle-left"></i></a>
-                                <a class="next"><i class="fa fa-angle-right"></i></a>
-                            </div><!-- /.partner-carousel-navigation -->
-
+                            </div><!-- /.carousel -->
                         </div><!-- /.col-md-12 -->
                     </div><!-- /.row -->
-                </div><!-- /.partner-section -->
-            </div><!-- /.container -->
+                    <hr>
+                    <div class="partner-section">
+                        <div class="row row-content">
+                            <div class="col-md-12">
+                                <div class="owl-carousel partner-carousel">
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#"><img src="~/Content/img/partner/p4.jpg" alt=""></a>
+                                    </div>
+                                </div>
+
+                                <div class="partner-carousel-navigation">
+                                    <a class="prev"><i class="fa fa-angle-left"></i></a>
+                                    <a class="next"><i class="fa fa-angle-right"></i></a>
+                                </div><!-- /.partner-carousel-navigation -->
+
+                            </div><!-- /.col-md-12 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.partner-section -->*@
+        </div><!-- /.container -->
         </section>
         <!-- testimonial-section end -->
-        <!-- counter start -->
-        <section class="counter-section" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="counter-block">
-                            <span class="count-description flaticon-home"><strong class="timer">207</strong>Dự án</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="counter-block">
-                            <span class="count-description flaticon-man"><strong class="timer">125</strong>Agency</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="counter-block">
-                            <span class="count-description flaticon-man"><strong class="timer">@usernumber</strong>User truy cập</span>
-                        </div>
-                    </div>
-                </div> <!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.counter-section -->
-        <!-- counter end -->
-
-
     </div> <!-- .st-content -->
-</div> <!-- .st-pusher -->
-<!-- Preloader -->
-<div id="preloader">
-    <div id="status">
-        <div class="status-mes"></div>
+    </div> <!-- .st-pusher -->
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="status-mes"></div>
+        </div>
     </div>
-</div>
+</body>
 

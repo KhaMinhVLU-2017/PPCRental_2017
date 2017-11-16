@@ -42,8 +42,28 @@
         <script src="js/vendor/html5shim.js"></script>
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-
+    @*<script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "/home/getcodetype",
+                datatype: "JSON",
+                type: "Get",
+                success: function (data) {
+                    debugger;
+                    for (var i = 0; i < data.length; i++) {
+                        var opt = new Option(data[i].CustomerGroupID);
+                        $("#").append(opt);
+                    }
+                }
+            });
+        });
+    </script>*@
 </head>
+@{
+    Random rnd = new Random();
+    int usernumber = rnd.Next(50, 5000);
+}
 <body>
 
     <div id="st-container" class="st-container">
@@ -91,8 +111,8 @@
                     </nav><!-- /.top-bar -->
                     <div id="search">
                         <button type="button" class="close">×</button>
-                        <form>
-                            <input type="search" value="" placeholder="type here"/>
+                        <form role="search" action="@Url.Action("Search","Home")" method="get">
+                            <input type="search" value="" placeholder="type here" name="search"/>
                             <button type="submit" class="btn btn-primary">Tìm kiếm</button>
                         </form>
                     </div>
@@ -121,7 +141,7 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <!-- Home -->
                                     <li class="dropdown active">
-                                    <li><a href="contact.html">Trang chủ</a></li>
+                                    <li><a href="/home/index">Trang chủ</a></li>
                                     @*<a href="index.html">Trang chủ <span class="fa fa-angle-down"></span></a>*@
                                     <!-- submenu-wrapper -->
                                     @*<div class="submenu-wrapper">
@@ -150,7 +170,7 @@
                                             </div>
                                             <!-- /submenu-wrapper -->
                                         </li>*@
-                                    <li><a href="contact.html">Giới thiệu</a></li>
+                                    <li><a href="/home/aboutus">Giới thiệu</a></li>
                                     <!-- /Pages -->
                                     <!-- Services -->
                                     <li class="dropdown">
@@ -159,10 +179,10 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Apartment</a></li>
-                                                    <li><a href="#">Villa</a></li>
-                                                    <li><a href="#">Office</a></li>
-                                                    <li><a href="#">House</a></li>
+                                                    <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Apartment" })">Apartment</a></li>
+                                                    <li id="2"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Villa" })">Villa</a></li>
+                                                    <li id="3"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Office" })">Office</a></li>
+                                                    <li id="4"><a href="@Url.Action("SearchCodeType", "Home", new { type = "House" })">House</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -200,17 +220,17 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Ban công</a></li>
-                                                    <li><a href="#">Chỗ đậu xe</a></li>
-                                                    <li><a href="#">Thang máy</a></li>
-                                                    <li><a href="#">Vườn</a></li>
-                                                    <li><a href="#">Phòng tập Gym</a></li>
-                                                    <li><a href="#">Nhà bếp</a></li>
-                                                    <li><a href="#">Phòng giặc ủi</a></li>
-                                                    <li><a href="#">Cho nuôi thú cưng</a></li>
-                                                    <li><a href="#">Hồ bơi</a></li>
-                                                    <li><a href="#">Sàn gỗ</a></li>
-                                                    <li><a href="#">Bảo vệ</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 1 })">Ban công</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 2 })">Chỗ đậu xe</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 3 })">Thang máy</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 4 })">Vườn</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 5 })">Phòng tập Gym</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 6 })">Nhà bếp</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 7 })">Phòng giặc ủi</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 8 })">Cho nuôi thú cưng</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 9 })">Hồ bơi</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 10 })">Sàn gỗ</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 11 })">Bảo vệ</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -376,6 +396,29 @@
                     </div><!-- /.container -->
                 </section><!-- /.cta-section -->
                 <!-- cta end -->
+                <!-- counter start -->
+                <section class="counter-section" data-stellar-background-ratio="0.5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-home"><strong class="timer">207</strong>Dự án</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-man"><strong class="timer">125</strong>Agency</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="counter-block">
+                                    <span class="count-description flaticon-man"><strong class="timer">@usernumber</strong>User truy cập</span>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div><!-- /.container -->
+                </section><!-- /.counter-section -->
+                <!-- counter end -->
                 <!-- footer-widget-section start -->
                 <section class="footer-widget-section section-padding">
                     <div class="container">
@@ -413,7 +456,6 @@
                                         <h3>Service</h3>
                                         <p>Hỗ trợ kĩ thuật</p>
                                         <span class="tel">0938 xxx xxx</span>
-                                        
                                     </div><!-- /.footer-widget -->
                                 </div><!-- /.col-md-4 -->
                                 <div class="col-md-4 col-sm-4">

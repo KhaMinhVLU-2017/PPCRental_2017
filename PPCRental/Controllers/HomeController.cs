@@ -45,6 +45,13 @@ namespace PPCRental.Controllers
             return View(rs);
         }
 
+        public ActionResult SearchFeature(int featureid)
+        {
+            var result = db.FEATUREs.FirstOrDefault(s => s.ID == featureid);
+            var ft = db.PROPERTY_FEATURE.Where(s=>s.Feature_ID == result.ID).ToList();
+            //var rs = db.PROPERTies.Where().ToList();
+            return View(ft);
+        }
         [HttpGet]
         public ActionResult GetCodeType()
         {

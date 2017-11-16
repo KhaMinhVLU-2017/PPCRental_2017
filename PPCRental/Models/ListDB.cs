@@ -9,4 +9,6 @@ namespace PPCRental.Models
     {
         public string CodeType { get; set; }
     }
+
+
 }

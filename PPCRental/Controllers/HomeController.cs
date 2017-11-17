@@ -53,8 +53,9 @@ namespace PPCRental.Controllers
             return View(rs);
         }
 
-        public ActionResult SearchFeature(int featureid)
+        public ActionResult SearchFeature(int featureid, string name ="")
         {
+            ViewBag.Name = name;
             var result = db.FEATUREs.FirstOrDefault(s => s.ID == featureid);
             var ft = db.PROPERTY_FEATURE.Where(s=>s.Feature_ID == result.ID).ToList();
             //var rs = db.PROPERTies.Where().ToList();

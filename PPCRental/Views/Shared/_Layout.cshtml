@@ -52,17 +52,21 @@
                 success: function (data) {
                     debugger;
                     for (var i = 0; i < data.length; i++) {
-                        var opt = new Option(data[i].CustomerGroupID);
-                        $("#").append(opt);
+                        var opt = new Option(data[i].CodeType);
+                        $("#type").append(opt);
                     }
                 }
             });
         });
     </script>*@
 </head>
+@using PPCRental.Models
 @{
     Random rnd = new Random();
     int usernumber = rnd.Next(50, 5000);
+    PPCRentalEntities db = new PPCRentalEntities();
+    List<PROPERTY_TYPE> Result = new List<PROPERTY_TYPE>();
+    Result = db.PROPERTY_TYPE.ToList();
 }
 <body>
 
@@ -178,11 +182,11 @@
                                         <!-- submenu-wrapper -->
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
-                                                <ul class="dropdown-menu">
-                                                    <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Apartment" })">Apartment</a></li>
-                                                    <li id="2"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Villa" })">Villa</a></li>
-                                                    <li id="3"><a href="@Url.Action("SearchCodeType", "Home", new { type = "Office" })">Office</a></li>
-                                                    <li id="4"><a href="@Url.Action("SearchCodeType", "Home", new { type = "House" })">House</a></li>
+                                                <ul class="dropdown-menu" id="type">
+                                                    @foreach (var item in Result)
+                                                    {
+                                                        <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>
@@ -220,17 +224,17 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 1 })">Ban công</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 2 })">Chỗ đậu xe</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 3 })">Thang máy</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 4 })">Vườn</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 5 })">Phòng tập Gym</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 6 })">Nhà bếp</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 7 })">Phòng giặc ủi</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 8 })">Cho nuôi thú cưng</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 9 })">Hồ bơi</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 10 })">Sàn gỗ</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 11 })">Bảo vệ</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 1, name = "Ban công" })">Ban công</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 2, name = "Chỗ đậu xe" })">Chỗ đậu xe</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 3, name = "Thang máy" })">Thang máy</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 4, name = "Vườn" })">Vườn</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 5, name = "Phòng tập Gym" })">Phòng tập Gym</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 6, name = "Nhà bếp" })">Nhà bếp</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 7, name = "Phòng giặc ủi" })">Phòng giặc ủi</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 8, name = "Cho nuôi thú cưng" })">Cho nuôi thú cưng</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 9, name = "Hồ bơi" })">Hồ bơi</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 10, name = "Sàn gỗ" })">Sàn gỗ</a></li>
+                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 11, name = "Bảo vệ" })">Bảo vệ</a></li>
                                                 </ul>
                                             </div>
                                         </div>

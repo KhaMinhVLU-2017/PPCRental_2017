@@ -79,7 +79,8 @@ namespace PPCRental.Controllers
         }
         public ActionResult Detail(int id)
         {
-            return View();
+            PROPERTY meo = db.PROPERTies.FirstOrDefault(s => s.ID == id);
+            return View(meo);
         }
     }
 }

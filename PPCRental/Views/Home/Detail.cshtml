@@ -1,4 +1,5 @@
-﻿
+﻿@using PPCRental.Models
+@model PROPERTY
 @{
 ViewBag.Title = "Detail";
 Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,6 +10,31 @@ Layout = "~/Views/Shared/_Layout.cshtml";
 		<header class="col-md-12">
 			<h1>Thông tin chi tiết dự án</h1>
 		</header>
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <p>@Model.PropertyName</p>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <p>@Model.STREET.StreetName</p>
+                        <p>@Model.WARD.WardName @Model.DISTRICT.DistrictName</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.Price @Model.UnitPrice</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="detail_ul_content">
+                        <li>Beds: @Model.BedRoom</li>
+                        <li>Baths: @Model.BathRoom</li>
+                        <li>ParkingPlace: @Model.PackingPlace</li>
+                        <li>Area: @Model.Area</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
 	</div>
 </div>
 

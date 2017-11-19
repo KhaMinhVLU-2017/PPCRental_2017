@@ -35,7 +35,6 @@
     <link href="~/Content/css/style.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="~/Content/css/responsive.css" rel="stylesheet">
-
     <script src="~/Content/js/vendor/modernizr-2.8.1.min.js"></script>
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,6 +67,10 @@
     PPCRentalEntities db = new PPCRentalEntities();
     List<PROPERTY_TYPE> Result = new List<PROPERTY_TYPE>();
     Result = db.PROPERTY_TYPE.ToList();
+    List<FEATURE> feature = new List<FEATURE>();
+    feature = db.FEATUREs.ToList();
+    List<DISTRICT> district = new List<DISTRICT>();
+    district = db.DISTRICTs.ToList();
 }
 <body>
 
@@ -186,7 +189,7 @@
                                                 <ul class="dropdown-menu" id="type">
                                                     @foreach (var item in Result)
                                                     {
-                                                        <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                                                        <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
                                                     }
                                                 </ul>
                                             </div>
@@ -199,21 +202,9 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Quận 1</a></li>
-                                                    <li><a href="#">Quận 2</a></li>
-                                                    <li><a href="#">Quận 3</a></li>
-                                                    <li><a href="#">Quận 4</a></li>
-                                                    <li><a href="#">Quận 5</a></li>
-                                                    <li><a href="#">Quận 6</a></li>
-                                                    <li><a href="#">Quận 7</a></li>
-                                                    <li><a href="#">Quận 8</a></li>
-                                                    <li><a href="#">Quận 9</a></li>
-                                                    <li><a href="#">Quận 10</a></li>
-                                                    <li><a href="#">Quận 11</a></li>
-                                                    <li><a href="#">Quận 12</a></li>
-                                                    <li><a href="#">Quận Tân Bình</a></li>
-                                                    <li><a href="#">Quận Phú Nhuận</a></li>
-                                                    <li><a href="#">Quận Bình Thạnh</a></li>
+                                                    @for(int i = 36 ; i< 55; i++){
+                                                         <li><a href="@Url.Action("SearchDistrict", "Home", new { districtid = i, name = @district.FirstOrDefault(s=>s.ID == i).DistrictName.ToString() })">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>
@@ -225,17 +216,9 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 1, name = "Ban công" })">Ban công</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 2, name = "Chỗ đậu xe" })">Chỗ đậu xe</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 3, name = "Thang máy" })">Thang máy</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 4, name = "Vườn" })">Vườn</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 5, name = "Phòng tập Gym" })">Phòng tập Gym</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 6, name = "Nhà bếp" })">Nhà bếp</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 7, name = "Phòng giặc ủi" })">Phòng giặc ủi</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 8, name = "Cho nuôi thú cưng" })">Cho nuôi thú cưng</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 9, name = "Hồ bơi" })">Hồ bơi</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 10, name = "Sàn gỗ" })">Sàn gỗ</a></li>
-                                                    <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = 11, name = "Bảo vệ" })">Bảo vệ</a></li>
+                                                    @foreach(var item in feature){
+                                                        <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = @item.ID, name = @item.FeatureName.ToString() })">@item.FeatureName</a></li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>

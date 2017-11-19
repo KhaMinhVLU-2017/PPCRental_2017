@@ -475,10 +475,10 @@
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Home\SearchCodeType.cshtml" />
     <Content Include="Views\Home\SearchFeature.cshtml" />
-
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\Home\Contact1.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\SearchDistrict.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

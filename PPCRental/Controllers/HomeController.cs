@@ -46,8 +46,9 @@ namespace PPCRental.Controllers
             return View(result);
         }
 
-        public ActionResult SearchCodeType(string type = "")
+        public ActionResult SearchCodeType(string type = "", string name = "")
         {
+            ViewBag.Name = name;
             var result = db.PROPERTY_TYPE.FirstOrDefault(s=>s.CodeType.Contains(type));
             var rs = db.PROPERTies.Where(s => s.PropertyType_ID == result.ID).ToList();
             return View(rs);
@@ -60,6 +61,14 @@ namespace PPCRental.Controllers
             var ft = db.PROPERTY_FEATURE.Where(s=>s.Feature_ID == result.ID).ToList();
             //var rs = db.PROPERTies.Where().ToList();
             return View(ft);
+        }
+
+        public ActionResult SearchDistrict(int districtid, string name="")
+        {
+            ViewBag.Name = name;
+            var result = db.DISTRICTs.FirstOrDefault(s=>s.ID == districtid);
+            var dt = db.PROPERTies.Where(s => s.District_ID == result.ID).ToList();
+            return View(dt);
         }
         [HttpGet]
         public ActionResult GetCodeType()
@@ -79,8 +88,7 @@ namespace PPCRental.Controllers
         }
         public ActionResult Detail(int id)
         {
-            PROPERTY meo = db.PROPERTies.FirstOrDefault(s => s.ID == id);
-            return View(meo);
+            return View();
         }
     }
 }

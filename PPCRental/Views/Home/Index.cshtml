@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<PPCRental.Models.PROPERTY>
 @{
     ViewBag.Title = "Home Page";
-
 }
 
 <body>
@@ -153,11 +152,11 @@
                             <div class="col-sm-4">
                                 <div class="service">
                                     <div class="service-thumb-home">
-                                        <a  href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID">
+                                        <a href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID">
                                             <img class="a_project_hot" src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt="">
                                             <hr class="project_hot_left" />
                                             <p class="project_hot_title">PPCRental</p>
-                                            <hr class="project_hot_right"/>
+                                            <hr class="project_hot_right" />
                                         </a>
                                     </div>
                                     <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
@@ -166,40 +165,6 @@
                                 </div>
                             </div>
                         }
-                        @*@foreach (var item in Model)
-                            {
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-thumb-home">
-                                            <a href="#"><img src="~/Content/img/Home/@item.Images"  alt=""></a>
-                                        </div>
-
-                                        <h3>@item.PropertyName</h3>
-                                        <p>@item.Content</p>
-                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div> /.col-sm-4
-                            }*@
-                        @*<div class="col-sm-4">
-                                <div class="service">
-                                    <div class="service-thumb-home">
-                                        <a href="#"><img src="~/Content/img/Home/N6.jpg" alt=""></a>
-                                    </div>
-                                    <h3>Khu chung cư cao cấp Sunrise City</h3>
-                                    <p>Khu chung cư cao cấp Sunrise City được thiết kế trên diện tích khu đất với độ rộng lên đến 51.000m², tọa lạc tại khu vực quận 7 ven sông Sài Gòn với một cảnh quan thoáng mát, trong lành .khu căn hộ gồm Trung tâm Towers, North Towers, South Towers. </p>
-                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                </div>
-                            </div><!-- /.col-sm-4 -->
-                            <div class="col-sm-4">
-                                <div class="service">
-                                    <div class="service-thumb-home">
-                                        <a href="#"><img src="~/Content/img/Home/N1.jpg" alt=""></a>
-                                    </div>
-                                    <h3>Căn hộ cao cấp Quận 2</h3>
-                                    <p>Trên mặt tiền đường Mai Chí Thọ quận 2 Thành phố <br> Hồ Chí Minh.  Là dự án hot nhất Quận 2<br> đang mở bán. </p>
-                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                </div>
-                            </div><!-- /.col-sm-4 -->*@
                     </div> <!-- /.row -->
                 </div><!-- /.container -->
             </section>
@@ -212,37 +177,56 @@
                         </div>
                     </div> <!-- /.row -->
                     <div class="row content-row">
-                        <div class="col-sm-4">
-                            <div class="service">
-                                <div class="service-thumb-home">
-                                    <a href="#"><img src="~/Content/img/Home/N3.jpg" alt=""></a>
+                        <br />
+                        <br />
+                        @{int count = 1;
+                        foreach (var item in Model)
+                        {
+                            if (count < 7)
+                            {
+                                <div class="col-sm-4">
+                                    <div class="service">
+                                        <div class="service-thumb-home">
+                                            <a href="#">
+                                                <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
+                                                <hr class="project_hot_left" />
+                                                <p class="project_hot_title">PPCRental</p>
+                                                <hr class="project_hot_right" />
+                                            </a>
+                                        </div>
+                                        <h3>@item.PropertyName</h3>
+                                        <p>@item.Content</p>
+                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    </div>
+                                </div><!-- /.col-sm-4 -->
+                            }
+                            else
+                            {
+                                break;
+                            }
+                            count++;
+                        }
+                        }
+                        @*<div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/N5.jpg" alt=""></a>
+                                    </div>
+                                    <h3>Dự án Léman Luxury Apartments</h3>
+                                    <p>Tòa nhà 24 tầng giữa trung tâm Quận 3<br> trên một khuôn viên thoáng đãng có hai mặt tiền đường Trương Định và Nguyễn Đình Chiểu<br> khu căn hộ cao và cấp sang trọng </p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                 </div>
-
-                                <h3>Khu phức hợp Saigon Airport Plaza</h3>
-                                <p>Sài Gòn Airport Plaza là điểm nhấn đầu tiên ở khu vực Tân Bình ngay tại nút giao thông quan trọng Sân bay quốc tế Tân Sơn Nhất khu phức hợp gồm khách sạn, văn phòng, căn hộ, trung tâm thương mại </p>
-                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                            </div>
-                        </div><!-- /.col-sm-4 -->
-                        <div class="col-sm-4">
-                            <div class="service">
-                                <div class="service-thumb-home">
-                                    <a href="#"><img src="~/Content/img/Home/N5.jpg" alt=""></a>
+                            </div><!-- /.col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="service">
+                                    <div class="service-thumb-home">
+                                        <a href="#"><img src="~/Content/img/Home/N4.jpg" alt=""></a>
+                                    </div>
+                                    <h3>Dự án MILLENNIUM</h3>
+                                    <p>MILLENNIUM sở hữu vị trí đắt giá tại trung tâm thành phố Hồ Chí Minh tọa lạc tại Bến Vân Đồn quận 4<br> là khu phức hợp với văn phòng và căn hộ cao cấp</p>
+                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                 </div>
-                                <h3>Dự án Léman Luxury Apartments</h3>
-                                <p>Tòa nhà 24 tầng giữa trung tâm Quận 3<br> trên một khuôn viên thoáng đãng có hai mặt tiền đường Trương Định và Nguyễn Đình Chiểu<br> khu căn hộ cao và cấp sang trọng </p>
-                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                            </div>
-                        </div><!-- /.col-sm-4 -->
-                        <div class="col-sm-4">
-                            <div class="service">
-                                <div class="service-thumb-home">
-                                    <a href="#"><img src="~/Content/img/Home/N4.jpg" alt=""></a>
-                                </div>
-                                <h3>Dự án MILLENNIUM</h3>
-                                <p>MILLENNIUM sở hữu vị trí đắt giá tại trung tâm thành phố Hồ Chí Minh tọa lạc tại Bến Vân Đồn quận 4<br> là khu phức hợp với văn phòng và căn hộ cao cấp</p>
-                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                            </div>
-                        </div><!-- /.col-sm-4 -->
+                            </div><!-- /.col-sm-4 -->*@
                     </div> <!-- /.row -->
                 </div><!-- /.container -->
             </section>
@@ -442,4 +426,3 @@
         </div>
     </div>
 </body>
-

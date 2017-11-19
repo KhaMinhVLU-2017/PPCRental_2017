@@ -43,22 +43,22 @@
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
     @*<script src="~/Scripts/jquery-2.1.4.js"></script>
-    <script>
-        $(document).ready(function () {
-            $.ajax({
-                url: "/home/getcodetype",
-                datatype: "JSON",
-                type: "Get",
-                success: function (data) {
-                    debugger;
-                    for (var i = 0; i < data.length; i++) {
-                        var opt = new Option(data[i].CodeType);
-                        $("#type").append(opt);
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/home/getcodetype",
+                    datatype: "JSON",
+                    type: "Get",
+                    success: function (data) {
+                        debugger;
+                        for (var i = 0; i < data.length; i++) {
+                            var opt = new Option(data[i].CodeType);
+                            $("#type").append(opt);
+                        }
                     }
-                }
+                });
             });
-        });
-    </script>*@
+        </script>*@
 </head>
 @using PPCRental.Models
 @{
@@ -91,7 +91,7 @@
                                             </ul>
                                         </div><!-- /.call-to-action -->
                                     </div><!-- /.col-sm-6 -->
-                                    <div class="col-sm-6 hidden-xs">
+                                    <div class="col-sm-4 hidden-xs">
                                         <div class="topbar-right">
                                             <div class="lang-support pull-right">
                                                 <select class="cs-select cs-skin-elastic">
@@ -112,7 +112,12 @@
                                             </ul>
                                         </div><!-- /.social-links -->
                                     </div><!-- /.col-sm-6 -->
-
+                                    <div class="col-sm-1">
+                                        <a href="#">Login</a>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <a href="#">Sign in</a>
+                                    </div>
                                 </div><!-- /.row -->
                             </div><!-- /.container -->
                         </div><!-- /.overlay-bg -->
@@ -120,7 +125,7 @@
                     <div id="search">
                         <button type="button" class="close">×</button>
                         <form role="search" action="@Url.Action("Search","Home")" method="get">
-                            <input type="search" value="" placeholder="type here" name="search"/>
+                            <input type="search" value="" placeholder="type here" name="search" />
                             <button type="submit" class="btn btn-primary">Tìm kiếm</button>
                         </form>
                     </div>
@@ -150,34 +155,6 @@
                                     <!-- Home -->
                                     <li class="dropdown active">
                                     <li><a href="/home/index">Trang chủ</a></li>
-                                    @*<a href="index.html">Trang chủ <span class="fa fa-angle-down"></span></a>*@
-                                    <!-- submenu-wrapper -->
-                                    @*<div class="submenu-wrapper">
-                                            <div class="submenu-inner">
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="index2.html">Giới thiệu về SGP</a></li>
-                                                    <li><a href="index2.html">Cơ cấu tổ chức</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>*@
-                                    <!-- /submenu-wrapper -->
-                                    </li>
-                                    <!-- /Home -->
-                                    <!-- Pages -->
-                                    @*<li class="dropdown">
-                                            <a href="#">Quy trình <span class="fa fa-angle-down"></span></a>
-                                            <!-- submenu-wrapper -->
-                                            <div class="submenu-wrapper">
-                                                <div class="submenu-inner">
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="about.html">Hướng dẫn nghiệp vụ</a></li>
-                                                        <li><a href="service.html">Quy cách đóng gói</a></li>
-                                                        <li><a href="our-people.html">Quy định gửi hàng</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- /submenu-wrapper -->
-                                        </li>*@
                                     <li><a href="/home/aboutus">Giới thiệu</a></li>
                                     <!-- /Pages -->
                                     <!-- Services -->
@@ -202,8 +179,9 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    @for(int i = 36 ; i< 55; i++){
-                                                         <li><a href="@Url.Action("SearchDistrict", "Home", new { districtid = i, name = @district.FirstOrDefault(s=>s.ID == i).DistrictName.ToString() })">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
+                                                    @for (int i = 36; i < 55; i++)
+                                                    {
+                                                        <li><a href="@Url.Action("SearchDistrict", "Home", new { districtid = i, name = @district.FirstOrDefault(s=>s.ID == i).DistrictName.ToString() })">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
                                                     }
                                                 </ul>
                                             </div>
@@ -216,7 +194,8 @@
                                         <div class="submenu-wrapper">
                                             <div class="submenu-inner">
                                                 <ul class="dropdown-menu">
-                                                    @foreach(var item in feature){
+                                                    @foreach (var item in feature)
+                                                    {
                                                         <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = @item.ID, name = @item.FeatureName.ToString() })">@item.FeatureName</a></li>
                                                     }
                                                 </ul>
@@ -440,25 +419,25 @@
                                 </div><!-- /.footer-widget -->
                             </div><!-- /.col-md-4 -->
                             <div class="col-md-3 col-sm-4">
-                                    <div class="footer-widget">
-                                        <h3>Service</h3>
-                                        <p>Hỗ trợ kĩ thuật</p>
-                                        <span class="tel">0938 xxx xxx</span>
-                                    </div><!-- /.footer-widget -->
-                                </div><!-- /.col-md-4 -->
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="footer-widget">
-                                        <h3>Stay in Touch</h3>
-                                        <p>Enter your email address to receive news &amp; offers from us</p>
-                                        <form class="newsletter-form">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="InputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
-                                                <button type="submit" class="">Send &nbsp;<i class="fa fa-angle-right"></i></button>
-                                            </div>
-                                        </form>
-                                    </div><!-- /.footer-widget -->
-                                </div><!-- /.col-md-4 -->
+                                <div class="footer-widget">
+                                    <h3>Service</h3>
+                                    <p>Hỗ trợ kĩ thuật</p>
+                                    <span class="tel">0938 xxx xxx</span>
+                                </div><!-- /.footer-widget -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="footer-widget">
+                                    <h3>Stay in Touch</h3>
+                                    <p>Enter your email address to receive news &amp; offers from us</p>
+                                    <form class="newsletter-form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="InputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
+                                            <button type="submit" class="">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+                                        </div>
+                                    </form>
+                                </div><!-- /.footer-widget -->
+                            </div><!-- /.col-md-4 -->
                         </div><!-- /.row -->
                     </div><!-- /.container -->
                 </section><!-- /.cta-section -->
@@ -487,62 +466,57 @@
                 <div class="off-canvas-header">
                     <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
                 </div>
-                <ul id="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
-                    <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                <ul id="offcanvasMenu" class="list-unstyled visible-xs visible-sm visible-lg">
+                    <li class="active"><a href="/home/index">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="/home/aboutus">Giới thiệu</a></li>
                     <li>
-                        <a href="#">Pages</a>
+                        <a href="#">Loại bất động sản</a>
                         <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="our-people.html">Our people</a></li>
-                            <li><a href="career.html">Career</a></li>
-                            <li><a href="faq.html">FAQ Page</a></li>
-                            <li><a href="typography.html">Typography</a></li>
+                            @foreach (var item in Result)
+                            {
+                                <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                            }
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">Dự án</a>
                         <ul>
-                            <li><a href="air.html">Air transportation</a></li>
-                            <li><a href="marine.html">Marine transportation</a></li>
-                            <li><a href="moving.html">Moving &amp; storage</a></li>
-                            <li><a href="shipping.html">Shipping &amp; operations</a></li>
-                            <li><a href="transportation.html">Transportation logistics</a></li>
-                            <li><a href="trucking.html">Trucking</a></li>
+                            @for (int i = 36; i < 55; i++)
+                            {
+                                <li><a href="@Url.Action("SearchDistrict", "Home", new { districtid = i, name = @district.FirstOrDefault(s=>s.ID == i).DistrictName.ToString() })">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
+                            }
                         </ul>
                     </li>
                     <li>
                         <a href="#">Blog</a>
                         <ul>
-                            <li>
-                                <a href="blog.html">Standard blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-single.html">Single blog</a>
-                            </li>
+                            @foreach (var item in feature)
+                            {
+                                <li><a href="@Url.Action("SearchFeature", "Home", new { featureid = @item.ID, name = @item.FeatureName.ToString() })">@item.FeatureName</a></li>
+                            }
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="contact.html">Tin tức</a></li>
+                    <li><a href="typography.html">Liên hệ</a></li>
                 </ul>
-                <div class="offcanvas-widgets hidden-sm hidden-xs">
-                    <div id="twitterWidget">
-                        <h2>Tweeter feed</h2>
-                        <div class="twitter-widget"></div>
-                    </div>
-                    <div class="newsletter-widget">
-                        <h2>Stay in Touch</h2>
-                        <p>Enter your email address to receive news &amp; offers from us</p>
-                        <form class="newsletter-form">
-                            <div class="form-group">
-                                <label class="sr-only" for="InputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="InputEmail2" placeholder="Your email address">
-                                <button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
-                            </div>
-                        </form>
+                @*<div class="offcanvas-widgets hidden-sm hidden-xs">
+                        <div id="twitterWidget">
+                            <h2>Tweeter feed</h2>
+                            <div class="twitter-widget"></div>
+                        </div>
+                        <div class="newsletter-widget">
+                            <h2>Stay in Touch</h2>
+                            <p>Enter your email address to receive news &amp; offers from us</p>
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="InputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="InputEmail2" placeholder="Your email address">
+                                    <button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+                                </div>
+                            </form>
 
-                    </div><!-- newsletter-widget -->
-                </div>
+                        </div> newsletter-widget
+                    </div>*@
             </div>
         </div><!-- .offcanvas-menu -->
     </div><!-- /st-container -->

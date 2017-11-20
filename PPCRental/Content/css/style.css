@@ -1602,6 +1602,34 @@ Contact Page
     font-size:xx-large;
     padding:20%;
 }
+.colInformation{
+    background-color:#F1F0F7;
+    float:left;
+    width:40%;
+}
+.form-control{
+    width:100%!important;
+    height:34px;
+    padding: 5px 10px;
+    background-color:#fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px;
+    font-size: 14px; 
+    line-height: 1.42857143;
+    color: #555;
+    display: block;
+
+}
+.colAddress{
+    background-color:#F1F0F7;
+    width:50%;
+    float:right;    
+    
+}
+.buttonSubmit{
+    padding: 20px 0;
+}
 /* ----------------------------------------------------------------
 News Page
 -------------------------------------------------------------------*/

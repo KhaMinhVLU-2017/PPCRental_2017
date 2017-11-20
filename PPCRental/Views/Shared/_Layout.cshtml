@@ -166,7 +166,7 @@
                                                 <ul class="dropdown-menu" id="type">
                                                     @foreach (var item in Result)
                                                     {
-                                                        <li id="1"><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                                                        <li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
                                                     }
                                                 </ul>
                                             </div>

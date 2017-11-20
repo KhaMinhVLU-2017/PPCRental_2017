@@ -9,6 +9,10 @@ Author: Cloud Software Solution Ltd.
 /*-------------------------------------
  *  HERO SLIDER
  *-------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
  .hero-slide img{
   min-width: 100%;
 }
@@ -249,6 +253,10 @@ OUR SERVICES SECTION
 
 .service-home .content-row {
   margin-top: 154px;
+}
+.row.content-row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .service-home .readmore {
@@ -1559,10 +1567,9 @@ Aboutus Page
   text-align:center;
   font-size:xx-large;
   padding:20%;
-=======
-    text-align:center;
-    font-size:xx-large;
-    padding:20%;
+  text-align:center;
+  font-size:xx-large;
+  padding:20%;
 
 }
 
@@ -1623,7 +1630,6 @@ News Page
     text-align:center;
     font-size:xx-large;
     padding:20%;
->>>>>>> 5fcd0cc934f2c6188c854b2cd90da67cf5b8c9e9
 }
 .a_project_hot{
   position: relative;

@@ -1597,10 +1597,35 @@ Contact Page
     box-shadow: 3px 0px 15px 1px;
     background-color:#F1F0F7;
 }
-.contentContactStyle{
-    text-align:center;
-    font-size:xx-large;
-    padding:20%;
+.colInformation{
+    float:left;
+    background-color:#F1F0F7;
+    width: 45%;
+}
+.form-control{
+   width:100%!important;
+   height:34px;
+   padding: 5px 10px;
+   background-color:#fff;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   box-shadow: 0 1px 1px;
+   font-size: 14px; 
+   line-height: 1.42857143;
+   color: #555;
+   display: block;
+
+}
+.colAddress{
+    
+    float:right;
+    background-color:#F1F0F7;
+    width: 50%;
+}
+.buttonSubmit{
+    padding: 20px 75%;
+    box-shadow: 0 1px 1px;
+    
 }
 /* ----------------------------------------------------------------
 News Page

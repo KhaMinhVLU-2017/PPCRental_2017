@@ -1,17 +1,40 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Contact1";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="contactbackgroud">
     <div class="contact">
-       Contact
+        Contact
     </div>
     <div>
         <div class="contentcontact">
+            <div class="colInformation">
+                <p>Send us an email or a message on Facebook and an agent will be in touch within 24 hours. Thank you.</p>
+                <div style="height:50px">
+                    <input class="form-control" type="text" placeholder="Name">
+                </div>
+                <div style="height:50px">
+                    <input class="form-control" type="email" placeholder="Email">
+                </div>
+                <div style="height:50px">
+                    <input class="form-control" type="text" placeholder="Office">
+                </div>
+                <div style="height:50px">
+                    <textarea class="form-control" required placeholder="Message" rows="15" name="message"></textarea>
+                </div>
+                <div class="buttonSubmit">
+                    <input type="submit" value="Send mesage">
+                </div>
+            </div>
 
+            <div class="colAddress">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6333263659876!2d106.69113991431699!3d10.762716662390776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f16ad86371b%3A0x949d258c9508b1f2!2zxJDhuqFpIGjhu41jIFbEg24gTGFuZyBjxqEgc-G7nyAx!5e0!3m2!1svi!2s!4v1511253799414" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <br><br>
+                <p>Contact</p>
+                <p>45 Nguyễn Khắc Nhu, Cô Giang, Hồ Chí Minh.</p>
+                <p>Phone: 0938 xxx xxx</p>
+
+            </div>
         </div>
     </div>
 </div>
-
-

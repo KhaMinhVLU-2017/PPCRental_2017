@@ -24,6 +24,9 @@
 .a_project_hot{
 	position: relative;
 }
+.header_detail h1{
+	color: steelblue;
+}
 @media (max-width:414px){
 	.carousel-inner div img{
 		height: 300px !important;

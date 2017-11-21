@@ -7,21 +7,21 @@
 
 <div class="container">
     <div class="row">
-        <header class="col-md-12">
+        <header class="col-md-12 header_detail">
             <h1>Thông tin chi tiết dự án</h1>
         </header>
         <div class="col-md-8">
             <div class="col-md-10">
-                <p>@Model.PropertyName</p>
+                <p class="frist_content_left">@Model.PropertyName</p>
             </div>
             <div class="col-md-2">
-                <p>@Model.Price @Model.UnitPrice</p>
+                <p class="frist_content_right">@Model.Price @Model.UnitPrice</p>
             </div>
             <div class="col-md-8">
-                <p>@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
+                <p class="second_content_left">@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
             </div>
             <div class="col-md-4">
-                <p>BedRoom: @Model.BedRoom | BathRoom: @Model.BathRoom </p>
+                <p class="frist_content_right">BedRoom: @Model.BedRoom | BathRoom: @Model.BathRoom </p>
             </div>
             <div class="col-md-12">
                 <img class="img-responsive" src="~/Content/img/Home/@Model.Images" />
@@ -47,7 +47,6 @@
                                     </a>
                                 </div>
                                 <h3>@item.PropertyName</h3>
-                                <p>@item.Content</p>
                                 <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                             </div>
                         </div><!-- /.col-sm-4 -->

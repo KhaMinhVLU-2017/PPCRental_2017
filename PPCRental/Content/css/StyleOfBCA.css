@@ -24,18 +24,6 @@
 .a_project_hot{
 	position: relative;
 }
-.header_detail h1{
-  color: steelblue;
-  text-align: center;
-}
-.maio_img img{
-	width: 100%;
-}
-.frist_content_left{
-    font-size: 26px;
-    font-weight: bold;
-    color: #19cab3;
-}
 @media (max-width:414px){
 	.carousel-inner div img{
 		height: 300px !important;

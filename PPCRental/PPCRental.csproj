@@ -42,6 +42,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -470,7 +478,6 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Sale\Index.cshtml" />
     <Content Include="Views\Home\Aboutus.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Home\SearchCodeType.cshtml" />
@@ -479,6 +486,12 @@
     <Content Include="Views\Home\Contact1.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\SearchDistrict.cshtml" />
+    <Content Include="Views\Shared\LayoutBackend.cshtml" />
+    <Content Include="Views\Sale\Create.cshtml" />
+    <Content Include="Views\Sale\Delete.cshtml" />
+    <Content Include="Views\Sale\Details.cshtml" />
+    <Content Include="Views\Sale\Edit.cshtml" />
+    <Content Include="Views\Sale\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,63 +1,17 @@
-﻿@using PPCRental.Models
-@model PPCRental.Models.PROPERTY
+﻿
 @{
-    ViewBag.Title = "Detail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+ViewBag.Title = "Detail";
+Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <div class="row">
-        <header class="col-md-12 header_detail">
-            <h1>Thông tin chi tiết dự án</h1>
-        </header>
-        <div class="col-md-8">
-            <div class="col-md-10">
-                <p class="frist_content_left">@Model.PropertyName</p>
-            </div>
-            <div class="col-md-2">
-                <p class="frist_content_right">@Model.Price @Model.UnitPrice</p>
-            </div>
-            <div class="col-md-8">
-                <p class="second_content_left">@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
-            </div>
-            <div class="col-md-4">
-                <p class="frist_content_right">BedRoom: @Model.BedRoom | BathRoom: @Model.BathRoom </p>
-            </div>
-            <div class="col-md-12 maio_img">
-                <img class="img-responsive" src="~/Content/img/Home/@Model.Images" />
-            </div>
-            <div class="col-md-12">
-                <p>@Model.Content</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            @{int count=0;
-                foreach (var item in ViewData["AllPro"] as List<PROPERTY>)
-                {
-                    if (count < 3)
-                    {
-                        <div class="col-sm-12">
-                            <div class="service">
-                                <div class="service-thumb-home">
-                                    <a href="/Home/Detail/@item.ID">
-                                        <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
-                                        <hr class="project_hot_left" />
-                                        <p class="project_hot_title">PPCRental</p>
-                                        <hr class="project_hot_right" />
-                                    </a>
-                                </div>
-                                <h3>@item.PropertyName</h3>
-                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                            </div>
-                        </div><!-- /.col-sm-4 -->
-                        count++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-        </div>
-    </div>
+<div class="container" >
+	<div class="row">
+		<header class="col-md-12">
+			<h1>Thông tin chi tiết dự án</h1>
+		</header>
+	</div>
 </div>
+
+
+
+

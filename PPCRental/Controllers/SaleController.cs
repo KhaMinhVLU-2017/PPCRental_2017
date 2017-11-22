@@ -19,7 +19,7 @@ namespace PPCRental.Controllers
         public ActionResult Index(int? page =1)
         {
 
-            int pageSize = 5;
+            int pageSize = 7;
             int pageNumber = (page ?? 1);
             var properties = db.PROPERTies.ToList();
             return View(properties.ToPagedList(pageNumber, pageSize));

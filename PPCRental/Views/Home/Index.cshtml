@@ -162,7 +162,7 @@
                                     </div>
                                     <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
                                     <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
-                                    <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                    <a class="readmore" href="/Home/Detail/i">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                 </div>
                             </div>
                         }
@@ -197,7 +197,7 @@
                                         </div>
                                         <h3>@item.PropertyName</h3>
                                         <p>@item.Content</p>
-                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                        <a class="readmore" href="/Home/Detail/@item.ID">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                     </div>
                                 </div><!-- /.col-sm-4 -->
                             }

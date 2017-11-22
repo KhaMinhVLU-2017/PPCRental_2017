@@ -88,7 +88,10 @@ namespace PPCRental.Controllers
         }
         public ActionResult Detail(int id)
         {
-            return View();
+            ViewData["AllPro"] = db.PROPERTies.ToList();
+             PROPERTY meo = new PROPERTY();		
+             meo = db.PROPERTies.FirstOrDefault(s =>s.ID == id);		
+             return View(meo);
         }
     }
 }

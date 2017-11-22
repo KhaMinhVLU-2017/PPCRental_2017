@@ -1703,6 +1703,10 @@ News Page
   visibility:visible;
   z-index: 2;
 }
+.header_detail h1{		
+   color: steelblue;		
+   text-align: center;		
+} 
 .service-thumb-home:not(:hover) .project_hot_right{
   transition: 0.5s;
 }

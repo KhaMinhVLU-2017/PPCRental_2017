@@ -41,44 +41,44 @@
     </tr>
 
     @foreach (var item in Model)
-    {
-        <tr class="@(item.Status_ID == 3 ? "success" : "") ">
-            <td>
-                @Html.DisplayFor(modelItem => item.PropertyName)
-            </td>
+{
+    <tr class="@(item.Status_ID == 3 ? "success" : "") @(item.Status_ID == 1 ? "warning" : "") @(item.Status_ID == 2 ? "info" : "") @(item.Status_ID == 4 ? "danger" : "")">
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyName)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Area)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Created_at)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_at)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Updated_at)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updated_at)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.USER.Email)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER.Email)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
-        </tr>
-    }
+        <td>
+            @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
 
 </table>
 <br />

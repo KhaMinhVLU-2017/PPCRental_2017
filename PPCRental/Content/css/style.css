@@ -1713,3 +1713,28 @@ News Page
   transition: 1s;
   z-index: 2;
 }
+/* ----------------------------------------------------------------
+Detail Page
+-------------------------------------------------------------------*/
+.backgroundH1{
+    background-color:#9781F9;
+    
+}
+.col-md-8css{
+    margin:5%  0% 5%;
+    width: 65%;
+    height: 80%;
+    border: 2px solid #9781F9;
+    padding: 90px;
+    box-shadow: 3px 0px 15px 1px;
+    background-color:#F1F0F7;
+}
+.col-md-4css{
+    margin:5% 0 5% 5%;
+    width: 30%;
+    height: 80%;
+    border: 2px solid #9781F9;
+    box-shadow: 3px 0px 15px 1px;
+    background-color:#F1F0F7;
+    float:right;
+}

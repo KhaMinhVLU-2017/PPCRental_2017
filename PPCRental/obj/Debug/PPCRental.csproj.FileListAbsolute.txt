@@ -276,10 +276,5 @@ D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\obj\Debug\PPCR
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\obj\Debug\PPCRental.pdb
 C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\PagedList.xml
 C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml
-<<<<<<< HEAD
-D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\PagedList.xml
-D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml
-=======
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\PagedList.xml
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml
->>>>>>> 4458372ee08d23b55560b8d0f71be199e5c7ca71

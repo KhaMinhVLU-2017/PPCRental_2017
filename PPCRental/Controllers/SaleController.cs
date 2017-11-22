@@ -11,7 +11,6 @@ using PagedList;
 
 namespace PPCRental.Controllers
 {
-    [Authorize]
     public class SaleController : Controller
     {
         private PPCRentalEntities db = new PPCRentalEntities();
@@ -19,7 +18,7 @@ namespace PPCRental.Controllers
         // GET: /Sale/
         public ActionResult Index(int? page =1)
         {
-     
+
             int pageSize = 7;
             int pageNumber = (page ?? 1);
             var properties = db.PROPERTies.ToList();

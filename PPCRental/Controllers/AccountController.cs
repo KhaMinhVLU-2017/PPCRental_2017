@@ -9,14 +9,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using PPCRental.Models;
-using System.Web.Security;
 
 namespace PPCRental.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        PPCRentalEntities db = new PPCRentalEntities();
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
@@ -40,68 +38,29 @@ namespace PPCRental.Controllers
 
         //
         // POST: /Account/Login
-        //[HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var user = await UserManager.FindAsync(model.UserName, model.Password);
-        //        if (user != null)
-        //        {
-        //            await SignInAsync(user, model.RememberMe);
-        //            return RedirectToLocal(returnUrl);
-        //        }
-        //        else
-        //        {
-        //            ModelState.AddModelError("", "Invalid username or password.");
-        //        }
-        //    }
-
-        //    // If we got this far, something failed, redisplay form
-        //    return View(model);
-        //}
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(USER meo, string url)
+        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (isCheck(meo) == true)
+            if (ModelState.IsValid)
             {
-                FormsAuthentication.SetAuthCookie(meo.Email, false);
-                if (url == "")
+                var user = await UserManager.FindAsync(model.UserName, model.Password);
+                if (user != null)
                 {
-                    return RedirectToAction("Index", "Sale");
+                    await SignInAsync(user, model.RememberMe);
+                    return RedirectToLocal(returnUrl);
                 }
                 else
                 {
-                    return Redirect(url);
+                    ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
-            else
-            {
-                return View("Login");
-            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
         }
-        public bool isCheck(USER meo)
-        {
-            USER su = db.USERs.FirstOrDefault(s => s.Email == meo.Email && s.Password == meo.Password);
-            if (su != null)
-            {
-                TempData["meo_k"] = su.FullName;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public ActionResult Logout()
-        {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Home");
-        }
+
         //
         // GET: /Account/Register
         [AllowAnonymous]

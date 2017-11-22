@@ -2,78 +2,96 @@
 @{
     ViewBag.Title = "Statistic";
     Layout = "~/Views/Shared/LayoutBackend.cshtml";
+    //Random rnd = new Random();
+    //int usernumber = rnd.Next(50, 5000);
+    int percent1 = (int)((125 * 100) / (125 + 400)); 
+    int percent2 = 100 - percent1;
 }
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <h2>Thống kê số lượng</h2>
+    <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-home"></i> Dự án</span>
+            <div class="count">207</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Agency</span>
+            <div class="count">@percent1</div>
+            @*<span class="count_bottom"><i class="green"><i></i>3% </i> chuyển phát nhanh</span>*@
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-users"></i> Khách vãng lai</span>
+            <div class="count green">400</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> Tháng trước</span>*@
+        </div>
 
-<h2>Thống kê số lượng</h2>
-<div class="row tile_count">
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-home"></i> Dự án</span>
-        <div class="count">10000</div>
-        @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>4% </i> Tháng trước</span>*@
     </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-user"></i> Agency</span>
-        <div class="count">1254</div>
-        @*<span class="count_bottom"><i class="green"><i></i>3% </i> chuyển phát nhanh</span>*@
-    </div>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <span class="count_top"><i class="fa fa-users"></i> User</span>
-        <div class="count green">2450</div>
-        @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> Tháng trước</span>*@
-    </div>
 
-</div>
-<div class="row">
-
-
-<div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="x_panel tile fixed_height_320">
-        <div class="x_title">
-            <h2>Doanh thu theo tháng<small>chưa bao gồm KV1</small></h2>
-            <canvas id="myLineChart" width="740" height="500"></canvas>
-            <div class="clearfix"></div>
+    <div class="col-md-12" style="position: relative; height:5vh; width:80vw">
+        <div class="col-lg-6">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-lg-6">
+            <canvas id="myChart1"></canvas>
         </div>
     </div>
-</div>
+   
+</body>
+@section Scripts{
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
 
-<div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="x_panel tile fixed_height_320 overflow_hidden">
-        <div class="x_title">
-            <h2>Doanh thu theo dịch vụ</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <table class="" style="width:100%; height:100%">
-                <tr>
-                    <td>
-                        <canvas id="canvas1" height="200" width="200" style="margin: 15px 10px 10px 0"></canvas>
-                    </td>
-                    <td>
-                        <table class="tile_info" id="result">
-                            <!--jquery tao bang ti le phan tram-->
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+            // The data for our dataset
+            data: {
+                labels: ["Agency", "Khách vãng lai"],
+                datasets: [{
+                    label: "User",
+                    backgroundColor: ['rgb(100, 178, 72)', 'rgb(150, 255, 30)'],
+                    borderColor: 'rgb(0, 0, 0)',
+                    data: [@percent1, @percent2], 
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 40,
+                    text: "User truy cập (%)"
+                }
+            }
+        });
+
+        var chart = document.getElementById('myChart1').getContext('2d');
+        var pie = new Chart(chart, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ["Chưa duyệt", "Lưu nháp","Đã duyệt","Hết hạn"],
+                datasets: [{
+                    label: "User",
+                    backgroundColor: ['rgb(255, 255, 102)','rgb(235, 252, 88)','rgb(252, 224, 88)', 'rgb(255, 153, 51)'],
+                    borderColor: 'rgb(0, 0, 0)',
+                    data: [10,10,70, 10],
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 40,
+                    text: "Trạng thái dự án (%)"
+                }
+            }
+        });
+    </script>
+}

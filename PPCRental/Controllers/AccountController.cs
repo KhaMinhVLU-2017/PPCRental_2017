@@ -9,12 +9,14 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using PPCRental.Models;
+using System.Web.Security;
 
 namespace PPCRental.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        PPCRentalEntities db = new PPCRentalEntities();
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
@@ -41,25 +43,44 @@ namespace PPCRental.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
-                if (user != null)
-                {
-                    await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Invalid username or password.");
-                }
-            }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+        public ActionResult Login(USER meo, string url)
+          {		          
+             if (isCheck(meo) == true)		
+              {		              
+                 FormsAuthentication.SetAuthCookie(meo.Email, false);		
+                 if (url == "")		
+                  {		                  
+                   return RedirectToAction("Index", "Sale");	
+                   
+                  }		                  
+                  else		              
+                  {		                  
+                     return Redirect(url);		
+                  }		                  
+              }		              
+            else		 
+            {		
+                 return View("Login");	
+             }		
+         }		
+         public bool isCheck(USER meo)		
+         {		
+             USER su = db.USERs.FirstOrDefault(s => s.Email == meo.Email && s.Password == meo.Password);		
+             if (su != null)		
+             {		
+                TempData["meo_k"] = su.FullName;		
+                return true;		
+           }		
+             else		
+            {		
+                 return false;		
+             }		
+         }
+         public ActionResult Logout()
+         {
+             FormsAuthentication.SignOut();
+             return RedirectToAction("Index", "Home");
+         }
 
         //
         // GET: /Account/Register

@@ -11,6 +11,7 @@ using PagedList;
 
 namespace PPCRental.Controllers
 {
+    [Authorize]
     public class SaleController : Controller
     {
         private PPCRentalEntities db = new PPCRentalEntities();

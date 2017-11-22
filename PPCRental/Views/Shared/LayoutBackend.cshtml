@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    var pop = @TempData["meo_k"];
 }
 
 <!DOCTYPE html>
@@ -69,6 +70,9 @@
                     </div>
                     <!-- /sidebar menu -->
                     <!-- /menu footer buttons -->
+                    <div class="col-md-12 papo">
+                         <p>@pop</p>
+                    </div>
                     <div class="sidebar-footer hidden-small">
                         <a data-toggle="tooltip" data-placement="top" title="Settings">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
@@ -79,8 +83,8 @@
                         <a data-toggle="tooltip" data-placement="top" title="Lock">
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Logout">
-                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        <a href="/Account/Logout" data-toggle="tooltip" data-placement="top" title="Logout">
+                            <span class="glyphicon glyphicon-o  ff" aria-hidden="true"></span>
                         </a>
                     </div>
                     <!-- /menu footer buttons -->
@@ -106,6 +110,7 @@
             </div>
         </div>
     </div>
+   
 
     <script src="~/Scripts/vendors/jquery/dist/jquery.min.js"></script>
 

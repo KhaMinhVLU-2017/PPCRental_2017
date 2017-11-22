@@ -40,7 +40,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="/Home/Index" class="site_title"> <span>Trang quản lí</span></a>
+                        <a href="/Sale/Index" class="site_title"> <span>Trang quản lí</span></a>
                     </div>
 
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -50,9 +50,19 @@
                                 <li>
                                     <a><i class="fa fa-home"></i> Dự án <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="#">Danh sách các Agency</a></li>
                                         <li><a href="/sale/index">Danh sách các dự án</a></li>
-                                        <li><a href="#">Theo dõi thống kê dự án</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-bars"></i> Thống kê <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="#">Theo dõi thống kê số lượng</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-users"></i> Agency <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="#">Danh sách các Agency</a></li>
                                     </ul>
                                 </li>
                         </div>
@@ -97,16 +107,16 @@
         </div>
     </div>
 
-    <script src="../Scripts/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/vendors/jquery/dist/jquery.min.js"></script>
 
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <!-- FastClick -->
-    <script src="../Scripts/vendors/fastclick/lib/fastclick.js"></script>
+    <script src="~/Scripts/vendors/fastclick/lib/fastclick.js"></script>
     <!-- Custom Theme Scripts -->
-    <script src="../Scripts/build/js/custom.min.js"></script>
-    @*@RenderSection("scripts", false)*@
+    <script src="~/Scripts/build/js/custom.min.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>
 

@@ -156,5 +156,10 @@ namespace PPCRental.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Statistic()
+        {
+            return View();
+        }
     }
 }

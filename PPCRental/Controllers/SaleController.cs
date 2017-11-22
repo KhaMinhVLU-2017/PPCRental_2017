@@ -16,12 +16,13 @@ namespace PPCRental.Controllers
         private PPCRentalEntities db = new PPCRentalEntities();
 
         // GET: /Sale/
-        public ActionResult Index(int? page = 1)
+        public ActionResult Index(int? page =1)
         {
+
             int pageSize = 5;
             int pageNumber = (page ?? 1);
             var properties = db.PROPERTies.ToList();
-            return View(properties.ToPagedList(pageNumber, pageSize)); ;
+            return View(properties.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: /Sale/Details/5

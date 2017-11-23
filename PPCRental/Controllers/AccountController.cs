@@ -49,7 +49,8 @@ namespace PPCRental.Controllers
               {		              
                  FormsAuthentication.SetAuthCookie(meo.Email, false);		
                  if (url == "")		
-                  {		                  
+                  {
+		                
                    return RedirectToAction("Index", "Sale");	
                    
                   }		                  

@@ -31,8 +31,8 @@
                 Ảnh đại diện dự án
             </div>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Avatar)
-                @Html.ValidationMessageFor(model => model.Avatar)
+                @*@Html.EditorFor(model => model.Avatar)*@
+                 <input class="inputcss" type="file" value="@Model.Avatar"/>             
             </div>
         </div>
 
@@ -237,3 +237,4 @@
 <div>
     <a href="/sale/index"><input type="submit" value="Back" class="btn btn-toolbar" /></a>
 </div>
+

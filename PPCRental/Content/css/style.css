@@ -1738,3 +1738,6 @@ News Page
      background-color:#F1F0F7;		
      float:right;		
  } 
+ .inputcss {
+    color: transparent;
+}

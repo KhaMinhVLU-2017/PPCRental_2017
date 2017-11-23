@@ -2128,6 +2128,7 @@
     <Content Include="Scripts\vendors\jquery\dist\jquery.min.map" />
     <Content Include="Scripts\vendors\jquery\external\sizzle\dist\sizzle.min.map" />
     <Content Include="Views\Sale\Statistic.cshtml" />
+    <Content Include="Views\Sale\ViewAgency.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

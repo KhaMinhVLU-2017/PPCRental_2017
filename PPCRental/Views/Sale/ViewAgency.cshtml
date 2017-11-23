@@ -1,0 +1,73 @@
+﻿@model PagedList.IPagedList<PPCRental.Models.USER>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "ViewAgency";
+    Layout = "~/Views/Shared/LayoutBackend.cshtml";
+}
+
+<h2>Danh sách các tài khoản</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Tên Agency
+        </th>
+
+        <th>
+            Email
+        </th>
+        <th>
+            Loại tài khoản
+        </th>
+        <th>
+            Trạng thái
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+{
+    <tr class="@(item.Status == true ? "success" : "") @(item.Status == false ? "danger" : "")">
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+
+
+        @if (@item.Role == "0")
+        {
+            <td>
+                Agency
+            </td>
+        }
+        else if (@item.Role == "1")
+        {
+            <td>
+                Sale
+            </td>
+        }
+
+        @if (@item.Status == true)
+        {
+            <td>
+                Kích hoạt
+            </td>
+        }
+        else if (@item.Status == false)
+        {
+            <td>
+                Chưa kích hoạt
+            </td>
+        }
+
+    </tr>
+}
+
+</table>
+<br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+                                             new { page }))
+

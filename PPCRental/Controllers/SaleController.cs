@@ -162,5 +162,13 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+
+        public ActionResult ViewAgency(int? page =1)
+        {
+            int pageSize = 7;
+            int pageNumber = (page ?? 1);
+            var agency = db.USERs.ToList();
+            return View(agency.ToPagedList(pageNumber, pageSize));
+        }
     }
 }

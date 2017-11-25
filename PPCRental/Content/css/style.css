@@ -1596,6 +1596,7 @@ Contact Page
     padding: 90px;
     box-shadow: 3px 0px 15px 1px;
     background-color:#F1F0F7;
+    
 }
 .colInformation{
     float:left;
@@ -1724,20 +1725,22 @@ News Page
      margin:5%  0% 5%;		
      width: 65%;		
      height: 80%;		
-     border: 2px solid #9781F9;		
+     border: 2px solid #7EB6FB;		
      padding: 90px;		
      box-shadow: 3px 0px 15px 1px;		
      background-color:#F1F0F7;		
+     
  }		
  .col-md-4css{		
      margin:5% 0 5% 5%;		
      width: 30%;		
      height: 80%;		
-     border: 2px solid #9781F9;		
+     border: 2px solid #7EB6FB;		
      box-shadow: 3px 0px 15px 1px;		
      background-color:#F1F0F7;		
      float:right;		
  } 
+
  .inputcss {
     color: transparent;
 }

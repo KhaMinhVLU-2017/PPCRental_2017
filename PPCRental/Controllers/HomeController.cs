@@ -38,6 +38,10 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+        public ActionResult Login()
+        {
+            return View();
+        }
 
         [HttpGet]
         public ActionResult Search(string search = "")

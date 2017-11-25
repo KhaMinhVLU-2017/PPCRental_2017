@@ -12,7 +12,9 @@
         <th>
             Tên dự án
         </th>
-
+        <th>
+            Avatar
+        </th>
         <th>
             Giá
         </th>
@@ -46,7 +48,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.PropertyName)
         </td>
-
+        <td>
+            <img src="@item.Avatar" />
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>

@@ -278,3 +278,5 @@ C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\Paged
 C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\PagedList.xml
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\PagedList.xml
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\PagedList.Mvc.xml

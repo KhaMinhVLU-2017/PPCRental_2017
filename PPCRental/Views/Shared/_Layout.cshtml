@@ -112,8 +112,8 @@
                                             </ul>
                                         </div><!-- /.social-links -->
                                     </div><!-- /.col-sm-6 -->
-                                    <div class="col-sm-1">
-                                        <a href="~/Account/Login">Login</a>
+                                    <div class="col-sm-1">dang
+                                        <a href="Tai-khoang/dang-nhap">Login</a>
                                     </div>
                                     <div class="col-sm-1">
                                         <a href="#">Sign in</a>
@@ -154,8 +154,8 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <!-- Home -->
                                     <li class="dropdown active">
-                                    <li><a href="/home/index">Trang chủ</a></li>
-                                    <li><a href="/home/aboutus">Giới thiệu</a></li>
+                                    <li><a href="Trang-chu">Trang chủ</a></li>
+                                    <li><a href="Trang-chu/gioi-thieu">Giới thiệu</a></li>
                                     <!-- /Pages -->
                                     <!-- Services -->
                                     <li class="dropdown">
@@ -166,7 +166,8 @@
                                                 <ul class="dropdown-menu" id="type">
                                                     @foreach (var item in Result)
                                                     {
-                                                        <li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                                                        @*<li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>*@
+                                                        <li><a href="Tim-kiem/loai-bat-dong-san/@item.CodeType.ToString()-@item.CodeType.ToString()">@item.CodeType</a></li>
                                                     }
                                                 </ul>
                                             </div>

@@ -2150,6 +2150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\fonts\fontawesome\" />
     <Folder Include="Scripts\vendors\Chart.js\test\" />
     <Folder Include="Scripts\vendors\DateJS\src\" />
     <Folder Include="Scripts\vendors\echarts\map\" />

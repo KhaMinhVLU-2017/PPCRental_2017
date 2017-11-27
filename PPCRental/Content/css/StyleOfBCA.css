@@ -32,9 +32,38 @@
  	width: 100%;		
  }		
  .frist_content_left{		
-     font-size: 26px;		
+     font-size: 30px;		
      font-weight: bold;		
-     color: #19cab3;
+     color: #000;
+     text-decoration:underline;
+     margin:auto;
+ }
+ .frist_content_Price{
+     text-align:left;
+     color:red;
+     margin: 23px 10px 0 0;
+ }
+ .frist_content_Address{
+     text-align:left;
+     margin: 18px 0 0 0;
+     color:#000;
+ }
+ .frist_content_Bedroom{
+     margin:auto;
+     text-align:left;
+     color:#000;
+ }
+ .frist_content_Bathroom{
+     text-align:left;
+     color:#000;
+ }
+ .frist_content_Describe{
+     color:#000;
+ }
+ .iconcss{
+     color:#377BCD;
+     font-size:33px;
+     margin:0 10px 0 0;
  }
  .circliful .outer {
     fill: transparent;

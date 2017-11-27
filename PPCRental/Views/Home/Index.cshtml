@@ -168,10 +168,11 @@
                             }*@
                         @for (var i = 23; i < 29; i++)
                         {
+                            var url = "/chi-tiet/" + Model.FirstOrDefault(s => s.ID == i).PropertyName + "-" + i;
                             <div class="col-sm-4">
                                 <div class="service">
                                     <div class="service-thumb-home">
-                                        <a href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID">
+                                        <a href="@url">
                                             <img class="a_project_hot" src="~/Content/img/Home/@Model.FirstOrDefault(s => s.ID == i).Images" alt="">
                                             <hr class="project_hot_left" />
                                             <p class="project_hot_title">HOT PROJECT</p>

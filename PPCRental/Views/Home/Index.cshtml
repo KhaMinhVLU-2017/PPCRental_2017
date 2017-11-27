@@ -2,7 +2,25 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
+<head>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/home/getcodetype",
+                    datatype: "JSON",
+                    type: "Get",
+                    success: function (data) {
+                        debugger;
+                        for (var i = 0; i < data.length; i++) {
+                            var opt = new Option(data[i].CodeType);
+                            $("#type").append(opt);
+                        }
+                    }
+                });
+            });
+        </script>
+</head>
 <body>
     <div class="st-pusher">
         <div class="st-content">

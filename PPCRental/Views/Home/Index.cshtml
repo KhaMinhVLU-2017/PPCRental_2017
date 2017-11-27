@@ -7,16 +7,59 @@
         <script>
             $(document).ready(function () {
                 $.ajax({
-                    url: "/home/getcodetype",
+                    url: "/Home/GetDistrict",
                     datatype: "JSON",
                     type: "Get",
                     success: function (data) {
                         debugger;
+                        $("#district").prepend("<option> </option>");
                         for (var i = 0; i < data.length; i++) {
-                            var opt = new Option(data[i].CodeType);
-                            $("#type").append(opt);
+                            var opt = new Option(data[i].DistrictName);
+                            $("#district").append(opt);
                         }
                     }
+                });
+            });
+
+            $(function () {
+                $("#district").change(function () {
+                    $("select[name='Ward'] option").remove()
+                    var district = $('#district').val();
+                    $.ajax({
+                        url: "/Home/GetWard",
+                        data: { District: district },
+                        datatype: "JSON",
+                        type: "Get",
+                        success: function (data) {
+                            debugger;
+                            //$("#ward").prepend("<option> </option>");
+                            for (var i = 0; i < data.length; i++) {
+                                var opt = new Option(data[i].WardName);
+                                $("#ward").append(opt);
+                            }
+                        }
+                    });
+                });
+            });
+
+            $(function () {
+                $("#district").change(function () {
+                    $("select[name='Street'] option").remove()
+                    var district = $('#district').val();
+                    $.ajax({
+                        url: "/Home/GetStreet",
+                        data: { District: district },
+                        datatype: "JSON",
+                        type: "Get",
+                        success: function (data) {
+                            debugger;
+                            //$("#ward").prepend("<option> </option>");
+                            for (var i = 0; i < data.length; i++) {
+                                var opt = new Option(data[i].StreetName);
+                                $("#street").append(opt);
+                            }
+                        }
+                    });
                 });
             });
         </script>
@@ -108,23 +151,23 @@
             <!-- #main-carousel-->
             <section class="why-us-setion section-padding">
                 <div class="col-sm-2">
-                    Nhóm khách hàng
+                    Quận
                     </br>
-                    <select class="form-control" id="op1" name="CustomerGroupID">
+                    <select class="form-control" id="district" name="District">
                         @*<option selected="selected"></option>*@
                     </select>
                 </div>
                 <div class="col-sm-2">
-                    Nhóm khách hàng
+                    Phường
                     </br>
-                    <select class="form-control" id="op1" name="CustomerGroupID">
+                    <select class="form-control" id="ward" name="Ward">
                         @*<option selected="selected"></option>*@
                     </select>
                 </div>
                 <div class="col-sm-2">
-                    Nhóm khách hàng
+                    Đường
                     </br>
-                    <select class="form-control" id="op1" name="CustomerGroupID">
+                    <select class="form-control" id="street" name="Street">
                         @*<option selected="selected"></option>*@
                     </select>
                 </div>

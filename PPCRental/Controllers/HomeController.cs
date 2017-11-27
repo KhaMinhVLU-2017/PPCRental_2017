@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PPCRental.Models;
+using System.Data.SqlClient;
 
 namespace PPCRental.Controllers
 {
@@ -79,17 +80,49 @@ namespace PPCRental.Controllers
             return View(dt);
         }
         [HttpGet]
-        public ActionResult GetCodeType()
+        public ActionResult GetDistrict()
         {
 
             List<ListDB> lstCus = new List<ListDB>();
             //var result = pms.Database.SqlQuery<CustomerGroup>("MM_CustomerGroup").ToList();
-            var result = db.Database.SqlQuery<ListDB>("PPC_GetCodeType").ToList();
+            var result = db.Database.SqlQuery<ListDB>("PPC_District").ToList();
             foreach (var item in result)
             {
                 lstCus.Add(new ListDB()
                 {
-                    CodeType = item.CodeType
+                    DistrictName = item.DistrictName
+                });
+            }
+            return Json(lstCus, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult GetWard(string District = "")
+        {
+            List<ListWard> lstCus = new List<ListWard>();
+            var district = new SqlParameter("@DistrictName", District);
+            var result = db.Database.SqlQuery<ListWard>("PPC_Ward @DistrictName", district).ToList();
+            foreach (var item in result)
+            {
+                lstCus.Add(new ListWard()
+                {
+                    WardName = item.WardName
+                });
+            }
+            return Json(lstCus, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult GetStreet(string District = "")
+        {
+            List<ListStreet> lstCus = new List<ListStreet>();
+            var district = new SqlParameter("@DistrictName", District);
+            var result = db.Database.SqlQuery<ListStreet>("PPC_Street @DistrictName", district).ToList();
+            foreach (var item in result)
+            {
+                lstCus.Add(new ListStreet()
+                {
+                    StreetName = item.StreetName
                 });
             }
             return Json(lstCus, JsonRequestBehavior.AllowGet);

@@ -39,13 +39,60 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult Login()
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(string email, string password)
+        {
+            var rs = db.USERs.FirstOrDefault(s => s.Email == email);
+            if (rs != null)
+            {
+                if (rs.Password.Equals(password))
+                {
+                    Session["Fullname"] = rs.FullName;
+                    Session["UserID"] = rs.ID;
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            else
+            {
+                ViewBag.mess = "Account not exist";
+            }
+            return View();
+        }
+
+        public ActionResult Logout(int id)
+        {
+            var user = db.USERs.FirstOrDefault(s => s.ID == id);
+            if (user != null)
+            {
+                Session["Fullname"] = null;
+                Session["UserID"] = null;
+            }
+            return RedirectToAction("Login");
+        }
+        [HttpGet]
         public ActionResult SignUp()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult SignUp(string fullname, string email, string address, string password, string phonenumber)
+        {
+            var us = new USER();
+            us.FullName = fullname;
+            us.Email = email;
+            us.Address = address;
+            us.Password = password;
+            us.Phone = phonenumber;
+            db.USERs.Add(us);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -85,7 +132,10 @@ namespace PPCRental.Controllers
 
             List<ListDB> lstCus = new List<ListDB>();
             //var result = pms.Database.SqlQuery<CustomerGroup>("MM_CustomerGroup").ToList();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a7c417b8e1faaec48f6784def7ce5925528dd38
             var result = db.Database.SqlQuery<ListDB>("PPC_District").ToList();
             foreach (var item in result)
             {

@@ -22,14 +22,18 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
 </head>
+@if (ViewBag.mess != null)
+{
+    <p>@ViewBag.mess</p>
+}
 <body>
     <div class="agile-login">
         <div class="wrapper">
             <h2>Đăng nhập</h2>
             <div class="w3ls-form">
-                <form action="/" method="post">
+                <form action="/home/login" method="post">
                     <label>Tài khoản</label>
-                    <input type="text" name="name" placeholder="Tài khoản" required />
+                    <input type="text" name="email" placeholder="Email" required />
                     <label>Mật khẩu</label>
                     <input type="password" name="password" placeholder="Mật khẩu" required />
                     <a href="#" class="pass">Quên mật khẩu ?</a>

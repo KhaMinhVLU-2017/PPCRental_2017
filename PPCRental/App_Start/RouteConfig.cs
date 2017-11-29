@@ -15,6 +15,20 @@ namespace PPCRental
 
 
             routes.MapRoute(
+<<<<<<< HEAD
+=======
+             name: "Fillter loai bat dong san",
+              url: "Tim-kiem/loai-bat-dong-san/{type}-{name}",
+                 defaults: new { controller = "Home", action = "SearchCodeType", id = UrlParameter.Optional }
+                 );
+            //routes.MapRoute(
+            //name: "Fillter loai bat dong san",
+            // url: "Tim-kiem/loai-bat-dong-san/{type}-{name}",
+            //    defaults: new { controller = "Home", action = "SearchCodeType", id = UrlParameter.Optional }
+            //    );
+
+            routes.MapRoute(
+>>>>>>> 5a7c417b8e1faaec48f6784def7ce5925528dd38
            name: "Trang chu",
            url: "Trang-Chu",
            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
@@ -27,7 +41,7 @@ namespace PPCRental
 
             routes.MapRoute(
                 name: "Account",
-                url: "Tai-khoang/dang-nhap",
+                url: "Tai-khoan/dang-nhap",
                 defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
             );
             routes.MapRoute(

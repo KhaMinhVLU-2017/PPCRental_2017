@@ -42,7 +42,7 @@
         <script src="js/vendor/html5shim.js"></script>
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-   
+
 </head>
 @using PPCRental.Models
 @{
@@ -96,12 +96,24 @@
                                             </ul>
                                         </div><!-- /.social-links -->
                                     </div><!-- /.col-sm-6 -->
-                                    <div class="col-sm-1">
-                                        <a href="http://localhost:2237/Home/Login">Login</a>
-                                    </div>
-                                    <div class="col-sm-1">
-                                        <a href="http://localhost:2237/Home/SignUp">Sign in</a>
-                                    </div>
+                                    @if (Session["UserID"] == null)
+                                    {
+                                        <div class="col-sm-1">
+                                            <a href="/home/login">Login</a>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="/home/signup">Sign Up</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-sm-1">
+                                            <a href="#">Hello @Session["Fullname"]</a>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="/home/logout/@Session["UserID"]">Log out</a>
+                                        </div>
+                                    }
                                 </div><!-- /.row -->
                             </div><!-- /.container -->
                         </div><!-- /.overlay-bg -->

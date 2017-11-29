@@ -112,7 +112,7 @@
                 </div>
             </section>
             <!-- services start -->
-        <br />
+            <br />
             <section class="service-homerent section-padding">
                 <div class="container text-center">
                     <div class="row">
@@ -162,7 +162,14 @@
                                         </a>
                                     </div>
                                     <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
-                                    <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                    @if (Model.FirstOrDefault(s => s.ID == i).Content.Length > 150)
+                                    {
+                                        <p>@Model.FirstOrDefault(s => s.ID == i).Content.Substring(1, 150)...</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
+                                    }
                                     <a class="readmore" href="/Home/Detail/@Model.FirstOrDefault(s=>s.ID==i).ID">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                 </div>
                             </div>
@@ -182,38 +189,45 @@
                         <br />
                         <br />
                         @{int count = 1;
-                        foreach (var item in Model)
-                        {
-                            if (count < 7)
+                            foreach (var item in Model)
                             {
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="service-thumb-home">
-                                            <a href="/Home/Detail/@item.ID">
-                                                <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
-                                                <hr class="project_hot_left" />
-                                                <p class="project_hot_title">NEW PROJECT</p>
-                                                <hr class="project_hot_right" />
-                                            </a>
+                                if (count < 7)
+                                {
+                                    <div class="col-sm-4">
+                                        <div class="service">
+                                            <div class="service-thumb-home">
+                                                <a href="/Home/Detail/@item.ID">
+                                                    <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
+                                                    <hr class="project_hot_left" />
+                                                    <p class="project_hot_title">NEW PROJECT</p>
+                                                    <hr class="project_hot_right" />
+                                                </a>
+                                            </div>
+                                            <h3>@item.PropertyName</h3>
+                                            @if (@item.Content.Length > 150)
+                                            {
+                                                <p>@item.Content.Substring(1, 150)...</p>
+                                            }
+                                            else
+                                            {
+                                                <p>@item.Content</p>
+                                            }
+                                            <a class="readmore" href="/Home/Detail/@item.ID">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
                                         </div>
-                                        <h3>@item.PropertyName</h3>
-                                        <p>@item.Content</p>
-                                        <a class="readmore" href="/Home/Detail/@item.ID">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div><!-- /.col-sm-4 -->
+                                    </div><!-- /.col-sm-4 -->
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                                count++;
                             }
-                            else
-                            {
-                                break;
-                            }
-                            count++;
-                        }
                         }
                     </div> <!-- /.row -->
                 </div><!-- /.container -->
             </section>
             <!-- services end -->
-    </div> <!-- .st-content -->
+        </div> <!-- .st-content -->
     </div> <!-- .st-pusher -->
     <!-- Preloader -->
     <div id="preloader">

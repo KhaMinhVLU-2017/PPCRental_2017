@@ -211,7 +211,29 @@
                             }*@
                         @for (var i = 23; i < 29; i++)
                         {
-                            var url = "/chi-tiet/" + Model.FirstOrDefault(s => s.ID == i).PropertyName + "-" + i;
+                            var url = "";
+                            string meoPName = "";
+                            string[] meoCount = Model.FirstOrDefault(s=>s.ID==i).PropertyName.Split(' ');
+                            if (meoCount.Count() > 0)
+                            {
+                                for (int j = 0; j < meoCount.Count(); j++)
+                                {
+                                    if (meoPName == "")
+                                    {
+                                        meoPName = meoCount[j] + "-" + meoPName;
+                                    }
+                                    else
+                                    {
+                                        meoPName = meoPName + "-" + meoCount[j];
+                                    }
+
+                                }
+                                url = "~/chi-tiet/" + meoPName.ToLower() + "-" + i;
+                            }
+                            else
+                            {
+                                url = "~/chi-tiet/" + Model.FirstOrDefault(s=>s.ID==i).PropertyName + "-" + i;
+                            }
                             <div class="col-sm-4">
                                 <div class="service">
                                     <div class="service-thumb-home">
@@ -254,10 +276,35 @@
                             {
                                 if (count < 7)
                                 {
+                                    var url = "";
+                                    string meoPName= "";
+                                    string[] meoCount = item.PropertyName.Split(' ');
+                                    if (meoCount.Count() > 0)
+                                    {
+                                        for(int i = 0; i < meoCount.Count(); i++)
+                                        {
+                                            if (meoPName == "")
+                                            {
+                                                meoPName = meoCount[i] + "-" + meoPName;
+                                            }
+                                            else
+                                            {
+                                                meoPName = meoPName + "-" + meoCount[i];
+                                            }
+
+                                        }
+                                        url= "~/chi-tiet/" + meoPName.ToLower() + "-" + item.ID;
+                                    }
+                                    else
+                                    {
+                                        url = "~/chi-tiet/" + item.PropertyName + "-" + item.ID;
+                                    }
+
+
                                     <div class="col-sm-4">
                                         <div class="service">
                                             <div class="service-thumb-home">
-                                                <a href="/Home/Detail/@item.ID">
+                                                <a href="@url">
                                                     <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
                                                     <hr class="project_hot_left" />
                                                     <p class="project_hot_title">NEW PROJECT</p>

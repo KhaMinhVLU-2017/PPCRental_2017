@@ -7,8 +7,18 @@ namespace PPCRental.Models
 {
     public class ListDB
     {
-        public string CodeType { get; set; }
+        public string DistrictName { get; set; }
     }
 
+
+    public class ListWard
+    {
+        public string WardName { get; set; }
+    }
+
+    public class ListStreet
+    {
+        public string StreetName { get; set; }
+    }
 
 }

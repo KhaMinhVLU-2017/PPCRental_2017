@@ -42,23 +42,7 @@
         <script src="js/vendor/html5shim.js"></script>
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-    @*<script src="~/Scripts/jquery-2.1.4.js"></script>
-        <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url: "/home/getcodetype",
-                    datatype: "JSON",
-                    type: "Get",
-                    success: function (data) {
-                        debugger;
-                        for (var i = 0; i < data.length; i++) {
-                            var opt = new Option(data[i].CodeType);
-                            $("#type").append(opt);
-                        }
-                    }
-                });
-            });
-        </script>*@
+   
 </head>
 @using PPCRental.Models
 @{

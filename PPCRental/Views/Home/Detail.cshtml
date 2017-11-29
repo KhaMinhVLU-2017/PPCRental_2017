@@ -1,10 +1,10 @@
-﻿@using PPCRental.Models		 +
+﻿@using PPCRental.Models		 
 @model PPCRental.Models.PROPERTY
 @{		 
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}		 
-
+}
+<link rel="stylesheet" type="text/css" href="~/Content/css/font-awesome.css" >
 <div class="container">
     <div class="container">
         <div class="row">
@@ -19,24 +19,23 @@
                             <p class="frist_content_left">@Model.PropertyName</p>
 
                         </div>
-                        <div class="col-md-2">
-                            <br />
-                            <p class="frist_content_right"><p><strong>Price:</strong></p>@Model.Price @Model.UnitPrice</p>
-
-                        </div>
-                        <div class="col-md-8">
-                            <p class="second_content_left">@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
-                        </div>
-                        <div class="col-md-4">                          
-                            <p class="frist_content_right">BedRoom: @Model.BedRoom | BathRoom: @Model.BathRoom </p>
+                        <div class="col-md-4 frist_content_Price">                           
+                            <p><strong>@Model.UnitPrice</strong>@Model.Price</p>
 
                         </div>
                         <div class="col-md-12 maio_img">
                             <img class="img-responsive" src="~/Content/img/Home/@Model.Images" />
                         </div>
+                        <div class="col-md-8">
+                            <p class="frist_content_Address"><span class="iconcss"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
+                        </div>
+                        <div class="col-md-8">                          
+                            <p class="frist_content_Bedroom"><span class="iconcss"><i class="fa fa-bed" aria-hidden="true"></i></span>BedRoom: @Model.BedRoom</p>
+                            <p class="frist_content_Bathroom"><span class="iconcss"><i class="fa fa-bath" aria-hidden="true"></i></span>BathRoom: @Model.BathRoom</p>
+                        </div>                       
                         <div class="col-md-12">
                             <br>
-                            <p>@Model.Content</p>
+                            <p class="frist_content_Describe">@Model.Content</p>
 
                         </div>
 
@@ -68,9 +67,7 @@
                                 break;
                             }
                         }
-                        }
-                        -
-                    </div>
-                    -
+                        }                      
+                    </div>                    
             </div>
         </div>

@@ -132,10 +132,6 @@ namespace PPCRental.Controllers
 
             List<ListDB> lstCus = new List<ListDB>();
             //var result = pms.Database.SqlQuery<CustomerGroup>("MM_CustomerGroup").ToList();
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a7c417b8e1faaec48f6784def7ce5925528dd38
             var result = db.Database.SqlQuery<ListDB>("PPC_District").ToList();
             foreach (var item in result)
             {

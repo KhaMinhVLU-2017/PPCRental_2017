@@ -228,11 +228,11 @@
                                     }
 
                                 }
-                                url = "~/chi-tiet/" + meoPName.ToLower() + "-" + i;
+                                url = "/chi-tiet/" + meoPName.ToLower() + "-" + i;
                             }
                             else
                             {
-                                url = "~/chi-tiet/" + Model.FirstOrDefault(s=>s.ID==i).PropertyName + "-" + i;
+                                url = "/chi-tiet/" + Model.FirstOrDefault(s=>s.ID==i).PropertyName + "-" + i;
                             }
                             <div class="col-sm-4">
                                 <div class="service">
@@ -293,11 +293,11 @@
                                             }
 
                                         }
-                                        url= "~/chi-tiet/" + meoPName.ToLower() + "-" + item.ID;
+                                        url= "/chi-tiet/" + meoPName.ToLower() + "-" + item.ID;
                                     }
                                     else
                                     {
-                                        url = "~/chi-tiet/" + item.PropertyName + "-" + item.ID;
+                                        url = "/chi-tiet/" + item.PropertyName + "-" + item.ID;
                                     }
 
 

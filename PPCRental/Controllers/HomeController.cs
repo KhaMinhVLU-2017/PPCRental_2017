@@ -55,7 +55,7 @@ namespace PPCRental.Controllers
                 {
                     Session["Fullname"] = rs.FullName;
                     Session["UserID"] = rs.ID;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Agency");
                 }
             }
             else
@@ -181,5 +181,6 @@ namespace PPCRental.Controllers
              meo = db.PROPERTies.FirstOrDefault(s =>s.ID == id);		
              return View(meo);
         }
+
     }
 }

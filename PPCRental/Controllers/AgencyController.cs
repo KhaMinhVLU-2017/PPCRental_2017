@@ -156,5 +156,9 @@ namespace PPCRental.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult ChangePass()
+        {
+            return View();
+        }
     }
 }

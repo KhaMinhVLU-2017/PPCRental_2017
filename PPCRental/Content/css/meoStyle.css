@@ -1,0 +1,86 @@
+body {
+    background-image: url('../img/img_changepass/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: meoFont;
+    color: white;
+}
+@font-face {
+ 
+    font-family: 'meoFont';
+    src: url('../fonts/IndieFlower.ttf') format('truetype');
+}
+.first_main{
+	transform: translateY(30vh);
+	padding: 3vh;
+}
+.second h1{
+	text-align: center;
+	color: #f513f7;
+	font-weight: bold;
+}  
+.second p{
+	font-weight: bold;
+	font-size: 20px;
+}
+.third{
+	transform: translateY(30vh);
+}
+.p_last{
+	transform: translateY(3vh);
+	text-align: right;
+}	
+.third p{
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: .15em; 
+	animation: meo 5s steps(85,end) infinite,
+	blink-caret .75s step-end infinite;
+}    
+.first_main:hover{
+	box-shadow: 1px 1px 9px 10px;
+	transition: 1s;
+}
+.first_main:hover .second{
+	transition: 1s;
+	color: #2cff2a;
+}
+.first_main:not(:hover) .second{
+	transition: 1s;
+}
+.first_main:not(:hover){
+	transition: 1s;
+}
+
+@keyframes meo{
+	0%{width: 0;}
+	50% {width: 40%;}
+	100%{width: 0;}
+}
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+}
+@media (max-width: 1024px){
+	.first_main{
+		width: 38vh;
+		left: -6vh;
+	}
+}
+@media (max-width: 414px){
+	.first_main{
+		width: 100%;
+		left: 0;
+		transform: translateY(25vh);
+	}
+	.third {
+		transform: translateY(19vh);
+	}
+}
+@media (max-width: 320px){
+	.first_main{
+	    transform: translateY(4vh);
+	}
+}

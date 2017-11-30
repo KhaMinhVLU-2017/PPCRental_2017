@@ -241,6 +241,7 @@
     <Content Include="Content\css\language-select.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\meoStyle.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\style1.css" />
@@ -317,6 +318,9 @@
     <Content Include="Content\img\Home\N4.jpg" />
     <Content Include="Content\img\Home\N5.jpg" />
     <Content Include="Content\img\Home\N6.jpg" />
+    <Content Include="Content\img\img_changepass\bg.jpg" />
+    <Content Include="Content\img\img_changepass\bg2.jpg" />
+    <Content Include="Content\img\img_changepass\bg3.jpg" />
     <Content Include="Content\img\intro-bg.jpg" />
     <Content Include="Content\img\logo - Copy.png" />
     <Content Include="Content\img\logo.png" />
@@ -402,6 +406,7 @@
     <Content Include="Content\js\jquery.stellar.js" />
     <Content Include="Content\js\jquery.sticky-kit.min.js" />
     <Content Include="Content\js\jquery.sticky.js" />
+    <Content Include="Content\js\msoJS.js" />
     <Content Include="Content\js\scripts.js" />
     <Content Include="Content\js\selectFx.js" />
     <Content Include="Content\js\smoothscroll.js" />
@@ -456,6 +461,7 @@
     <Content Include="Content\fonts\fontsSignup\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\fontsSignup\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\fontsSignup\FontAwesome.otf" />
+    <Content Include="Content\fonts\IndieFlower.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\build\css\custom.css" />
     <Content Include="Scripts\build\css\custom.min.css" />
@@ -2153,6 +2159,7 @@
     <Content Include="Views\Agency\Details.cshtml" />
     <Content Include="Views\Agency\Edit.cshtml" />
     <Content Include="Views\Agency\Index.cshtml" />
+    <Content Include="Views\Agency\ChangePass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

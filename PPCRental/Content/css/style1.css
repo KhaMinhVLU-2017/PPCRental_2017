@@ -218,6 +218,12 @@ span.fa.fa-pinterest-p:hover {
 	    letter-spacing: 2px;
 		font-size: 13px;
 }
+.p{
+    color:#3EB7EF;
+}
+.P:hover{
+    color:#30DA99;
+}
 .copyright a {
     color: aqua;
 }

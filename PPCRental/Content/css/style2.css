@@ -97,11 +97,11 @@ h1 {
     display: inline-block;
 }
 a {
-    color: #5a5a5a;
+    color: #3EB7EF;
     margin: 0em;
 }
 a:hover{
-    color: #000;
+    color: #4DE673;
 }
 .f {
     background: #3b5998;
@@ -163,7 +163,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     margin: 0 auto;
 }
 ::-webkit-input-placeholder{
-    color: #616161!important;
+    color: #30DA99!important;
 }
 .header-left-bottom input[type="text"] {
     outline: none;
@@ -246,7 +246,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     font-size: 15px;
     font-weight: 400;
     color: #ececec;
-    color: #1f1f1f;
+    color: #3EB7EF;
     display: inline-block;
     text-align: center;
     font-style: italic;
@@ -258,7 +258,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 	font-size: 15px;
 	font-weight: 400;
 	color: #ececec;
-    color: #1f1f1f;
+    color: #3EB7EF;
 	margin-left: 10px;
 }
 .header-left-bottom p a:hover {
@@ -272,7 +272,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 }
 .heading h5 {
     color: #c5c5c5;
-    color: #616161;
+    color: #3EB7EF;
     margin-top: 8px;
     font-size: 20px;
 }
@@ -296,7 +296,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 }
 .social i.fa {
     color: #fff;
-    color: #505050;
+    color: #3EB7EF;
 }
 .heading,.icons {
     width: 50%;
@@ -348,7 +348,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     letter-spacing: 2px;
     font-size: 14px;
     color: #fff;
-    color: #616161;
+    color: #3EB7EF;
 }
 /*-- w3layouts --*/
 /*-- header end here --*/

@@ -163,13 +163,13 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     margin: 0 auto;
 }
 ::-webkit-input-placeholder{
-    color: #30DA99!important;
+    color: #fff!important;
 }
 .header-left-bottom input[type="text"] {
     outline: none;
     font-size: 15px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
 	border:none;
     width: 90%;
     padding-left: 15px;
@@ -181,7 +181,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     outline: none;
     font-size: 15px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
 	border:none;
     width: 90%;
     padding-left: 12px;
@@ -193,7 +193,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     outline: none;
     font-size: 15px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
 	border:none;
     width: 90%;
     padding-left: 15px;
@@ -205,7 +205,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
   outline: none;
   font-size: 15px;
   font-weight: 400;
-    color: #000;
+    color: #fff;
   border:none;
     width: 90%;
     padding-left: 15px;
@@ -372,6 +372,9 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 .copyright p a:hover{
 	color:#34a853;
 	text-decoration:none;
+}
+.trangchu{
+    text-align:center;
 }
 /*-- copyright end here --*/
 /*-- responsive --*/

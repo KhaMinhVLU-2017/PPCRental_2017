@@ -105,7 +105,7 @@
                                     @if (Session["UserID"] == null)
                                     {
                                         <div class="col-sm-1">
-                                            <a href="Tai-khoan/dang-nhap">Login</a>
+                                            <a href="~/Home/Login">Login</a>
                                         </div>
                                         <div class="col-sm-1">
                                             <a href="/home/signup">Sign Up</a>
@@ -156,8 +156,8 @@
                                 <ul class="nav navbar-nav navbar-right">
                                     <!-- Home -->
                                     <li class="dropdown active">
-                                    <li><a href="~/Trang-chu">Trang chủ</a></li>
-                                    <li><a href="~/Trang-chu/gioi-thieu">Giới thiệu</a></li>
+                                    <li><a href="~/Home/Index">Trang chủ</a></li>
+                                    <li><a href="~/Home/Aboutus">Giới thiệu</a></li>
                                     <!-- /Pages -->
                                     <!-- Services -->
                                     <li class="dropdown">
@@ -168,8 +168,9 @@
                                                 <ul class="dropdown-menu" id="type">
                                                     @foreach (var item in Result)
                                                     {
-                                                        @*<li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>*@
-                                                        <li><a href="~/Tim-kiem/loai-bat-dong-san/@item.CodeType.ToString()-@item.CodeType.ToString()">@item.CodeType</a></li>
+                                                        <li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
+                                                  
+                                                        @*<li><a href="~/Tim-kiem/loai-bat-dong-san/@item.CodeType.ToString()-@item.CodeType.ToString()">@item.CodeType</a></li>*@
                                                     }
                                                 </ul>
                                             </div>
@@ -184,7 +185,7 @@
                                                 <ul class="dropdown-menu">
                                                     @for (int i = 36; i < 55; i++)
                                                     {
-                                                        var url = "";
+                                                        @*var url = "";
                                                         string meoPName = "";
                                                         string[] meoCount = district.FirstOrDefault(s => s.ID == i).DistrictName.Split(' ');
                                                         if (meoCount.Count() > 0)
@@ -208,11 +209,14 @@
                                                             url = "/Tim-kiem/Quan-"+ @i+"-"+district.FirstOrDefault(s => s.ID == i).DistrictName;
                                                         }
                                                             <li><a href="@url">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
-                                                        }       
+                                                        }*@      
+                                                       
+                                                        <li><a href="~/Home/SearchDistrict?districtid=@i&&name=@district.Where(s => s.ID == i).FirstOrDefault().DistrictName">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
+                                                    }
                                                 </ul>
                                             </div>
                                         </div>  
-                                        <!-- /submenu-wrapper -->
+                                        <!-- /submenu-wrapper -->   
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">Loại tiện ích <span class="fa fa-angle-down"></span></a>

@@ -410,7 +410,7 @@ Whyus Setion
 
   .content-text {
     text-align: left;
-  };
+  }
 }
 
 
@@ -505,7 +505,7 @@ TESTIMONIAL SECTION
 @media screen and (min-width: 768px) {
   #testimonial-carousel .carousel-indicators {
     bottom: -3px;
-  };
+  }
 }
 
 #testimonial-carousel .carousel-indicators li {
@@ -1528,10 +1528,7 @@ Contact Page
 .div_slide:not(:hover) .black-background{
   transition: 1s;
 }
-<<<<<<< HEAD
-.div_slide:hover{
-  text-shadow:  5px 5px 15px white;
-}
+
 .div_slide:hover {
     text-shadow: 5px 5px 15px white;
 }

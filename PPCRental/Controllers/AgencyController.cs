@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using PPCRental.Models;
 using PagedList;
+using Postal;
+using System.Net.Mail;
 
 namespace PPCRental.Controllers
 {
@@ -181,6 +183,64 @@ namespace PPCRental.Controllers
                 ViewBag.error = "Password current not exactly";
                 return View();
             }
+        }
+        public ActionResult ForgetPassword()
+        {
+            return View();
+        }
+        public async System.Threading.Tasks.Task<ActionResult> ForgetPass(string Semail,string number_phone)
+        {
+            if (Semail != "" && number_phone!="") {
+                USER meo = db.USERs.ToList().FirstOrDefault(s => s.Email == Semail && s.Phone == number_phone);
+                if (meo != null)
+                {   
+                    string line = "qwertyuiopasdfdghjklzxcvbnm0123456789";
+                    int count = line.Length-1;
+                  
+                    Random number = new Random();   
+                    int begin = number.Next(1, count);
+                    int end = count - begin;
+                    string sum = "";
+                    for (int i = 0; i < 3; i++)
+                    {
+                        sum = sum + line.Substring(begin, end);
+                    }
+                    meo.Password = sum;
+                    db.SaveChanges();
+                    ViewBag.email = Semail;
+                    /////////////////////
+                    var body = "<h1>Hi! "+meo.FullName+" </h1";
+                    body += "<p>&ensp; Email From: {0} to {1}</p><br/><p>Message:{2}</p>";
+                    body += "<p>Very pleased to hear from customers<p>";
+                    body += "<p>JudasFate<p>";
+                    var message = new MailMessage();
+                    message.To.Add(new MailAddress(Semail));  // replace with valid value 
+                    message.From = new MailAddress("k21t1boconganh@gmail.com");
+                    message.Subject = "Your email subject";
+                    message.Body = string.Format(body,"k21t1boconganh@gmail.com",Semail,"This is your password: "+sum);
+                    message.IsBodyHtml = true;
+
+                    using (var smtp = new SmtpClient())
+                    {   
+                    
+                        smtp.Send(message);
+                        return RedirectToAction("ForgetComplete", "Agency");
+                    }
+                }
+                else
+                {
+                    return View("ForgetPassword");
+                }
+            }
+            else
+            {
+                ViewBag.erorr = "Password or NumberPhone not found";
+                return View("ForgetPassword");
+            }
+        }
+        public ActionResult ForgetComplete()
+        {
+            return View();
         }
     }
 }

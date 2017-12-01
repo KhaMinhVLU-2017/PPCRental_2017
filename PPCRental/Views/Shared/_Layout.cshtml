@@ -97,11 +97,11 @@
                                         </div><!-- /.social-links -->
                                     </div><!-- /.col-sm-6 -->
                                     @*<div class="col-sm-1">
-                                        <a href="~/Tai-khoang/dang-nhap">Login</a>
-                                    </div>
-                                    <div class="col-sm-1">
-                                        <a href="http://localhost:2237/Home/SignUp">Sign in</a>
-                                    </div>*@
+                                            <a href="~/Tai-khoang/dang-nhap">Login</a>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <a href="http://localhost:2237/Home/SignUp">Sign in</a>
+                                        </div>*@
                                     @if (Session["UserID"] == null)
                                     {
                                         <div class="col-sm-1">
@@ -113,12 +113,22 @@
                                     }
                                     else
                                     {
-                                        <div class="col-sm-1">
-                                            <a href="#">Chào @Session["Fullname"]</a>
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <a href="/home/logout/@Session["UserID"]">Log out</a>
-                                        </div>
+                                        <ul class="nav navbar-right">
+                                            <li class="dropdown">
+                                                <a href="#">Xin chào @Session["Fullname"] <span class="fa fa-angle-down"></span></a>
+                                                <!-- submenu-wrapper -->
+                                                <div class="submenu-wrapper">
+                                                    <div class="submenu-inner">
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="">Danh sách các dự án</a></li>
+                                                            <li><a href="">Thay đổi thông tin tài khoản</a></li>
+                                                            <li><a href="/home/logout/@Session["UserID"]">Log out</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- /submenu-wrapper -->
+                                            </li>
+                                        </ul>
                                     }
                                 </div><!-- /.row -->
                             </div><!-- /.container -->
@@ -169,8 +179,6 @@
                                                     @foreach (var item in Result)
                                                     {
                                                         <li><a href="@Url.Action("SearchCodeType", "Home", new { type = @item.CodeType.ToString(), name = @item.CodeType.ToString() })">@item.CodeType</a></li>
-                                                  
-                                                        @*<li><a href="~/Tim-kiem/loai-bat-dong-san/@item.CodeType.ToString()-@item.CodeType.ToString()">@item.CodeType</a></li>*@
                                                     }
                                                 </ul>
                                             </div>
@@ -186,37 +194,37 @@
                                                     @for (int i = 36; i < 55; i++)
                                                     {
                                                         @*var url = "";
-                                                        string meoPName = "";
-                                                        string[] meoCount = district.FirstOrDefault(s => s.ID == i).DistrictName.Split(' ');
-                                                        if (meoCount.Count() > 0)
-                                                        {
-                                                            for (int j = 0; j < meoCount.Count(); j++)
+                                                            string meoPName = "";
+                                                            string[] meoCount = district.FirstOrDefault(s => s.ID == i).DistrictName.Split(' ');
+                                                            if (meoCount.Count() > 0)
                                                             {
-                                                                if (meoPName == "")
+                                                                for (int j = 0; j < meoCount.Count(); j++)
                                                                 {
-                                                                    meoPName = meoCount[j] + meoPName;
-                                                                }
-                                                                else
-                                                                {
-                                                                    meoPName = meoPName + meoCount[j];  
-                                                                }   
+                                                                    if (meoPName == "")
+                                                                    {
+                                                                        meoPName = meoCount[j] + meoPName;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        meoPName = meoPName + meoCount[j];
+                                                                    }
 
+                                                                }
+                                                                url = "/Tim-kiem/Quan-"+@i+"-"+meoPName.ToLower();
                                                             }
-                                                            url = "/Tim-kiem/Quan-"+@i+"-"+meoPName.ToLower();
-                                                        }
-                                                        else
-                                                        {
-                                                            url = "/Tim-kiem/Quan-"+ @i+"-"+district.FirstOrDefault(s => s.ID == i).DistrictName;
-                                                        }
-                                                            <li><a href="@url">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
-                                                        }*@      
-                                                       
+                                                            else
+                                                            {
+                                                                url = "/Tim-kiem/Quan-"+ @i+"-"+district.FirstOrDefault(s => s.ID == i).DistrictName;
+                                                            }
+                                                                <li><a href="@url">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
+                                                            }*@
+
                                                         <li><a href="~/Home/SearchDistrict?districtid=@i&&name=@district.Where(s => s.ID == i).FirstOrDefault().DistrictName">@district.Where(s => s.ID == i).FirstOrDefault().DistrictName</a></li>
                                                     }
                                                 </ul>
                                             </div>
-                                        </div>  
-                                        <!-- /submenu-wrapper -->   
+                                        </div>
+                                        <!-- /submenu-wrapper -->
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">Loại tiện ích <span class="fa fa-angle-down"></span></a>

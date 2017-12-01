@@ -162,7 +162,25 @@ namespace PPCRental.Controllers
         }
         public ActionResult IdentiChangepass(string passOld,string passNew,string passCf)
         {
-            return View();
+            USER meo = db.USERs.Find((int)Session["UserID"]);
+            if (meo.Password == passOld)
+            {
+                if (passNew == passCf)
+                {
+                    meo.Password = passNew;
+                    db.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                else{
+                    ViewBag.error = "Password not confirm";
+                    return View();
+                }
+            }
+            else
+            {
+                ViewBag.error = "Password current not exactly";
+                return View();
+            }
         }
     }
 }

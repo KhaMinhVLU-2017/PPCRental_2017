@@ -160,5 +160,9 @@ namespace PPCRental.Controllers
         {
             return View();
         }
+        public ActionResult IdentiChangepass(string passOld,string passNew,string passCf)
+        {
+            return View();
+        }
     }
 }

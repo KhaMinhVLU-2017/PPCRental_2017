@@ -17,3 +17,9 @@ function ChangBGout(){
 	body.style.size='cover';
 	body.style.transition='1s';
 }
+var pass1 = document.getElementById('passNew1');
+pass1.addEventListener("input",GetPass);
+function GetPass(){
+	var sosanh= pass1.value;
+	console.log(sosanh);
+}

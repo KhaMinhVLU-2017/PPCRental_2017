@@ -20,13 +20,13 @@
             <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-12 first_main" id="first">
                 <div class="col-md-12 second">
                     <h1>Change Password</h1>
-                    <form class="form-group">
+                    <form class="form-group" method="post"  action="~/Agency/IdentiChangepass">
                         <p>Password current</p>
                         <input type="Password" name="passOld" class="form-control">
                         <p>Password New</p>
-                        <input type="Password" name="passNew" class="form-control">
+                        <input type="Password" name="passNew" id="passNew1" class="form-control">
                         <p>Password Confirm</p>
-                        <input type="Password" name="passCf" class="form-control">
+                        <input type="Password" name="passCf" id="passNew2" class="form-control">
                         <p class="p_last">
                             <button class="btn btn-success" type="submit">Change</button>
                             <button class="btn btn-danger">Cancel</button>

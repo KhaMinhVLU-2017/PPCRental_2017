@@ -342,9 +342,7 @@
     <Content Include="Content\img\Home\DA19-02.JPG" />
     <Content Include="Content\img\Home\Sunrise01.JPG" />
     <Content Include="Content\img\Home\Sunrise02.JPG" />
-    <Content Include="Content\img\img_changepass\bg.jpg" />
-    <Content Include="Content\img\img_changepass\bg2.jpg" />
-    <Content Include="Content\img\img_changepass\bg3.jpg" />
+    <Content Include="Content\img\img_changepass\BackgroundLogin.jpeg" />
     <Content Include="Content\img\intro-bg.jpg" />
     <Content Include="Content\img\logo - Copy.png" />
     <Content Include="Content\img\logo.png" />

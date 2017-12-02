@@ -1,5 +1,5 @@
 body {
-    background-image: url('../img/img_changepass/bg.jpg');
+    background-image: url('../img/img_changepass/BackgroundLogin.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -10,7 +10,7 @@ body {
 @font-face {
  
     font-family: 'meoFont';
-    src: url('../fonts/IndieFlower.ttf') format('truetype');
+   
 }
 .first_main{
 	transform: translateY(30vh);
@@ -18,7 +18,7 @@ body {
 }
 .second h1{
 	text-align: center;
-	color: #f513f7;
+	color: #5FA5FF;
 	font-weight: bold;
 }  
 .second p{
@@ -45,7 +45,7 @@ body {
 }
 .first_main:hover .second{
 	transition: 1s;
-	color: #2cff2a;
+	color: #EFF2F7;
 }
 .first_main:not(:hover) .second{
 	transition: 1s;

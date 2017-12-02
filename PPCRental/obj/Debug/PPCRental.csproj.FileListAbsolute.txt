@@ -285,3 +285,8 @@ D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRenta
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\Postal.xml
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\RazorEngine.pdb
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental\bin\RazorEngine.xml
+D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\Postal.dll
+D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngine.dll
+D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\Postal.xml
+D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngine.pdb
+D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngine.xml

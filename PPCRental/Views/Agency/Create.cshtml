@@ -5,14 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Tạo dự án mới</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>PROPERTY</h4>
         <hr />
         @Html.ValidationSummary(true)
 
@@ -128,13 +127,6 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserID, "UserID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("UserID", String.Empty)
-                @Html.ValidationMessageFor(model => model.UserID)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Created_at, new { @class = "control-label col-md-2" })
@@ -152,41 +144,13 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Status_ID, "Status_ID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Status_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Status_ID)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Note, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Note)
-                @Html.ValidationMessageFor(model => model.Note)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Updated_at, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Updated_at)
-                @Html.ValidationMessageFor(model => model.Updated_at)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Sale_ID, "Sale_ID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Sale_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Sale_ID)
-            </div>
-        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="button" name="Save" value="Lưu" class="btn btn-default" />
+                <input type="button" name="Draftsave" value="Lưu nháp" class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -290,3 +290,8 @@ D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngin
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\Postal.xml
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngine.pdb
 D:\Tài liệu lập trình\WebPPCRental\PPCRental_2017\PPCRental\bin\RazorEngine.xml
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\Postal.dll
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\RazorEngine.dll
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\Postal.xml
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\RazorEngine.pdb
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental\bin\RazorEngine.xml

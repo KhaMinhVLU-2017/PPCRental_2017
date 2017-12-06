@@ -2176,7 +2176,6 @@
     <Content Include="Views\Sale\ViewAgency.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\SignUp.cshtml" />
-    <Content Include="Views\Agency\Create.cshtml" />
     <Content Include="Views\Agency\Delete.cshtml" />
     <Content Include="Views\Agency\Details.cshtml" />
     <Content Include="Views\Agency\Edit.cshtml" />
@@ -2186,6 +2185,7 @@
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Emails\Web.config" />
     <Content Include="Views\Agency\ForgetComplete.cshtml" />
+    <Content Include="Views\Agency\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

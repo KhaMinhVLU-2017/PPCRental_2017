@@ -60,22 +60,35 @@ namespace PPCRental.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,PropertyName,Avatar,Images,PropertyType_ID,Content,Street_ID,Ward_ID,District_ID,Price,UnitPrice,Area,BedRoom,BathRoom,PackingPlace,UserID,Created_at,Create_post,Status_ID,Note,Updated_at,Sale_ID")] PROPERTY property)
+        public ActionResult Create(PROPERTY property)
         {
             if (ModelState.IsValid)
             {
-                db.PROPERTies.Add(property);
+               
+                var prop = new PROPERTY();
+                prop.PropertyName = property.PropertyName;
+                prop.Avatar = property.Avatar;
+                prop.Images = property.Images;
+                prop.PropertyType_ID = property.PropertyType_ID;
+                prop.Street_ID = property.Street_ID;
+                prop.Ward_ID = property.Ward_ID;
+                prop.District_ID = property.District_ID;
+                prop.Price = property.Price;
+                prop.Content = property.Content;
+                prop.UnitPrice = property.UnitPrice;
+                prop.Area = property.Area;
+                prop.BathRoom = property.BathRoom;
+                prop.BedRoom = property.BedRoom;
+                prop.PackingPlace = property.PackingPlace;
+                prop.UserID = int.Parse(Session["UserID"].ToString());
+                prop.Created_at = DateTime.Now;
+                prop.Create_post = property.Create_post;
+                    prop.Status_ID = 3;
+                db.PROPERTies.Add(prop);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.District_ID = new SelectList(db.DISTRICTs, "ID", "DistrictName", property.District_ID);
-            ViewBag.Status_ID = new SelectList(db.PROJECT_STATUS, "ID", "Status_Name", property.Status_ID);
-            ViewBag.PropertyType_ID = new SelectList(db.PROPERTY_TYPE, "ID", "CodeType", property.PropertyType_ID);
-            ViewBag.Street_ID = new SelectList(db.STREETs, "ID", "StreetName", property.Street_ID);
-            ViewBag.UserID = new SelectList(db.USERs, "ID", "Email", property.UserID);
-            ViewBag.Sale_ID = new SelectList(db.USERs, "ID", "Email", property.Sale_ID);
-            ViewBag.Ward_ID = new SelectList(db.WARDs, "ID", "WardName", property.Ward_ID);
+           
             return View(property);
         }
 

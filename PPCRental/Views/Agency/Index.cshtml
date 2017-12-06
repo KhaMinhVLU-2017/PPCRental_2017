@@ -5,8 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Danh sách các dự án của Agency</h2>
-
+<h2>Danh sách các dự án của @Model.FirstOrDefault().USER.FullName</h2>
+<p><a href="/agency/create">Tạo dự án mới</a></p>
 <table class="table">
     <tr>
         <th>
@@ -77,10 +77,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
+            @if (item.UserID == 2)
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            }
         </tr>
     }
 

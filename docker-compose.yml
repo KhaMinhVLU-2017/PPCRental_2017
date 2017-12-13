@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  ppcrental.appceptance.test:
+    image: ppcrental.appceptance.test
+    build:
+      context: .\PPCRental.Appceptance.Test
+      dockerfile: Dockerfile

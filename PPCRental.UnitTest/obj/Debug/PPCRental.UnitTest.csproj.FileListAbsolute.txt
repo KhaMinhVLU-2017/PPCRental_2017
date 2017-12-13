@@ -1,0 +1,13 @@
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\PPCRental.UnitTest.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\PPCRental.UnitTest.pdb
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.csprojResolveAssemblyReference.cache
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.csproj.CoreCompileInputs.cache
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.dll
+D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.pdb

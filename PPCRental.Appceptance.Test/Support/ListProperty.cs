@@ -2,7 +2,7 @@
 using PPCRental.Models;
 using FluentAssertions;
 
-namespace PPCRental.Appceptance.Test.Support
+namespace PPCRental.AcceptanceTests.Support
 {
     public class ListProperty : Dictionary<string,PROPERTY>
     {

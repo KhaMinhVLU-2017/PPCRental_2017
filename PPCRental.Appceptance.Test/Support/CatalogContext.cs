@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPCRental.Appceptance.Test.Support
+namespace PPCRental.AcceptanceTests.Support
 {
     public class CatalogContext
     {

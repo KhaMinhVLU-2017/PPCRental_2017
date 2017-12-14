@@ -8,7 +8,7 @@ using PPCRental.Appceptance.Test.Support;
 using FluentAssertions;
 
 
-namespace PPCRental.Appceptance.Test.Driver
+namespace PPCRental.AcceptanceTests.Driver
 {
     public class DetailProjectDriver
     {

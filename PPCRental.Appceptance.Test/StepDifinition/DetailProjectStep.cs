@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-namespace PPCRental.Appceptance.Test.StepDifinition
+namespace PPCRental.AcceptanceTests.StepDifinition
 {
     [Binding]
     public sealed class DetailProjectStep

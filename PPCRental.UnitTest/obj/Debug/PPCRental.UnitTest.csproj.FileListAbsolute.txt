@@ -11,3 +11,15 @@ D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRenta
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.csproj.CoreCompileInputs.cache
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.dll
 D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.pdb
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\PPCRental.UnitTest.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\PPCRental.UnitTest.pdb
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.csprojResolveAssemblyReference.cache
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.dll
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.UnitTest\obj\Debug\PPCRental.UnitTest.pdb

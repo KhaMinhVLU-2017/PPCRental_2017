@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental.Appceptance.Test\obj\Debug\PPCRental.AcceptanceTests.csprojResolveAssemblyReference.cache
+=======
+D:\Project\PPCRental_2017\PPCRental_2017 - Copy\PPCRental.Appceptance.Test\obj\Debug\PPCRental.AcceptanceTests.csprojResolveAssemblyReference.cache
+>>>>>>> e3bb2f77801a4945dad7e67164c0f4f1288ce0f4

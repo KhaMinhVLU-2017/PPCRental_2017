@@ -1,1 +1,0 @@
-C:\Users\hoang\Downloads\Programs\PortableGit\PPCRental_2017\PPCRental.Appceptance.Test\obj\Debug\PPCRental.AcceptanceTests.csprojResolveAssemblyReference.cache

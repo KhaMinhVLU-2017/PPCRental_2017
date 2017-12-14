@@ -4,7 +4,7 @@ using PPCRental.Controllers;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 using PPCRental.Models;
-using PPCRental.AcceptanceTests.Common;
+//using PPCRental.AcceptanceTests.Common;
 
 namespace PPCRental.AcceptanceTests.Drivers.Home
 {
@@ -20,13 +20,7 @@ namespace PPCRental.AcceptanceTests.Drivers.Home
             }
         }
 
-        public void Login(string email, string password)
-        {
-            using (var controller = new HomeController())
-            {
-                _result = controller.Login();
-            }
-        }
+      
         public void ShowViewListProject(Table expectedShowViewListProject)
         => ShowViewListProject(expectedShowViewListProject.Rows.Select(r=>r["Email"]));
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 using PPCRental.AcceptanceTests.Drivers.Property;
+using PPCRental.AcceptanceTests.Drivers.Home;
 namespace PPCRental.AcceptanceTests.StepDefinitions
 {
  [Binding]

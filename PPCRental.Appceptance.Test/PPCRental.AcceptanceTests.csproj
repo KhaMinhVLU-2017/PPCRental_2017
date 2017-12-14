@@ -86,12 +86,18 @@
   <ItemGroup>
     <Compile Include="Driver\DetailProjectDriver.cs" />
     <Compile Include="Driver\Home\HomeDriver.cs" />
+    <Compile Include="Driver\Login\Login.cs" />
     <Compile Include="Driver\Property\PropertyDriver.cs" />
     <Compile Include="Feature\US02_ViewListProject.feature.cs" />
     <Compile Include="Feature\US02_ViewListProject1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>US02_ViewListProject.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\US05_EditAgencyProject.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US05_EditAgencyProject.feature</DependentUpon>
     </Compile>
     <Compile Include="Feature\ViewDetailProject.feature.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +106,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDifinition\DetailProjectStep.cs" />
+    <Compile Include="StepDifinition\EditAgencyProject.cs" />
     <Compile Include="StepDifinition\ViewListProjectStep.cs" />
     <Compile Include="Support\ActionResultExtensions.cs" />
     <Compile Include="Support\CatalogContext.cs" />
@@ -113,6 +120,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>US02_ViewListProject1.feature.cs</LastGenOutput>
     </None>
+    <None Include="Feature\US05_EditAgencyProject.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US05_EditAgencyProject.feature.cs</LastGenOutput>
+    </None>
     <None Include="Feature\ViewDetailProject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ViewDetailProject.feature.cs</LastGenOutput>
@@ -125,6 +136,10 @@
     <ProjectReference Include="..\PPCRental.AcceptanceTest.Common\PPCRental.AcceptanceTests.Common.csproj">
       <Project>{02293ac5-5793-43f5-9c1a-e73ac0b1baba}</Project>
       <Name>PPCRental.AcceptanceTests.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PPCRental.UnitTest\PPCRental.UnitTest.csproj">
+      <Project>{ee1122cb-4dea-425e-b718-f55ce796b8ed}</Project>
+      <Name>PPCRental.UnitTest</Name>
     </ProjectReference>
     <ProjectReference Include="..\PPCRental\PPCRental.csproj">
       <Project>{c0ce3af9-6f8e-4f93-9434-36f76d9b92d5}</Project>

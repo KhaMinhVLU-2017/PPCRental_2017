@@ -1,73 +1,155 @@
-﻿@using PPCRental.Models		 
+﻿@using PPCRental.Models
 @model PPCRental.Models.PROPERTY
-@{		 
-    ViewBag.Title = "Detail";
+@{		 ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/css/font-awesome.css" >
-<div class="container">
-    <div class="container">
-        <div class="row">
+
+<style>
+    .col-md-9 {
+        width: 75%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .prop_social_single {
+        width: 100%;
+        padding-bottom: 10px;
+        text-align: right;
+        margin-top: -15px;
+        float: right;
+        color: black;
+    }
+
+    .featured_article_righ, .featured_article_secondline, .property_location .inforoom, .property_location .infobath, .agent_meta, .blog_unit_meta a, .property_location .infosize, .sale_line, .meta-info a, .breadcrumb > li + li:before, .blog_unit_meta, .meta-info, .agent_position, .breadcrumb a {
+        color: #4b5684;
+    }
+
+    a {
+        color: #4c5483;
+        transition: all 0.3s ease 0s;
+    }
+</style>
+
+<div class="container content_wrapper">
+    <div id="post" class="row post-5008 post type-post status-publish format-standard has-post-thumbnail hentry category-blog-news-tips tag-hoi-an tag-hue tag-landscape tag-photography tag-travel">
+        <div class="col-xs-12 col-md-12 breadcrumb_container">
+            <ol class="breadcrumb">
+                <li class="active"></li>
+            </ol>
+        </div>    
+        <div class="col-md-9 rightmargin single_width_blog">
+            <div id="listing_ajax_container">
+
+            </div>
+
+            <h1 class="entry-title single-title">@Model.PropertyName</h1>
+
+            <div class="meta-info">
+                <div class="meta-element"> Posted by Admin</div>
+                <div class="meta-element"> <span class="meta-separator"> | </span><i class="fa fa-comment-o"></i> 0   </div>
+                <div class="prop_social_single">
+                    <a href="http://www.facebook.com/sharer.php?u=https://placeinsaigon.com/vietnam-shots-north-south-will-take-breath-away/&amp;t=Vietnam+from+above%3A+These+shots+from+north+to+south+will+take+your+breath+away" target="_blank" class="share_facebook"><i class="fa fa-facebook fa-2"></i></a>
+                    <a href="http://twitter.com/home?status=Vietnam+from+above%3A+These+shots+from+north+to+south+will+take+your+breath+away+https%3A%2F%2Fplaceinsaigon.com%2Fvietnam-shots-north-south-will-take-breath-away%2F" class="share_tweet" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+                    <a href="https://plus.google.com/share?url=https://placeinsaigon.com/vietnam-shots-north-south-will-take-breath-away/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="share_google"><i class="fa fa-google-plus fa-2"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url=https://placeinsaigon.com/vietnam-shots-north-south-will-take-breath-away/&amp;media=https://placeinsaigon.com/wp-content/uploads/2017/09/vietnam-from-above-these-shots-from-north-to-south-will-take-your-breath-away-9.jpg&amp;description=Vietnam+from+above%3A+These+shots+from+north+to+south+will+take+your+breath+away" target="_blank" class="share_pinterest"> <i class="fa fa-pinterest fa-2"></i> </a>
+                </div>
+            </div>
+            <div class="single-content single-blog">
+                    <div class="col-md-12 maio_img">
+                        <img class="img-responsive" src="~/Content/img/Home/@Model.Images" />
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#slider-property" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#slider-property" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            <h3>Property Overview</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td><strong>Price</strong></td>
+                        <td>@Model.Price </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Type</strong></td>
+                        <td>@Model.PROPERTY_TYPE.CodeType</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Location</strong></td>
+                        <td>
+                            @Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bathrooms</strong></td>
+                        <td>@Model.BathRoom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bedrooms</strong></td>
+                        <td>@Model.BedRoom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Area</strong></td>
+                        <td>@Model.Area </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h3>Property Features</h3>
             <div class="row">
-                <header class="col-md-12 header_detail">
-                    <header class="col-md-12 backgroundH1">
-                        <h1 style="color: #f4f6f7">Thông tin chi tiết dự án</h1>
-
-                    </header>
-                    <div class="col-md-8 col-md-8css">
-                        <div class="col-md-10">
-                            <p class="frist_content_left">@Model.PropertyName</p>
-
-                        </div>
-                        <div class="col-md-4 frist_content_Price">                           
-                            <p><strong>@Model.UnitPrice</strong>@Model.Price</p>
-
-                        </div>
-                        <div class="col-md-12 maio_img">
-                            <img class="img-responsive" src="~/Content/img/Home/@Model.Images" />
-                        </div>
-                        <div class="col-md-8">
-                            <p class="frist_content_Address"><span class="iconcss"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>@Model.STREET.StreetName, @Model.WARD.WardName, @Model.DISTRICT.DistrictName</p>
-                        </div>
-                        <div class="col-md-8">                          
-                            <p class="frist_content_Bedroom"><span class="iconcss"><i class="fa fa-bed" aria-hidden="true"></i></span>BedRoom: @Model.BedRoom</p>
-                            <p class="frist_content_Bathroom"><span class="iconcss"><i class="fa fa-bath" aria-hidden="true"></i></span>BathRoom: @Model.BathRoom</p>
-                        </div>                       
-                        <div class="col-md-12">
-                            <br>
-                            <p class="frist_content_Describe">@Model.Content</p>
-
+                <ul style="list-style: none;">
+                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Balcony</li>
+                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Internet</li>
+                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Computer</li>
+                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Parking</li>
+                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Terrace</li>
+                </ul>
+            </div>
+            <h3>Property Description</h3>
+           <p>@Model.Content</p> 
+        </div>
+        <div class="col-xs-12 col-md-3 widget-area-sidebar" id="primary">
+            <li id="footer_latest_widget-2" class="widget-container latest_listings">
+                <h3 class="widget-title-sidebar">Latest Listing</h3>
+                <div class="latest_listings">
+                    <div class="widget_latest_internal" data-link="#">
+                        <div class="widget_latest_listing_image">
+                            @{int count = 0;
+                                foreach (var item in ViewData["AllPro"] as List<PROPERTY>)
+                                {
+                                    if (count < 3)
+                                    {
+                                                    <a href="/Home/Detail/@item.ID">
+                                                        <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
+                                                        <hr class="project_hot_left" />
+                                                        <p class="project_hot_title">PPCRental</p>
+                                                        <hr class="project_hot_right" />
+                                                    </a>
+                                                <h3>@item.PropertyName</h3>
+                                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
+                                        count++;
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
                         </div>
 
                     </div>
-                    <div class="col-md-4 col-md-4css">
-                        @{int count = 0;
-                        foreach (var item in ViewData["AllPro"] as List<PROPERTY>)
-                        {
-                            if (count < 3)
-                            {
-                                <div class="col-sm-12">
-                                    <div class="service">
-                                        <div class="service-thumb-home">
-                                            <a href="/Home/Detail/@item.ID">
-                                                <img class="a_project_hot" src="~/Content/img/Home/@item.Images" alt="">
-                                                <hr class="project_hot_left" />
-                                                <p class="project_hot_title">PPCRental</p>
-                                                <hr class="project_hot_right" />
-                                            </a>
-                                        </div>
-                                        <h3>@item.PropertyName</h3>
-                                        <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div><!-- /.col-sm-4 -->
-                                count++;
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                        }                      
-                    </div>                    
-            </div>
+                </div>
+            </li>
         </div>
+    </div>
+    </div>
+
+<!-- break -->
+<!-- begin sidebar -->
+
+
+
+

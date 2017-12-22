@@ -1,3 +1,0 @@
-D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.Appceptance.Test\obj\Debug\PPCRental.Appceptance.Test.csprojResolveAssemblyReference.cache
-D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.Appceptance.Test\obj\Debug\PPCRental.Appceptance.Test.csproj.CoreCompileInputs.cache
-D:\Learning School\THe Thrid\Project_PPCRental_CourceHKI\PPCRental_2017\PPCRental.Appceptance.Test\obj\Debug\PPCRental.Appceptance.Test.csproj.PPCRental.Appceptance.Test.exe.config

@@ -39,11 +39,15 @@ namespace PPCRental.Acceptance.Test.Driver
         {
 
             string NameMongMuon = project.Rows[0]["PropertyName"];
-       
 
-            var NameReadly = _result.Model<PROPERTY>();
 
-            NameReadly.PropertyName.Equals(NameMongMuon);
+            var NameReadly = _result.Model<IEnumerable<PROPERTY>>();
+
+           
+            foreach (var item in NameReadly)
+            {
+                item.PropertyName.Equals(NameMongMuon);
+            }
             
         }
 

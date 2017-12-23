@@ -419,3 +419,4 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental\bin\Microsoft.Owin.Security.
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental\obj\Debug\PPCRental.csproj.CoreCompileInputs.cache
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental\obj\Debug\PPCRental.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental\obj\Debug\PPCRental.pdb
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental\obj\Debug\PPCRental.csprojResolveAssemblyReference.cache

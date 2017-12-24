@@ -13,7 +13,7 @@ Given I have data of Project
 
 Scenario: Search Project follow Name for All User
 	Given I have a Home Page
-	When I click search follow name is 'Scala Quận 9'
+	When I click search follow name is 'Scala '
 	Then I see Project on screen
   | PropertyName			     | Avatar        | Images        | Content                                                                                                                                                            | Status_Name |
   | Scala Quận 9				 | Sunrise01.JPG | Sunrise02.JPG | Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các trung tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart. | Đã duyệt    |

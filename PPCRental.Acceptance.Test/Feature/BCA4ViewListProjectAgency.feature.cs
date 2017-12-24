@@ -18,14 +18,14 @@ namespace PPCRental.Acceptance.Test.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class BCA3SearchProjectFeature
+    public partial class BCA4ViewListProjectAgencyFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "BCA3SearchProject.feature"
+#line 1 "BCA4ViewListProjectAgency.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,7 +44,7 @@ namespace PPCRental.Acceptance.Test.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BCA3SearchProject", "\tAllow All people Search Project follow name", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BCA4ViewListProjectAgency", "\tAllow Agency see All project about Agency Post", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace PPCRental.Acceptance.Test.Feature
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "BCA3SearchProject")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "BCA4ViewListProjectAgency")))
             {
-                global::PPCRental.Acceptance.Test.Feature.BCA3SearchProjectFeature.FeatureSetup(null);
+                global::PPCRental.Acceptance.Test.Feature.BCA4ViewListProjectAgencyFeature.FeatureSetup(null);
             }
         }
         
@@ -84,14 +84,15 @@ namespace PPCRental.Acceptance.Test.Feature
         
         public virtual void FeatureBackground()
         {
-#line 3
+#line 4
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyName",
                         "Avatar",
                         "Images",
                         "Content",
-                        "Status_Name"});
+                        "Status_Name",
+                        "UserID"});
             table1.AddRow(new string[] {
                         "Căn hộ Enterprise City",
                         "Sunrise01.JPG",
@@ -99,7 +100,8 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
+                        "Đã duyệt",
+                        "6"});
             table1.AddRow(new string[] {
                         "PIS Top Apartment",
                         "Sunrise01.JPG",
@@ -107,7 +109,8 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
+                        "Đã duyệt",
+                        "6"});
             table1.AddRow(new string[] {
                         "Bigroom with Riverview",
                         "Sunrise01.JPG",
@@ -115,7 +118,8 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
+                        "Đã duyệt",
+                        "6"});
             table1.AddRow(new string[] {
                         "Phú Mỹ Hưng Quận 7",
                         "Sunrise01.JPG",
@@ -123,7 +127,8 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
+                        "Đã duyệt",
+                        "6"});
             table1.AddRow(new string[] {
                         "Scala Quận 9",
                         "Sunrise01.JPG",
@@ -131,7 +136,8 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
+                        "Đã duyệt",
+                        "6"});
             table1.AddRow(new string[] {
                         "Căn hộ Enterprise City 25",
                         "Sunrise01.JPG",
@@ -139,33 +145,73 @@ namespace PPCRental.Acceptance.Test.Feature
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
-#line 4
-testRunner.Given("I have data of Project", ((string)(null)), table1, "Given ");
+                        "Đã duyệt",
+                        "6"});
+#line 5
+testRunner.Given("All project posted of Agency", ((string)(null)), table1, "Given ");
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search Project follow Name for All User")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "BCA3SearchProject")]
-        public virtual void SearchProjectFollowNameForAllUser()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Agency see all project posted")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "BCA4ViewListProjectAgency")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        public virtual void AgencySeeAllProjectPosted()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Project follow Name for All User", ((string[])(null)));
-#line 14
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Agency see all project posted", new string[] {
+                        "mytag"});
 #line 15
- testRunner.Given("I have a Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
 #line 16
- testRunner.When("I click search follow name is \'Scala \'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("Agency have a HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 17
+ testRunner.When("Agency go to Login with username \'shuu27897@gmail.com\' and pass \'tiegviet\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyName",
                         "Avatar",
                         "Images",
                         "Content",
-                        "Status_Name"});
+                        "Status_Name",
+                        "UserID"});
+            table2.AddRow(new string[] {
+                        "Căn hộ Enterprise City",
+                        "Sunrise01.JPG",
+                        "Sunrise02.JPG",
+                        "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
+                            "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
+                            ".",
+                        "Đã duyệt",
+                        "6"});
+            table2.AddRow(new string[] {
+                        "PIS Top Apartment",
+                        "Sunrise01.JPG",
+                        "Sunrise02.JPG",
+                        "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
+                            "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
+                            ".",
+                        "Đã duyệt",
+                        "6"});
+            table2.AddRow(new string[] {
+                        "Bigroom with Riverview",
+                        "Sunrise01.JPG",
+                        "Sunrise02.JPG",
+                        "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
+                            "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
+                            ".",
+                        "Đã duyệt",
+                        "6"});
+            table2.AddRow(new string[] {
+                        "Phú Mỹ Hưng Quận 7",
+                        "Sunrise01.JPG",
+                        "Sunrise02.JPG",
+                        "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
+                            "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
+                            ".",
+                        "Đã duyệt",
+                        "6"});
             table2.AddRow(new string[] {
                         "Scala Quận 9",
                         "Sunrise01.JPG",
@@ -173,9 +219,19 @@ this.FeatureBackground();
                         "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
                             "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
                             ".",
-                        "Đã duyệt"});
-#line 17
- testRunner.Then("I see Project on screen", ((string)(null)), table2, "Then ");
+                        "Đã duyệt",
+                        "6"});
+            table2.AddRow(new string[] {
+                        "Căn hộ Enterprise City 25",
+                        "Sunrise01.JPG",
+                        "Sunrise02.JPG",
+                        "Nhà đẹp khu dân cư yên tĩnh, có nhiều tiện ích, gần trung tâm quận 7, gần các tru" +
+                            "ng tâm thương mại khu vui chơi giải trí như Vivo City, Crescent Mall, Lotte Mart" +
+                            ".",
+                        "Đã duyệt",
+                        "6"});
+#line 18
+ testRunner.Then("All project of Agency show screen", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

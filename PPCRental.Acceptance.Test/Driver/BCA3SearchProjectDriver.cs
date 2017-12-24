@@ -54,9 +54,7 @@ namespace PPCRental.Acceptance.Test.Driver
         public void SearchNameProject(string nameProject)
         {
              var controller = new HomeController();
-            PPCRentalEntities db = new PPCRentalEntities();
-            PROPERTY meo = db.PROPERTies.FirstOrDefault(s => s.PropertyName == nameProject);
-            _result = controller.Search(meo.PropertyName);
+            _result = controller.Search(nameProject);
         }
 
         public void Navigator()

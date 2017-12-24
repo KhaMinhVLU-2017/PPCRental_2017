@@ -155,11 +155,9 @@ testRunner.Given("All project posted of Agency", ((string)(null)), table1, "Give
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Agency see all project posted")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "BCA4ViewListProjectAgency")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
         public virtual void AgencySeeAllProjectPosted()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Agency see all project posted", new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Agency see all project posted", ((string[])(null)));
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 4
@@ -168,6 +166,8 @@ this.FeatureBackground();
  testRunner.Given("Agency have a HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
  testRunner.When("Agency go to Login with username \'shuu27897@gmail.com\' and pass \'tiegviet\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+ testRunner.And("Agency go to View Agency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyName",
@@ -230,7 +230,7 @@ this.FeatureBackground();
                             ".",
                         "Đã duyệt",
                         "6"});
-#line 18
+#line 19
  testRunner.Then("All project of Agency show screen", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();

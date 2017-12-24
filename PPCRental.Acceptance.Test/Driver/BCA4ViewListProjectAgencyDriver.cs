@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using PPCRental.Controllers;
 using PPCRental.Acceptance.Test.Support;
 using FluentAssertions;
+using System;
+
 namespace PPCRental.Acceptance.Test.Driver
 {
     public class BCA4ViewListProjectAgencyDriver
@@ -33,6 +35,12 @@ namespace PPCRental.Acceptance.Test.Driver
             db.SaveChanges();
         }
 
+        public void NavigatorMainAgancy()
+        {
+            var controller = new AgencyController();
+            _result = controller.Index();
+        }
+
         public void ShowProjectOfAgency(Table project)
         {
             //Project Expected
@@ -47,10 +55,10 @@ namespace PPCRental.Acceptance.Test.Driver
 
         }
 
-        public void GoPageLoginWithAccount(string user, string pass)
+        public void Login(string user, string pass)
         {
             var controller = new HomeController();
-            _result = controller.Login(user,pass);
+            _result = controller.Login(user,pass);       
         }
 
         public void NavigatorHomePage()

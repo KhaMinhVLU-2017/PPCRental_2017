@@ -27,7 +27,12 @@ namespace PPCRental.Acceptance.Test.StepDifinition
         [When(@"Agency go to Login with username '(.*)' and pass '(.*)'")]
         public void WhenAgencyGoToLoginWithUsernameAndPass(string User, string Pass)
         {
-            _driver.GoPageLoginWithAccount(User, Pass);
+            _driver.Login(User, Pass);
+        }
+        [When(@"Agency go to View Agency")]
+        public void WhenAgencyGoToViewAgency()
+        {
+            _driver.NavigatorMainAgancy();
         }
 
         [Then(@"All project of Agency show screen")]

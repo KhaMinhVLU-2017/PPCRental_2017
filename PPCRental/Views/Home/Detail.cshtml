@@ -101,11 +101,14 @@
             <h3>Property Features</h3>
             <div class="row">
                 <ul style="list-style: none;">
-                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Balcony</li>
-                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Internet</li>
-                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Computer</li>
-                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Parking</li>
-                    <li class="col-md-3 col-sm-3"><i class="fa fa-check"></i> Terrace</li>
+                    @foreach (var item in Model.PROPERTY_FEATURE.ToList())
+                    {
+                        if (item.Property_ID == Model.ID)
+                        {
+                             <li class="col-md-3 col-sm-3"><i class="fa fa-check">@item.FEATURE.FeatureName</i></li>
+                        }
+                    }
+                   
                 </ul>
             </div>
             <h3>Property Description</h3>
@@ -147,8 +150,7 @@
     </div>
     </div>
 
-<!-- break -->
-<!-- begin sidebar -->
+
 
 
 

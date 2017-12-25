@@ -185,55 +185,8 @@
                     <div class="row content-row">
                         <br />
                         <br />
-                        @*@for (int i = 0; i < Model.Count(); i++)
-                            {
-                                <div class="col-md-12">
-                                    @for (; i < Model.Count(); i++)
-                                    {
-                                        <div class="col-sm-4">
-                                            <div class="service">
-                                                <div class="service-thumb-home">
-                                                    <a href="#"><img src="~/Content/img/Home/@Model.FirstOrDefault(s=>s.ID == i).Images" alt=""></a>
-                                                </div>
-
-                                                <h3>@Model.FirstOrDefault(s => s.ID == i).PropertyName</h3>
-                                                <p>@Model.FirstOrDefault(s => s.ID == i).Content</p>
-                                                <a class="readmore" href="#">Read More &nbsp;<i class="fa fa-angle-right"></i> </a>
-                                            </div>
-                                        </div>
-                                    }
-                                    @if (i + 1 % 3 == 0)
-                                    {
-                                        break;
-                                    }
-
-                                </div>
-                            }*@
                         @for (var i = 23; i < 29; i++)
                         {
-                            //var url = "";
-                            //string meoPName = "";
-                            //string[] meoCount = Model.FirstOrDefault(s=>s.ID==i).PropertyName.Split(' ');
-                            //if (meoCount.Count() > 0)
-                            //{
-                            //    for (int j = 0; j < meoCount.Count(); j++)
-                            //    {
-                            //        if (meoPName == "")
-                            //        {
-                            //            meoPName = meoCount[j] + "-" + meoPName;
-                            //        }
-                            //        else
-                            //        {
-                            //            meoPName = meoPName + "-" + meoCount[j];
-                            //        }
-
-                            //    }
-                            //    url = "/chi-tiet/" + meoPName.ToLower() + "-" + i;
-                            //}
-                            //else
-                            //{
-                            //    url = "/chi-tiet/" + Model.FirstOrDefault(s=>s.ID==i).PropertyName + "-" + i;
-                            //}
                             <div class="col-sm-4">
                                 <div class="service">
                                     <div class="service-thumb-home">

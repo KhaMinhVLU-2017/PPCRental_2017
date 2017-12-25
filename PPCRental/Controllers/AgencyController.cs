@@ -10,6 +10,7 @@ using PPCRental.Models;
 using PagedList;
 using Postal;
 using System.Net.Mail;
+using System.Reflection;
 
 namespace PPCRental.Controllers
 {
@@ -42,6 +43,28 @@ namespace PPCRental.Controllers
             return View(property);
         }
 
+        [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
+        public class MultipleButtonAttribute : ActionNameSelectorAttribute
+        {
+            public string Name { get; set; }
+            public string Argument { get; set; }
+
+            public override bool IsValidName(ControllerContext controllerContext, string actionName, MethodInfo methodInfo)
+            {
+                var isValidName = false;
+                var keyValue = string.Format("{0}:{1}", Name, Argument);
+                var value = controllerContext.Controller.ValueProvider.GetValue(keyValue);
+
+                if (value != null)
+                {
+                    controllerContext.Controller.ControllerContext.RouteData.Values[Name] = Argument;
+                    isValidName = true;
+                }
+
+                return isValidName;
+            }
+        }
+
         // GET: /Agency/Create
         public ActionResult Create()
         {
@@ -60,6 +83,7 @@ namespace PPCRental.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [MultipleButton(Name = "action", Argument = "Save")]
         public ActionResult Create(PROPERTY property)
         {
             if (ModelState.IsValid)
@@ -82,13 +106,46 @@ namespace PPCRental.Controllers
                 prop.PackingPlace = property.PackingPlace;
                 prop.UserID = int.Parse(Session["UserID"].ToString());
                 prop.Created_at = DateTime.Now;
-                prop.Create_post = property.Create_post;
-                    prop.Status_ID = 3;
+                prop.Status_ID = 1;
                 db.PROPERTies.Add(prop);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
            
+            return View(property);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [MultipleButton(Name = "action", Argument = "SaveDraft")]
+        public ActionResult SaveDraft(PROPERTY property)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var prop = new PROPERTY();
+                prop.PropertyName = property.PropertyName;
+                prop.Avatar = property.Avatar;
+                prop.Images = property.Images;
+                prop.PropertyType_ID = property.PropertyType_ID;
+                prop.Street_ID = property.Street_ID;
+                prop.Ward_ID = property.Ward_ID;
+                prop.District_ID = property.District_ID;
+                prop.Price = property.Price;
+                prop.Content = property.Content;
+                prop.UnitPrice = property.UnitPrice;
+                prop.Area = property.Area;
+                prop.BathRoom = property.BathRoom;
+                prop.BedRoom = property.BedRoom;
+                prop.PackingPlace = property.PackingPlace;
+                prop.UserID = int.Parse(Session["UserID"].ToString());
+                prop.Created_at = DateTime.Now;
+                prop.Status_ID = 2;
+                db.PROPERTies.Add(prop);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
             return View(property);
         }
 

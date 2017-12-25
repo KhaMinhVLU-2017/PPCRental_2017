@@ -11,226 +11,169 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true)
-        @Html.HiddenFor(model => model.ID)
+    @Html.ValidationSummary(true)
+    <div class="panel panel-default container-fluid">
+        <div class="col-md-6">
+            <div class="panel panel-default">
 
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Tên dự án
+                <div class="panel-heading">Informantion</div>
+                <div class=" panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PropertyName, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.PropertyName)
+                        @Html.ValidationMessageFor(model => model.PropertyName)
+
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Avatar, new { @class = "control-label col-md-2" })
+
+                        <input class="inputcss" type="file" value="@Model.Avatar" />
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Images, new { @class = "control-label col-md-2" })
+
+                        <input class="inputcss" type="file" value="@Model.Images" />
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PropertyType_ID, "PropertyType_ID", new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("PropertyType_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.PropertyType_ID)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Content)
+                        @Html.ValidationMessageFor(model => model.Content)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Street_ID, "Street_ID", new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("Street_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.Street_ID)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Ward_ID, "Ward_ID", new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("Ward_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.Ward_ID)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.District_ID, "District_ID", new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("District_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.District_ID)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Price)
+                        @Html.ValidationMessageFor(model => model.Price)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.UnitPrice)
+                        @Html.ValidationMessageFor(model => model.UnitPrice)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Area)
+                        @Html.ValidationMessageFor(model => model.Area)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.BedRoom, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.BedRoom)
+                        @Html.ValidationMessageFor(model => model.BedRoom)
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.BathRoom, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.BathRoom)
+                        @Html.ValidationMessageFor(model => model.BathRoom)
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PropertyName)
-                @Html.ValidationMessageFor(model => model.PropertyName)
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Feature</div>
+                <div class="form-group">
+                    <form>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1">Ban Công
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="2">Chỗ đậu xe
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="3">Thang máy
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="4">Vườn
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="5">Phòng tập Gym
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="6">Nhà bếp
+                        </label>
+                    </form>
+                    <form>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="7">Phòng giặt ủi
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="8">Cho nuôi thú cưng
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="9">Hồ bơi
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="10">Sàn gỗ
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="11" />Bảo vệ
+                        </label>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ảnh đại diện dự án
-            </div>
-            <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Avatar)*@
-                 <input class="inputcss" type="file" value="@Model.Avatar"/>             
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ảnh chi tiết
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Images)
-                @Html.ValidationMessageFor(model => model.Images)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Loại dự án
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("PropertyType_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.PropertyType_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Miêu tả
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Content)
-                @Html.ValidationMessageFor(model => model.Content)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Tên đường
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("Street_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Street_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Tên phường
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("Ward_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Ward_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Tên quận
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("District_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.District_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Giá
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Price)
-                @Html.ValidationMessageFor(model => model.Price)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Loại tiền tệ
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UnitPrice)
-                @Html.ValidationMessageFor(model => model.UnitPrice)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Diện tích
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Area)
-                @Html.ValidationMessageFor(model => model.Area)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Số phòng ngủ
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BedRoom)
-                @Html.ValidationMessageFor(model => model.BedRoom)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Số phòng tắm
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BathRoom)
-                @Html.ValidationMessageFor(model => model.BathRoom)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Chỗ đậu xe
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PackingPlace)
-                @Html.ValidationMessageFor(model => model.PackingPlace)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Email Agency
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("UserID", String.Empty)
-                @Html.ValidationMessageFor(model => model.UserID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ngày tạo
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Created_at)
-                @Html.ValidationMessageFor(model => model.Created_at)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ngày post
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Create_post)
-                @Html.ValidationMessageFor(model => model.Create_post)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Trạng thái
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("Status_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Status_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ghi chú
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Note)
-                @Html.ValidationMessageFor(model => model.Note)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                Ngày update
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Updated_at)
-                @Html.ValidationMessageFor(model => model.Updated_at)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                ID Sale
-            </div>
-            <div class="col-md-10">
-                @Html.DropDownList("Sale_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Sale_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" />
-            </div>
-        </div>
+       
     </div>
 }
 

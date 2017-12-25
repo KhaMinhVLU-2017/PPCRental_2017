@@ -55,7 +55,16 @@ namespace PPCRental.Controllers
                 {
                     Session["Fullname"] = rs.FullName;
                     Session["UserID"] = rs.ID;
-                    return RedirectToAction("Index", "Agency");
+                    Session["RoleID"] = rs.Role;
+                    if (int.Parse(rs.Role) == 0)
+                    {
+                        return RedirectToAction("Index", "Agency");
+                    }
+                    else
+                    {
+                        return View();
+                    }
+                   
                 }
             }
             else
@@ -72,6 +81,7 @@ namespace PPCRental.Controllers
             {
                 Session["Fullname"] = null;
                 Session["UserID"] = null;
+                Session["RoleID"] = null;
             }
             return RedirectToAction("Login");
         }
@@ -102,7 +112,7 @@ namespace PPCRental.Controllers
             return View(result);
         }
 
-        public ActionResult SearchCodeType(string    = "", string name = "")
+        public ActionResult SearchCodeType(string type = "", string name = "")
         {
             ViewBag.Name = name;
             var result = db.PROPERTY_TYPE.FirstOrDefault(s=>s.CodeType.Contains(type));
@@ -115,7 +125,6 @@ namespace PPCRental.Controllers
             ViewBag.Name = name;
             var result = db.FEATUREs.FirstOrDefault(s => s.ID == featureid);
             var ft = db.PROPERTY_FEATURE.Where(s=>s.Feature_ID == result.ID).ToList();
-            //var rs = db.PROPERTies.Where().ToList();
             return View(ft);
         }
 

@@ -30,17 +30,17 @@ else
         </th>
 
         <th>
-            Ngày tạo
+            Phòng ngủ
         </th>
 
         <th>
-            Ghi chú
+            Phòng tắm
+        </th>
+        <th>
+            Ngày tạo
         </th>
         <th>
             Ngày Update
-        </th>
-        <th>
-            Email Agency
         </th>
         <th>
             Trạng thái bài đăng
@@ -66,24 +66,24 @@ else
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.Created_at)
+                @Html.DisplayFor(modelItem => item.BedRoom)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.Note)
+                @Html.DisplayFor(modelItem => item.BathRoom)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created_at)
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Updated_at)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.USER.Email)
-            </td>
-
-            <td>
                 @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
             </td>
-            @if (item.UserID == 2)
+            @if (item.Status_ID == 2)
             {
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |

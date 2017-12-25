@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using PPCRental.Controllers;
 using PPCRental.Acceptance.Test.Support;
 using FluentAssertions;
-using System;
+using System.Web.Routing;
 
 namespace PPCRental.Acceptance.Test.Driver
 {
@@ -35,30 +35,42 @@ namespace PPCRental.Acceptance.Test.Driver
             db.SaveChanges();
         }
 
-        public void NavigatorMainAgancy()
-        {
-            var controller = new AgencyController();
-            _result = controller.Index();
-        }
 
         public void ShowProjectOfAgency(Table project)
         {
             //Project Expected
-            var mongmuon = project.Rows[0]["PropertyName"];
+    
             //Actual
             var actualProject = _result.Model<IEnumerable<PROPERTY>>();
             //Compare
+    
+            int count = 0;
+            
             foreach(var item in actualProject)
             {
-                item.PropertyName.ShouldBeEquivalentTo(mongmuon);
+                item.PropertyName.Equals(project.Rows[count]["PropertyName"]);
+                count++;
             }
 
         }
 
         public void Login(string user, string pass)
         {
-            var controller = new HomeController();
-            _result = controller.Login(user,pass);       
+            RouteData routeData = new RouteData();
+            routeData.Values.Add("action", "Index");
+            routeData.Values.Add("controller", "Agency");
+
+            var homecontroller = getHomeControllerMeo(routeData);
+            _result = homecontroller.Login(user, pass);
+
+            if (((RedirectToRouteResult)_result).RouteValues["action"].Equals("Index"))
+            {
+                var agencycontroller = getAgencyController();
+                _result = agencycontroller.Index();
+
+                var showProperty = _result.Model<IEnumerable<PROPERTY>>();
+                ScenarioContext.Current.Add("AgencyProperty", showProperty);
+            }
         }
 
         public void NavigatorHomePage()
@@ -66,5 +78,18 @@ namespace PPCRental.Acceptance.Test.Driver
             var controller = new HomeController();
             _result = controller.Index();
         }
+
+        public static HomeController getHomeControllerMeo(RouteData routeData)
+        {
+            var controller = new HomeController();
+            HttpContextStub.SetupController(controller, routeData);
+            return controller;
+        }
+        public static AgencyController getAgencyController()
+        {
+            var controller = new AgencyController();
+            HttpContextStub.SetupController(controller);
+            return controller;
+        }
     }
-}
+}   

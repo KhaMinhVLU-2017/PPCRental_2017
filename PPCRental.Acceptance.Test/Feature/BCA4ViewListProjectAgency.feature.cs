@@ -166,8 +166,6 @@ this.FeatureBackground();
  testRunner.Given("Agency have a HomePage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
  testRunner.When("Agency go to Login with username \'shuu27897@gmail.com\' and pass \'tiegviet\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
- testRunner.And("Agency go to View Agency", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyName",
@@ -230,7 +228,7 @@ this.FeatureBackground();
                             ".",
                         "Đã duyệt",
                         "6"});
-#line 19
+#line 18
  testRunner.Then("All project of Agency show screen", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();

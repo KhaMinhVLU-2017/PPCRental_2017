@@ -44,7 +44,8 @@ namespace PPCRental.Acceptance.Test.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BCA1.DetailProject", "\tAllow User see Detail of project", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BCA1.DetailProject", "\tAllow User see Detail of project", ProgrammingLanguage.CSharp, new string[] {
+                        "web"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -148,6 +149,7 @@ namespace PPCRental.Acceptance.Test.Feature
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User see Detail of Project")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "BCA1.DetailProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         public virtual void UserSeeDetailOfProject()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User see Detail of Project", ((string[])(null)));

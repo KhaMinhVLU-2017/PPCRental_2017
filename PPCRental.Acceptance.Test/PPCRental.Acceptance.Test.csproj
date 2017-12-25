@@ -139,6 +139,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PPCRental.UITests.Selenium\PPCRental.UITests.Selenium.csproj">
+      <Project>{e07ce0a9-8004-49a9-8a37-3a578a3d646e}</Project>
+      <Name>PPCRental.UITests.Selenium</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PPCRental\PPCRental.csproj">
       <Project>{c0ce3af9-6f8e-4f93-9434-36f76d9b92d5}</Project>
       <Name>PPCRental</Name>

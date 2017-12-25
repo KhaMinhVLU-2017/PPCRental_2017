@@ -1,5 +1,5 @@
 ﻿
-
+@web
 Feature: BCA1.DetailProject
 	Allow User see Detail of project
 

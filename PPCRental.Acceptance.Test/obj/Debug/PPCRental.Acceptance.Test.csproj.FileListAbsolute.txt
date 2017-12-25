@@ -14,7 +14,6 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Sy
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.Razor.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.dll
-C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\TechTalk.SpecFlow.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Owin.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.Optimization.dll
@@ -41,7 +40,6 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Sy
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.Razor.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Owin.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\System.Web.Optimization.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -64,3 +62,8 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Mo
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Moq.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Polly.xml
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\RestSharp.xml
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.UITests.Selenium.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.UITests.Selenium.pdb
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.UITests.Selenium.dll.config
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\WebDriver.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\WebDriver.xml

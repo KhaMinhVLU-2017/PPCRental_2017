@@ -102,7 +102,7 @@ namespace PPCRental.Controllers
             return View(result);
         }
 
-        public ActionResult SearchCodeType(string    = "", string name = "")
+        public ActionResult SearchCodeType(string type = "", string name = "")
         {
             ViewBag.Name = name;
             var result = db.PROPERTY_TYPE.FirstOrDefault(s=>s.CodeType.Contains(type));

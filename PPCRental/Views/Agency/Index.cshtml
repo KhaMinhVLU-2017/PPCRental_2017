@@ -4,8 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Danh sách các dự án của @Model.FirstOrDefault().USER.FullName</h2>
+@if (Model.Count > 0)
+{
+    <h2>Danh sách các dự án của @Model.FirstOrDefault().USER.FullName</h2>
+}
+else
+{
+    <h2>Danh sách các dự án của @Session["Fullname"]</h2>
+}
 <p><a href="/agency/create">Tạo dự án mới</a></p>
 <table class="table">
     <tr>

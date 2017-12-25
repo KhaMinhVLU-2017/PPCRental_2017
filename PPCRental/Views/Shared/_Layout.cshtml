@@ -36,6 +36,7 @@
     <!-- Responsive CSS -->
     <link href="~/Content/css/responsive.css" rel="stylesheet">
     <script src="~/Content/js/vendor/modernizr-2.8.1.min.js"></script>
+
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -105,10 +106,12 @@
                                     @if (Session["UserID"] == null)
                                     {
                                         <div class="col-sm-1">
-                                            <a href="~/Home/Login">Login</a>
+                                            <a href="/Home/Login" role="button">Login</a>
+                                            @*<input type="button" value="Login" /><a href="/home/login"></a>*@
                                         </div>
                                         <div class="col-sm-1">
-                                            <a href="/home/signup">Sign Up</a>
+                                            <a href="/home/signup" role="button">Sign Up</a>
+                                            @*<button type="button" class="btn btn-default btn-sm"><a href="/Home/signup">Sign Up</a></button>*@
                                         </div>
                                     }
                                     else
@@ -154,9 +157,9 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                                 <button type="button" style="z-index:20;" class="navbar-toggle" data-toggle="collapse" data-target="#Meobar">
+                                    @*<span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>*@
                                 </button>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->

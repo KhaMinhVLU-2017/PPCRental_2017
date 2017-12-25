@@ -6,7 +6,6 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\En
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\FluentAssertions.Core.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\FluentAssertions.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Newtonsoft.Json.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.dll
@@ -27,7 +26,6 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Mi
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PagedList.dll
-C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.pdb
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\PPCRental.dll.config
@@ -57,3 +55,12 @@ C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\obj\Debug\PP
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\obj\Debug\PPCRental.Acceptance.Test.csproj.CoreCompileInputs.cache
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\obj\Debug\PPCRental.Acceptance.Test.dll
 C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\obj\Debug\PPCRental.Acceptance.Test.pdb
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\ImageResizer.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Moq.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Polly.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\RestSharp.dll
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\ImageResizer.xml
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Moq.pdb
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Moq.xml
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\Polly.xml
+C:\Users\JudasFate\Desktop\PPCRental_2017\PPCRental.Acceptance.Test\bin\Debug\RestSharp.xml

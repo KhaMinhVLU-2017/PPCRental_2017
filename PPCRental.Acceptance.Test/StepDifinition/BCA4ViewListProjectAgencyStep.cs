@@ -29,11 +29,6 @@ namespace PPCRental.Acceptance.Test.StepDifinition
         {
             _driver.Login(User, Pass);
         }
-        [When(@"Agency go to View Agency")]
-        public void WhenAgencyGoToViewAgency()
-        {
-            _driver.NavigatorMainAgancy();
-        }
 
         [Then(@"All project of Agency show screen")]
         public void ThenAllProjectOfAgencyShowScreen(Table Project)

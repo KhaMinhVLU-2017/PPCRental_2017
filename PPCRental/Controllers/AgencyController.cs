@@ -75,6 +75,9 @@ namespace PPCRental.Controllers
             ViewBag.UserID = new SelectList(db.USERs, "ID", "Email");
             ViewBag.Sale_ID = new SelectList(db.USERs, "ID", "Email");
             ViewBag.Ward_ID = new SelectList(db.WARDs, "ID", "WardName");
+            List<FEATURE> meo = new List<FEATURE>();
+            meo = db.FEATUREs.ToList();
+            ViewData["FeatureMeo"] = meo;
             return View();
         }
 
@@ -168,6 +171,9 @@ namespace PPCRental.Controllers
             ViewBag.UserID = new SelectList(db.USERs, "ID", "Email", property.UserID);
             ViewBag.Sale_ID = new SelectList(db.USERs, "ID", "Email", property.Sale_ID);
             ViewBag.Ward_ID = new SelectList(db.WARDs, "ID", "WardName", property.Ward_ID);
+            List<FEATURE> meo = new List<FEATURE>();
+            meo = db.FEATUREs.ToList();
+            ViewData["FeatureMeo"] = meo;
             return View(property);
         }
 
@@ -176,11 +182,19 @@ namespace PPCRental.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,PropertyName,Avatar,Images,PropertyType_ID,Content,Street_ID,Ward_ID,District_ID,Price,UnitPrice,Area,BedRoom,BathRoom,PackingPlace,UserID,Created_at,Create_post,Status_ID,Note,Updated_at,Sale_ID")] PROPERTY property)
+        public ActionResult Edit([Bind(Include="ID,PropertyName,Avatar,Images,PropertyType_ID,Content,Street_ID,Ward_ID,District_ID,Price,UnitPrice,Area,BedRoom,BathRoom,PackingPlace,UserID,Created_at,Create_post,Status_ID,Note,Updated_at,Sale_ID")] PROPERTY property,List<string> meoFeature,int ID_Meo)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(property).State = EntityState.Modified;
+                PROPERTY_FEATURE meo = new PROPERTY_FEATURE();
+                meo.Property_ID = ID_Meo;
+                foreach(var item in meoFeature)
+                {
+                    int id = int.Parse(item);
+                    meo.Feature_ID = id;
+                    db.PROPERTY_FEATURE.Add(meo);
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

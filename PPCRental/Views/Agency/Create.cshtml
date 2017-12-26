@@ -1,8 +1,10 @@
-﻿@model PPCRental.Models.PROPERTY
-
+﻿@using PPCRental.Models
+@model PPCRental.Models.PROPERTY
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<FEATURE> meo = new List<FEATURE>();
+    meo = ViewData["FeatureMeo"] as List<FEATURE>;
 }
 <h2>Tạo dự án mới</h2>
 @using (Html.BeginForm())

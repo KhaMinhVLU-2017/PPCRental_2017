@@ -88,7 +88,7 @@ namespace PPCRental.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [MultipleButton(Name = "action", Argument = "Save")]
-        public ActionResult Create(PROPERTY property, HttpPostedFileBase avatar, HttpPostedFileBase images)
+        public ActionResult Create(PROPERTY property, HttpPostedFileBase avatar, HttpPostedFileBase images, List<string> meoFeature)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace PPCRental.Controllers
                     var filename = Path.GetFileName(avatar.FileName);
                     var path = Path.Combine(Server.MapPath("~/Content/img/Home"), avatar.FileName);
                     avatar.SaveAs(path);
-                    Avatar = filename;
+                    Avatar = avatar.FileName;
                 }
                 string Images = "";
                 if (images.ContentLength > 0)
@@ -106,12 +106,21 @@ namespace PPCRental.Controllers
                     var filename = Path.GetFileName(images.FileName);
                     var path = Path.Combine(Server.MapPath("~/Content/img/Home"), images.FileName);
                     images.SaveAs(path);
-                    Images = filename;
+                    Images = images.FileName;
                 }
+                foreach(var item in meoFeature)
+                {
+                    PROPERTY_FEATURE meo = new PROPERTY_FEATURE();
+                    meo.Property_ID = property.ID;
+                    int id = int.Parse(item);
+                    meo.Feature_ID = id;
+                    db.PROPERTY_FEATURE.Add(meo);
+                }
+
                 var prop = new PROPERTY();
                 prop.PropertyName = property.PropertyName;
-                prop.Avatar = property.Avatar;
-                prop.Images = property.Images;
+                prop.Avatar = Avatar;
+                prop.Images = Images;
                 prop.PropertyType_ID = property.PropertyType_ID;
                 prop.Street_ID = property.Street_ID;
                 prop.Ward_ID = property.Ward_ID;

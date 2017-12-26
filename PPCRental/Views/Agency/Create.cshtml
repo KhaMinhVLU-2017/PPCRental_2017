@@ -135,43 +135,17 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Tiện ích</div>
                 <div class="form-group">
+                   
                     <form>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="1">Ban Công
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="2">Chỗ đậu xe
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="3">Thang máy
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="4">Vường
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="5">Phòng tập Gym
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="6">Nhà bếp
-                        </label>
-                    </form>
-                    <form>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="7">Phòng giặt ủi
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="8">Cho nuôi thú cưng
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="9">Hồ bơi
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="10">Sàn gỗ
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="11" />Bảo vệ
-                        </label>
-                    </form>
+                        @foreach (var item in meo)
+                        {
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="meoFeature" value="@item.ID">@item.FeatureName
+                            </label>
+                         
+                        }     
+                   </form>
+                    
                 </div>
             </div>
         </div>

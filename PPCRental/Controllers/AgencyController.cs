@@ -146,15 +146,38 @@ namespace PPCRental.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [MultipleButton(Name = "action", Argument = "SaveDraft")]
-        public ActionResult SaveDraft(PROPERTY property)
+        public ActionResult SaveDraft(PROPERTY property, HttpPostedFileBase avatar, HttpPostedFileBase images, List<string> meoFeature)
         {
             if (ModelState.IsValid)
             {
-
+                string Avatar = "";
+                if (avatar.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(avatar.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Content/img/Home"), avatar.FileName);
+                    avatar.SaveAs(path);
+                    Avatar = avatar.FileName;
+                }
+                string Images = "";
+                if (images.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(images.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Content/img/Home"), images.FileName);
+                    images.SaveAs(path);
+                    Images = images.FileName;
+                }
+                foreach (var item in meoFeature)
+                {
+                    PROPERTY_FEATURE meo = new PROPERTY_FEATURE();
+                    meo.Property_ID = property.ID;
+                    int id = int.Parse(item);
+                    meo.Feature_ID = id;
+                    db.PROPERTY_FEATURE.Add(meo);
+                }
                 var prop = new PROPERTY();
                 prop.PropertyName = property.PropertyName;
-                prop.Avatar = property.Avatar;
-                prop.Images = property.Images;
+                prop.Avatar = Avatar;
+                prop.Images = Images;
                 prop.PropertyType_ID = property.PropertyType_ID;
                 prop.Street_ID = property.Street_ID;
                 prop.Ward_ID = property.Ward_ID;
@@ -199,6 +222,9 @@ namespace PPCRental.Controllers
             List<FEATURE> meo = new List<FEATURE>();
             meo = db.FEATUREs.ToList();
             ViewData["FeatureMeo"] = meo;
+            List<PROPERTY_FEATURE> meoSelect = new List<PROPERTY_FEATURE>();
+            meoSelect = db.PROPERTY_FEATURE.Where(s => s.Property_ID == id).ToList();
+            ViewData["FeatureSeen"] = meoSelect;
             return View(property);
         }
 
@@ -212,10 +238,11 @@ namespace PPCRental.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(property).State = EntityState.Modified;
-                PROPERTY_FEATURE meo = new PROPERTY_FEATURE();
-                meo.Property_ID = ID_Meo;
+       
                 foreach(var item in meoFeature)
                 {
+                    PROPERTY_FEATURE meo = new PROPERTY_FEATURE();
+                    meo.Property_ID = ID_Meo;
                     int id = int.Parse(item);
                     meo.Feature_ID = id;
                     db.PROPERTY_FEATURE.Add(meo);

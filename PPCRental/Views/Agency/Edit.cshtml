@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<FEATURE> meo = new List<FEATURE>();
     meo = ViewData["FeatureMeo"] as List<FEATURE>;
+    List<PROPERTY_FEATURE> FeatureSeen = new List<PROPERTY_FEATURE>();
+    FeatureSeen = ViewData["FeatureSeen"] as List<PROPERTY_FEATURE>;
 }
 <h2>Edit dự án @Model.PropertyName</h2>
 @using (Html.BeginForm())
@@ -23,8 +25,8 @@
 
                         @Html.EditorFor(model => model.PropertyName)
                         @Html.ValidationMessageFor(model => model.PropertyName)
-                        @Html.Hidden("ID_Meo", Model.ID,new { style = "visibility:hidden" })
-      
+                        @Html.Hidden("ID_Meo", Model.ID, new { style = "visibility:hidden" })
+
                     </div>
                     <div class="form-group">
                         <div class="col-md-2">Avatar</div>
@@ -130,13 +132,34 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Tiện ích</div>
                 <div class="form-group">
+
                     <form>
-                        @foreach (var item in meo)
+                        @for (int i = 0; i < meo.Count(); i++)
                         {
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="meoFeature" value="@item.ID">@item.FeatureName
-                            </label>
+                            int Su_id = 0;
+                            try
+                            {
+                                Su_id = FeatureSeen[i].FEATURE.ID;
+                            }
+                            catch
+                            {
+                                Su_id = 0;
+                            }
+
+                            if (meo[i].ID == Su_id)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="meoFeature" value="@meo[i].ID" checked />@meo[i].FeatureName
+                                </label>
+                            }
+                            else
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="meoFeature" value="@meo[i].ID" />@meo[i].FeatureName
+                                </label>
+                            }
                         }
+                        
                     </form>
                 </div>
             </div>

@@ -11,6 +11,7 @@ using PagedList;
 using Postal;
 using System.Net.Mail;
 using System.Reflection;
+using System.IO;
 
 namespace PPCRental.Controllers
 {
@@ -84,11 +85,26 @@ namespace PPCRental.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [MultipleButton(Name = "action", Argument = "Save")]
-        public ActionResult Create(PROPERTY property)
+        public ActionResult Create(PROPERTY property, HttpPostedFileBase avatar, HttpPostedFileBase images)
         {
             if (ModelState.IsValid)
             {
-               
+                string Avatar = "";
+                if (avatar.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(avatar.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Content/img/Home"), avatar.FileName);
+                    avatar.SaveAs(path);
+                    Avatar = filename;
+                }
+                string Images = "";
+                if (images.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(images.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Content/img/Home"), images.FileName);
+                    images.SaveAs(path);
+                    Images = filename;
+                }
                 var prop = new PROPERTY();
                 prop.PropertyName = property.PropertyName;
                 prop.Avatar = property.Avatar;

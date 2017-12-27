@@ -89,6 +89,7 @@
     <Compile Include="Driver\BCA2ViewListProjectDriver.cs" />
     <Compile Include="Driver\BCA3SearchProjectDriver.cs" />
     <Compile Include="Driver\BCA4ViewListProjectAgencyDriver.cs" />
+    <Compile Include="Driver\BCA5EditOfSaleDriver.cs" />
     <Compile Include="Feature\BCA1DetailProject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +120,7 @@
     <Compile Include="StepDifinition\BCA2ViewListProjectStep.cs" />
     <Compile Include="StepDifinition\BCA3SearchProjectStep.cs" />
     <Compile Include="StepDifinition\BCA4ViewListProjectAgencyStep.cs" />
+    <Compile Include="StepDifinition\BCA5EditOfSaleStep.cs" />
     <Compile Include="Support\ActionResultExtensions.cs" />
     <Compile Include="Support\DatabaseTools.cs" />
     <Compile Include="Support\HttpContextStub.cs" />

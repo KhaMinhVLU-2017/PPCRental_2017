@@ -47,7 +47,7 @@ namespace PPCRental.Controllers
           {		          
              if (isCheck(meo) == true)		
               {		              
-                 FormsAuthentication.SetAuthCookie(meo.Email, false);		
+                 //FormsAuthentication.SetAuthCookie(meo.Email, false);		
                  if (url == "")		
                   {
 		                

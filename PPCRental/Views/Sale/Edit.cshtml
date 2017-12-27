@@ -125,8 +125,10 @@
                     <div class="form-group">
                         <div class="col-md-2">Trạng Thái</div>
 
-                        @Html.DropDownList("Trạng Thái",ViewBag.Status_ID as SelectList, "Chọn trạng thái")
-                        @Html.ValidationMessageFor(model => model.PROJECT_STATUS.Status_Name)
+                        @*@Html.DropDownList("Trạng Thái",ViewBag.Status_ID as SelectList, "Chọn trạng thái")
+                        @Html.ValidationMessageFor(model => model.PROJECT_STATUS.Status_Name)*@
+                        @Html.DropDownList("Status_ID", String.Empty)
+                        @Html.ValidationMessageFor(model => model.Status_ID)
 
                     </div>
                     <div class="form-group">

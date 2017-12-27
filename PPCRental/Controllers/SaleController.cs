@@ -109,7 +109,6 @@ namespace PPCRental.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 db.Entry(property).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

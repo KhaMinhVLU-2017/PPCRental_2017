@@ -109,6 +109,7 @@ namespace PPCRental.Controllers
         {
             if (ModelState.IsValid)
             {
+                property.Status_ID = db.PROJECT_STATUS.FirstOrDefault(s => s.Status_Name == property.PROJECT_STATUS.Status_Name).ID;
                 db.Entry(property).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

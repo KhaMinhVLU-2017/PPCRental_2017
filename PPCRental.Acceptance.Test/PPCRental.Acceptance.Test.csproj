@@ -109,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BCA4ViewListProjectAgency.feature</DependentUpon>
     </Compile>
+    <Compile Include="Feature\BCA5EditOfSale.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BCA5EditOfSale.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDifinition\BCA1DetailProjectStep.cs" />
     <Compile Include="StepDifinition\BCA2ViewListProjectStep.cs" />
@@ -135,6 +140,10 @@
     <None Include="Feature\BCA4ViewListProjectAgency.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BCA4ViewListProjectAgency.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature\BCA5EditOfSale.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BCA5EditOfSale.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

@@ -28,8 +28,8 @@
                     <div class="form-group">
                         <div class="col-md-2">Avatar</div>
                         <form action="create" method="post" enctype="multipart/form-data">
-                            <input type="file" name="avatar">
-           
+                            <p><img style="width:100px;height=100px;" src="~/Content/img/Home/@Model.Avatar" />
+                            <input style="float:right" type="file" name="avatar" ></p>
                         </form>
 
                     </div>
@@ -37,8 +37,8 @@
                     <div class="form-group">
                         <div class="col-md-2">Images</div>
                         <form action="create" method="post" enctype="multipart/form-data">
-                            <input type="file" name="images">
-               
+                             <p><img style="width:100px;height=100px;" src="~/Content/img/Home/@Model.Images" />
+                            <input style="float:right" type="file" name="images" value="@Model.Images"></p>
                         </form>
 
                     </div>
